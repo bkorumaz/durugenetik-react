@@ -11,7 +11,7 @@ export default function Hero({ darkMode }) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Fade out hero video as user scrolls
+  // Fade out hero video as user scrolls.
   const fadeOpacity = 1 - Math.min(offsetY / (window.innerHeight * 0.75), 1);
 
   return (
