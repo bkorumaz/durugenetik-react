@@ -1,0 +1,42 @@
+{
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "blog": "Blog",
+    "partners": "Partners",
+    "aboutus": "About Us",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Building a Productive Future",
+    "subtitle": "World-class bull genetics, sexed semen, embryo transfer—all to boost your herd’s productivity."
+  },
+  "products": {
+    "title": "Our Products",
+    "item": "Product {{number}}",
+    "description": "Detailed service description here."
+  },
+  "blog": {
+    "title": "Latest Posts",
+    "post": "Blog Title {{number}}",
+    "excerpt": "Short excerpt goes here.",
+    "readMore": "Read more"
+  },
+  "partners": {
+    "title": "Our Partners",
+    "partner": "Partner {{number}}"
+  },
+  "about": {
+    "title": "About Us",
+    "description": "Durugentik is dedicated to delivering premium genetics solutions to breeders worldwide."
+  },
+  "contact": {
+    "title": "Contact",
+    "name": "Name",
+    "message": "Message",
+    "send": "Send"
+  },
+  "footer": {
+    "developed_by": "Powered by"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "nav": {
+    "home": "Anasayfa",
+    "products": "Ürünler",
+    "blog": "Blog",
+    "partners": "Ortaklar",
+    "aboutus": "Hakkımızda",
+    "contact": "İletişim"
+  },
+  "hero": {
+    "title": "Verimli Bir Gelecek İnşa Ediyoruz",
+    "subtitle": "Dünya standartlarında boğa genetiği, seksli semen, embriyo transferi—sürü verimliliğinizi artırmak için."
+  },
+  "products": {
+    "title": "Ürünlerimiz",
+    "item": "Ürün {{number}}",
+    "description": "Detaylı hizmet açıklaması burada."
+  },
+  "blog": {
+    "title": "Son Yazılar",
+    "post": "Yazı Başlığı {{number}}",
+    "excerpt": "Kısa özet buraya.",
+    "readMore": "Devamını oku"
+  },
+  "partners": {
+    "title": "Ortaklarımız",
+    "partner": "Ortak {{number}}"
+  },
+  "about": {
+    "title": "Hakkımızda",
+    "description": "Durugentik, dünya çapında yetiştiricilere premium genetik çözümler sunmaya adanmıştır."
+  },
+  "contact": {
+    "title": "İletişim",
+    "name": "İsim",
+    "message": "Mesaj",
+    "send": "Gönder"
+  },
+  "footer": {
+    "developed_by": "Geliştirici"
+  }
+}
