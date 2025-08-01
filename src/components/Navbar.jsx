@@ -15,10 +15,12 @@ export default function Navbar({
     // Menü item’ları ve ref’ler
     const menuItems = [
         { id: "home", label: t("nav.home") },
+        { id: "services", label: t("nav.services") },
         { id: "products", label: t("nav.products") },
         { id: "blog", label: t("nav.blog") },
         { id: "partners", label: t("nav.partners") },
         { id: "aboutus", label: t("nav.aboutus") },
+        { id: "approach", label: t("nav.approach") },
         { id: "contact", label: t("nav.contact") },
     ];
     const menuRefs = useRef(menuItems.map(() => React.createRef()));
