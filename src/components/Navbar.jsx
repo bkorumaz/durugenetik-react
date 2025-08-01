@@ -58,37 +58,34 @@ export default function Navbar({
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
 
+    // Navbar BG: Light modda kesin bembeyaz, dark modda koyu
     const base =
         "fixed top-0 w-full z-30 shadow-md backdrop-blur transition-colors";
-    const themeBg = darkMode ? "bg-neutral-900" : "bg-white";
-    const opacity = scrolled ? "bg-opacity-70" : "bg-opacity-80";
-    const bgClasses = `${base} ${themeBg} ${opacity}`;
+    const themeBg = darkMode ? "bg-neutral-900" : "bg-gray-50";
+    const bgClasses = `${base} ${themeBg}`; // Opacity yok, doğrudan beyaz/koyu
 
-    // Dil ikonu olarak renksiz rozetler
-    const ENIcon = (
+    // PIXEL PERFECT SWITCH BUTONU STILI
+    const switchBtnClass =
+        "ml-2 flex items-center justify-center w-9 h-9 rounded-full border border-gray-300 dark:border-gray-600 " +
+        "bg-gray-100/60 dark:bg-neutral-700/80 transition hover:shadow-md hover:bg-gray-200/60 dark:hover:bg-gray-700/60 focus:outline-none";
+
+    // Dil butonu için text tam ortalı, tam yuvarlak
+    const ENTRButton = (code) => (
         <span
-            className="inline-flex w-7 h-7 rounded-full border border-gray-400 dark:border-gray-500 items-center justify-center text-xs font-semibold text-gray-700 dark:text-gray-200"
-            title="English"
+            className="flex items-center justify-center w-7 h-7 rounded-full font-semibold text-xs"
+            style={{ fontFamily: "inherit" }}
         >
-            EN
+            {code}
         </span>
     );
-    const TRIcon = (
-        <span
-            className="inline-flex w-7 h-7 rounded-full border border-gray-400 dark:border-gray-500 items-center justify-center text-xs font-semibold text-gray-700 dark:text-gray-200"
-            title="Türkçe"
-        >
-            TR
-        </span>
-    );
+
     // Geçilecek dili gösteren ikon
     const isTR = i18n.language === "tr";
-    const switchFlag = isTR ? ENIcon : TRIcon;
+    const switchFlag = isTR ? ENTRButton("EN") : ENTRButton("TR");
     const switchLabel = isTR ? "Switch to English" : "Türkçe'ye geç";
 
-    // Gelişmiş Dark/Light switch
+    // Dark/Light switch
     const [themeSwitching, setThemeSwitching] = useState(false);
-
     function handleThemeSwitch() {
         setThemeSwitching(true);
         setTimeout(() => setThemeSwitching(false), 350);
@@ -127,30 +124,29 @@ export default function Navbar({
         </svg>
     );
 
-    const themeBtnBase =
-        "ml-2 p-1 rounded-full relative transition hover:shadow-md focus:outline-none " +
-        "bg-gray-100/60 dark:bg-neutral-700/80 border border-gray-300 dark:border-gray-600 w-9 h-9 flex items-center justify-center";
-    const themeBtnSpin = themeSwitching
-        ? "animate-[spin_0.35s_linear]"
-        : "";
-
     function handleMenuClick(e, sectionId) {
         e.preventDefault();
         setMenuOpen(false);
         if (onMenuClick) onMenuClick(sectionId);
     }
 
+    // Menü yazıları için class, belirgin ve net renk + font-weight!
+    const navItemBase = "relative whitespace-nowrap capitalize px-2 py-1 font-semibold transition-colors";
+    const navItemLight = "text-gray-900 hover:text-teal-600";
+    const navItemDark = "text-gray-200 hover:text-teal-300";
+    const navItemActiveLight = "text-teal-700 font-bold";
+    const navItemActiveDark = "text-teal-300 font-bold";
+
     return (
         <nav className={bgClasses}>
             <div className="max-w-6xl mx-auto px-6 flex justify-between items-center h-16">
                 {/* Logo */}
                 <span className="font-extrabold text-2xl flex">
-          <span className="text-green-800 dark:text-green-300">Duru</span>
-          <span className="text-teal-500 dark:text-teal-200 ml-1">genetik</span>
-        </span>
+                    <span className="text-green-800 dark:text-green-300">Duru</span>
+                    <span className="text-teal-500 dark:text-teal-200 ml-1">genetik</span>
+                </span>
                 {/* Menü + underline */}
                 <div className="hidden md:flex items-center space-x-4">
-                    {/* Sadece menü item’larını ve underline’ı saran kapsayıcı */}
                     <div className="relative flex items-center" ref={menuContainerRef}>
                         {menuItems.map(({ id, label }, idx) => (
                             <a
@@ -159,17 +155,21 @@ export default function Navbar({
                                 ref={menuRefs.current[idx]}
                                 onClick={(e) => handleMenuClick(e, id)}
                                 className={
-                                    "relative whitespace-nowrap capitalize transition-colors px-2 py-1" +
-                                    (activeSection === id
-                                        ? " text-teal-600 dark:text-teal-300 font-semibold"
-                                        : " hover:text-teal-500 dark:hover:text-teal-300")
+                                    navItemBase +
+                                    " " +
+                                    (darkMode
+                                        ? (activeSection === id
+                                            ? navItemActiveDark
+                                            : navItemDark)
+                                        : (activeSection === id
+                                            ? navItemActiveLight
+                                            : navItemLight))
                                 }
                                 style={{ zIndex: 1 }}
                             >
                                 <span>{label}</span>
                             </a>
                         ))}
-                        {/* Animasyonlu underline */}
                         <div
                             className="absolute bottom-0 left-0 h-[3px] bg-teal-600 dark:bg-teal-300 rounded"
                             style={{
@@ -181,26 +181,26 @@ export default function Navbar({
                             }}
                         />
                     </div>
-                    {/* Dil Butonu (geçilecek dili ve tooltipi gösterir) */}
+                    {/* DİL BUTONU */}
                     <button
                         onClick={toggleLang}
-                        className="ml-4 p-1 rounded-full border border-gray-300 dark:border-gray-600 hover:bg-gray-200/60 dark:hover:bg-gray-700/60 transition focus:outline-none w-9 h-9 flex items-center justify-center"
+                        className={switchBtnClass}
                         aria-label={switchLabel}
                         title={switchLabel}
                         style={{ minWidth: 36, minHeight: 36 }}
                     >
                         {switchFlag}
                     </button>
-                    {/* Tema Butonu */}
+                    {/* DARK/LIGHT SWITCH */}
                     <button
                         onClick={handleThemeSwitch}
-                        className={`${themeBtnBase} ${themeBtnSpin}`}
+                        className={switchBtnClass + (themeSwitching ? " animate-[spin_0.35s_linear]" : "")}
                         aria-label="Toggle Theme"
                         style={{ minWidth: 36, minHeight: 36 }}
                     >
-            <span className="block transition-all duration-200 origin-center">
-              {darkMode ? moonIcon : sunIcon}
-            </span>
+                        <span className="block transition-all duration-200 origin-center">
+                            {darkMode ? moonIcon : sunIcon}
+                        </span>
                         <span
                             className={
                                 "pointer-events-none absolute inset-0 rounded-full opacity-40 " +
@@ -218,7 +218,6 @@ export default function Navbar({
                     onClick={() => setMenuOpen((prev) => !prev)}
                     aria-label="Menu"
                 >
-                    {/* Klasik hamburger */}
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none"
                          viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"
                          className="w-6 h-6">
@@ -236,10 +235,15 @@ export default function Navbar({
                                 href={`#${id}`}
                                 onClick={(e) => handleMenuClick(e, id)}
                                 className={
-                                    "whitespace-nowrap capitalize transition-colors px-2 py-1" +
-                                    (activeSection === id
-                                        ? " text-teal-600 dark:text-teal-300 font-semibold underline underline-offset-8"
-                                        : " hover:text-teal-500 dark:hover:text-teal-300")
+                                    navItemBase +
+                                    " " +
+                                    (darkMode
+                                        ? (activeSection === id
+                                            ? navItemActiveDark
+                                            : navItemDark)
+                                        : (activeSection === id
+                                            ? navItemActiveLight
+                                            : navItemLight))
                                 }
                             >
                                 {label}
@@ -248,7 +252,7 @@ export default function Navbar({
                         <div className="flex items-center space-x-4">
                             <button
                                 onClick={toggleLang}
-                                className="p-1 rounded-full border border-gray-300 dark:border-gray-600 hover:bg-gray-200/60 dark:hover:bg-gray-700/60 transition focus:outline-none w-9 h-9 flex items-center justify-center"
+                                className={switchBtnClass}
                                 aria-label={switchLabel}
                                 title={switchLabel}
                                 style={{ minWidth: 36, minHeight: 36 }}
@@ -257,13 +261,13 @@ export default function Navbar({
                             </button>
                             <button
                                 onClick={handleThemeSwitch}
-                                className={`${themeBtnBase} ${themeBtnSpin}`}
+                                className={switchBtnClass + (themeSwitching ? " animate-[spin_0.35s_linear]" : "")}
                                 aria-label="Toggle Theme"
                                 style={{ minWidth: 36, minHeight: 36 }}
                             >
-                <span className="block transition-all duration-200 origin-center">
-                  {darkMode ? moonIcon : sunIcon}
-                </span>
+                                <span className="block transition-all duration-200 origin-center">
+                                    {darkMode ? moonIcon : sunIcon}
+                                </span>
                                 <span
                                     className={
                                         "pointer-events-none absolute inset-0 rounded-full opacity-40 " +

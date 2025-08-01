@@ -24,8 +24,34 @@ const SECTION_IDS = [
 ];
 
 export default function App() {
-    const [darkMode, setDarkMode] = useState(false);
+    // ----- Final Dark Mode Logic -----
+    const [darkMode, setDarkMode] = useState(() => {
+        if (typeof window !== "undefined") {
+            const userPref = localStorage.getItem("theme");
+            if (userPref) return userPref === "dark";
+            return window.matchMedia("(prefers-color-scheme: dark)").matches;
+        }
+        return false;
+    });
+    useEffect(() => {
+        if (darkMode) {
+            document.documentElement.classList.add("dark");
+            localStorage.setItem("theme", "dark");
+        } else {
+            document.documentElement.classList.remove("dark");
+            localStorage.setItem("theme", "light");
+        }
+    }, [darkMode]);
+    const toggleDark = () => setDarkMode((prev) => !prev);
+
+    // Dil
     const { i18n } = useTranslation();
+    const toggleLang = () => {
+        const newLang = i18n.language === "en" ? "tr" : "en";
+        i18n.changeLanguage(newLang);
+    };
+
+    // Section scroll
     const [activeSection, setActiveSection] = useState("home");
     const sectionRefs = useRef(
         SECTION_IDS.reduce((acc, id) => {
@@ -34,21 +60,6 @@ export default function App() {
         }, {})
     );
 
-    useEffect(() => {
-        document.documentElement.classList.remove("dark");
-    }, []);
-
-    const toggleDark = () => {
-        setDarkMode((prev) => !prev);
-        document.documentElement.classList.toggle("dark");
-    };
-
-    const toggleLang = () => {
-        const newLang = i18n.language === "en" ? "tr" : "en";
-        i18n.changeLanguage(newLang);
-    };
-
-    // Aktif section scroll event ile takip
     useEffect(() => {
         const handleScroll = () => {
             const scrollPos = window.scrollY + 65;
@@ -67,22 +78,19 @@ export default function App() {
 
         window.addEventListener("scroll", handleScroll, { passive: true });
         handleScroll();
-
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    // Navbar tıklandığında scroll animasyonu
     const handleMenuClick = (sectionId) => {
         const ref = sectionRefs.current[sectionId];
         if (ref?.current) {
             window.scrollTo({
                 top:
                     ref.current.getBoundingClientRect().top +
-                    window.scrollY -
-                    64, // Navbar yüksekliği (16 * 4 px)
+                    window.scrollY - 64,
                 behavior: "smooth",
             });
-            setActiveSection(sectionId); // Tıklayınca da hemen aktif et
+            setActiveSection(sectionId);
         }
     };
 
