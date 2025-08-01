@@ -2,6 +2,12 @@
 module.exports = {
   darkMode: 'class',        // ← force “class” mode only
   content: ['./index.html','./src/**/*.{js,jsx,ts,tsx}'],
-  theme: { extend: {} },
+  theme: {
+    extend: {
+      fontFamily: {
+        league: ['"League Spartan"', 'sans-serif'],
+      },
+    },
+  },
   plugins: [],
 }

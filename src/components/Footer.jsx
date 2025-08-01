@@ -4,9 +4,18 @@ import { useTranslation } from "react-i18next";
 export default function Footer() {
   const { t } = useTranslation();
   return (
-    <footer className="py-8 bg-gray-700 dark:bg-gray-900 text-center">
-      <p className="text-white">
-        © {new Date().getFullYear()} Durugentik. {t("footer.developed_by")} sers coding.
+    <footer className="py-8 bg-white/80 dark:bg-neutral-900/80 text-center">
+      <p className="text-gray-900 dark:text-white">
+        © {new Date().getFullYear()} Durugentik. {t("footer.developed_by")}{" "}
+        <a
+          href="https://sers.com.tr"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-bold font-league"
+        >
+          sers
+        </a>
+        .
       </p>
     </footer>
   );
