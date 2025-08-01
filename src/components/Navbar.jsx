@@ -12,7 +12,6 @@ export default function Navbar({
     const [scrolled, setScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
 
-    // Menu items & refs
     const menuItems = [
         { id: "home", label: t("nav.home") },
         { id: "services", label: t("nav.services") },
@@ -26,7 +25,6 @@ export default function Navbar({
     const menuRefs = useRef(menuItems.map(() => React.createRef()));
     const menuContainerRef = useRef();
 
-    // Underline position
     const [underline, setUnderline] = useState({ left: 0, width: 0 });
     useEffect(() => {
         const idx = menuItems.findIndex((item) => item.id === activeSection);
@@ -57,18 +55,16 @@ export default function Navbar({
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
 
-    // PURE WHITE or LIGHT GRAY NAVBAR
+    // Navbar BG (choose one line below):
     const base = "fixed top-0 w-full z-30 shadow-md backdrop-blur transition-colors";
-    // Change to bg-gray-50 for super-light gray look if you want
-    const themeBg = darkMode ? "bg-neutral-900" : "bg-white";
+    const themeBg = darkMode ? "bg-neutral-900" : "bg-white"; // For pure white
+    // const themeBg = darkMode ? "bg-neutral-900" : "bg-gray-50"; // For super-light gray
     const bgClasses = `${base} ${themeBg}`;
 
-    // Buttons (pixel-perfect)
     const switchBtnClass =
         "ml-2 flex items-center justify-center w-9 h-9 rounded-full border border-gray-300 dark:border-gray-600 " +
         "bg-gray-100/60 dark:bg-neutral-700/80 transition hover:shadow-md hover:bg-gray-200/60 dark:hover:bg-gray-700/60 focus:outline-none";
 
-    // EN/TR Button (centered)
     const ENTRButton = (code) => (
         <span
             className="flex items-center justify-center w-7 h-7 rounded-full font-semibold text-xs"
@@ -81,7 +77,6 @@ export default function Navbar({
     const switchFlag = isTR ? ENTRButton("EN") : ENTRButton("TR");
     const switchLabel = isTR ? "Switch to English" : "Türkçe'ye geç";
 
-    // Dark/Light Switch
     const [themeSwitching, setThemeSwitching] = useState(false);
     function handleThemeSwitch() {
         setThemeSwitching(true);
@@ -127,7 +122,7 @@ export default function Navbar({
         if (onMenuClick) onMenuClick(sectionId);
     }
 
-    // Nav items: bolder, more visible
+    // More readable nav item classes:
     const navItemBase = "relative whitespace-nowrap capitalize px-2 py-1 font-semibold transition-colors";
     const navItemLight = "text-gray-900 hover:text-teal-600";
     const navItemDark = "text-gray-200 hover:text-teal-300";

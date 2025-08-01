@@ -24,7 +24,7 @@ const SECTION_IDS = [
 ];
 
 export default function App() {
-    // Dark Mode: remembers last mode, defaults to system
+    // Dark Mode (localStorage + system)
     const [darkMode, setDarkMode] = useState(() => {
         if (typeof window !== "undefined") {
             const userPref = localStorage.getItem("theme");
@@ -102,7 +102,7 @@ export default function App() {
                 onMenuClick={handleMenuClick}
             />
 
-            {/* Desktop/Tablet: background video */}
+            {/* Universal BG Video (both mobile & desktop) */}
             <video
                 autoPlay
                 loop
@@ -110,7 +110,7 @@ export default function App() {
                 playsInline
                 aria-hidden="true"
                 poster="/images/bg-mobile.jpg"
-                className="hidden md:block fixed inset-0 w-full h-full object-cover -z-10 pointer-events-none select-none"
+                className="fixed inset-0 w-full h-full object-cover -z-10 pointer-events-none select-none"
                 style={{
                     filter: darkMode
                         ? "brightness(1) saturate(2) sepia(1) hue-rotate(80deg)"
@@ -119,21 +119,6 @@ export default function App() {
             >
                 <source src="/videos/dna-bg-video2.mp4" type="video/mp4" />
             </video>
-            {/* Mobile: static background image */}
-            <img
-                src="/images/bg-mobile.jpg"
-                alt=""
-                aria-hidden="true"
-                className="block md:hidden fixed inset-0 w-full h-full object-cover -z-10 pointer-events-none select-none"
-                style={{
-                    filter: darkMode
-                        ? "brightness(1) saturate(2) sepia(1) hue-rotate(80deg)"
-                        : "invert(1) hue-rotate(120deg)",
-                }}
-            />
-
-            {/* Remove overlays! */}
-            {/* <div className={`fixed inset-0 -z-10 ${darkMode ? "bg-transparent" : "bg-gray-100/40"}`} /> */}
 
             <main className="relative z-10 pt-16">
                 <section id="home" ref={sectionRefs.current.home}>
