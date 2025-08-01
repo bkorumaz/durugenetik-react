@@ -1,10 +1,12 @@
 {
   "nav": {
     "home": "Home",
+    "services": "Services",
     "products": "Products",
     "blog": "Blog",
     "partners": "Partners",
     "aboutus": "About Us",
+    "approach": "Approach",
     "contact": "Contact"
   },
   "hero": {
@@ -28,7 +30,33 @@
   },
   "about": {
     "title": "About Us",
-    "description": "Durugentik is dedicated to delivering premium genetics solutions to breeders worldwide."
+    "description": "Since 2010, DuruGenetik has stood beside farmers at every step—from sire selection to post-calving monitoring. Our goal is to blend scientific innovation with field expertise to build healthy, highly productive herds."
+  },
+  "services": {
+    "title": "Our Services",
+    "list": [
+      {
+        "title": "Genetic Consulting",
+        "description": "Expert guidance on herd management and sire selection."
+      },
+      {
+        "title": "Sexed Semen",
+        "description": "Certified sexed semen supplies for high conception rates."
+      },
+      {
+        "title": "Embryo Transfer",
+        "description": "Modern embryo transfer solutions to multiply superior genetics quickly."
+      }
+    ]
+  },
+  "approach": {
+    "title": "The DuruGenetik Approach",
+    "description": "We combine scientific expertise with field experience to prepare your herd for the future.",
+    "points": [
+      "Tailored strategies for every farm",
+      "Ongoing performance monitoring and reporting",
+      "Innovative solutions for sustainable production"
+    ]
   },
   "contact": {
     "title": "Contact",

@@ -1,10 +1,12 @@
 {
   "nav": {
     "home": "Anasayfa",
+    "services": "Hizmetler",
     "products": "Ürünler",
     "blog": "Blog",
     "partners": "Ortaklar",
     "aboutus": "Hakkımızda",
+    "approach": "Yaklaşımımız",
     "contact": "İletişim"
   },
   "hero": {
@@ -28,7 +30,33 @@
   },
   "about": {
     "title": "Hakkımızda",
-    "description": "Durugentik, dünya çapında yetiştiricilere premium genetik çözümler sunmaya adanmıştır."
+    "description": "DuruGenetik, 2010'dan bu yana damızlık seçiminden doğum sonrası takibe kadar her adımda çiftçinin yanında olan bir genetik teknolojileri şirketidir. Amacımız, yüksek verimli ve sağlıklı sürüler oluşturmak için bilimsel yenilikleri pratik deneyimle buluşturmaktır."
+  },
+  "services": {
+    "title": "Hizmetlerimiz",
+    "list": [
+      {
+        "title": "Genetik Danışmanlık",
+        "description": "Sürü yönetimi ve damızlık seçiminde uzman rehberlik."
+      },
+      {
+        "title": "Seksli Semen",
+        "description": "Yüksek gebelik oranları için sertifikalı seksli semen tedariki."
+      },
+      {
+        "title": "Embriyo Transferi",
+        "description": "Üstün genetik potansiyeli hızla çoğaltmak için modern embriyo transferi çözümleri."
+      }
+    ]
+  },
+  "approach": {
+    "title": "DuruGenetik Yaklaşımı",
+    "description": "Bilimsel altyapı ve saha deneyimini bir araya getirerek sürülerinizi geleceğe hazırlarız.",
+    "points": [
+      "Çiftçilere özel strateji ve planlama",
+      "Düzenli performans takibi ve raporlama",
+      "Sürdürülebilir üretim için yenilikçi çözümler"
+    ]
   },
   "contact": {
     "title": "İletişim",
