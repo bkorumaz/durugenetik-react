@@ -60,10 +60,8 @@ export default function Navbar({
 
     const base =
         "fixed top-0 w-full z-30 shadow-md backdrop-blur transition-colors";
-    const themeBg = darkMode
-        ? "bg-neutral-900 bg-opacity-95"
-        : "bg-white bg-opacity-90";
-    const opacity = scrolled ? "bg-opacity-80" : "";
+    const themeBg = darkMode ? "bg-neutral-900" : "bg-white";
+    const opacity = scrolled ? "bg-opacity-70" : "bg-opacity-80";
     const bgClasses = `${base} ${themeBg} ${opacity}`;
 
     // Yuvarlak bayraklar (flat ve modern)
