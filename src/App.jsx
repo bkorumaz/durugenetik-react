@@ -92,6 +92,11 @@ export default function App() {
         }
     };
 
+    // Products'ta hero.mp4, diğer tüm sectionlarda dna-bg-video2.mp4
+    const videoSrc = activeSection === "products"
+        ? "/videos/hero.mp4"
+        : "/videos/dna-bg-video2.mp4";
+
     return (
         <div className="min-h-screen text-gray-800 dark:text-gray-200">
             <Navbar
@@ -102,7 +107,7 @@ export default function App() {
                 onMenuClick={handleMenuClick}
             />
 
-            {/* Universal BG Video (both mobile & desktop) */}
+            {/* Background video - sadece src değişiyor, başka hiçbir efekt yok */}
             <video
                 autoPlay
                 loop
@@ -114,10 +119,11 @@ export default function App() {
                 style={{
                     filter: darkMode
                         ? "brightness(1) saturate(2) sepia(1) hue-rotate(80deg)"
-                        : "invert(1) hue-rotate(120deg)",
+                        : "invert(1) hue-rotate(120deg)"
                 }}
+                key={videoSrc} // src değişince video yeniden başlasın diye
             >
-                <source src="/videos/dna-bg-video2.mp4" type="video/mp4" />
+                <source src={videoSrc} type="video/mp4" />
             </video>
 
             <main className="relative z-10 pt-16">
@@ -128,7 +134,7 @@ export default function App() {
                     <Services />
                 </section>
                 <section id="products" ref={sectionRefs.current.products}>
-                    <Products />
+                    <Products darkMode={darkMode} />
                 </section>
                 <section id="blog" ref={sectionRefs.current.blog}>
                     <Blog />
@@ -146,7 +152,6 @@ export default function App() {
                     <Contact />
                 </section>
             </main>
-
             <Footer />
         </div>
     );

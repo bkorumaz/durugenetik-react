@@ -1,44 +1,51 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 
 export default function Hero({ darkMode }) {
   const { t } = useTranslation();
-  const [offsetY, setOffsetY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => setOffsetY(window.scrollY);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  // Fade out hero video as user scrolls.
-  const fadeOpacity = 1 - Math.min(offsetY / (window.innerHeight * 0.75), 1);
 
   return (
-    <section id="home" className="h-screen pt-16 relative overflow-hidden">
-      <video
-        autoPlay
-        loop
-        muted
-        style={{ opacity: fadeOpacity }}
-        className="absolute inset-0 w-full h-full object-cover"
-      >
-        <source src="/videos/hero.mp4" type="video/mp4" />
-      </video>
-      {darkMode && (
-        <div className="absolute inset-0 bg-black bg-opacity-50 z-10" />
-      )}
-      {/* No gradient fade to avoid white flash */}
-      <div className="pointer-events-none absolute bottom-0 inset-x-0 h-32 bg-gradient-to-t from-transparent to-transparent z-10" />
-      <div className="relative z-20 text-center px-6 mt-16">
-        <h1 className="text-6xl font-bold mb-4 text-gray-900 dark:text-white">
-          {t("hero.title")}
+    <section
+      id="home"
+      className="relative h-[100vh] flex flex-col items-center justify-center pt-16 overflow-hidden select-none"
+    >
+      {/* Karartma layer (gece/gündüz efekti) */}
+      <div
+        className={`absolute inset-0 transition duration-300 z-0 pointer-events-none ${
+          darkMode
+            ? "bg-black/60"
+            : "bg-gradient-to-b from-white/60 via-white/20 to-white/0"
+        }`}
+      />
+      {/* Üstten çok hafif bir blur/fade */}
+      <div className="absolute inset-0 z-0 pointer-events-none backdrop-blur-[2px]" />
+
+      {/* Content */}
+      <div className="relative z-10 flex flex-col items-center justify-center w-full h-full text-center px-6">
+        <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-5 text-green-900 dark:text-green-300 drop-shadow-xl tracking-tight">
+          Duru<span className="text-teal-600 dark:text-teal-300">genetik</span>
         </h1>
-        <p className="text-xl max-w-2xl mx-auto text-gray-900 dark:text-white">
-          {t("hero.subtitle")}
+        <p className="text-xl sm:text-2xl md:text-3xl font-medium text-gray-800 dark:text-gray-100 mb-7 max-w-2xl mx-auto drop-shadow">
+          {t("hero.subtitle") ||
+            "Geleceğin genetiği, sürdürülebilir tarım ve yüksek verimlilik için yeni nesil çözümler."}
         </p>
+        <a
+          href="#products"
+          className="inline-block mt-3 px-8 py-3 rounded-2xl bg-teal-600 hover:bg-teal-700 transition text-lg font-bold text-white shadow-xl hover:scale-105 active:scale-95"
+        >
+          {t("hero.cta") || "Ürünlerimizi Keşfet"}
+        </a>
+      </div>
+      {/* Aşağı ok animasyonu */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20">
+        <a href="#products" aria-label="Scroll to products" className="animate-bounce">
+          <svg width="38" height="38" fill="none" stroke="currentColor" strokeWidth={2} className="text-teal-600 dark:text-teal-300">
+            <circle cx="19" cy="19" r="17" strokeOpacity=".15" />
+            <path d="M12 18l7 7 7-7" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M19 10v14" strokeLinecap="round" />
+          </svg>
+        </a>
       </div>
     </section>
   );
 }
-
