@@ -15,8 +15,8 @@ export default function Navbar({ darkMode, toggleLang, toggleDark }) {
   const base =
     "fixed top-0 w-full z-30 shadow-md backdrop-blur transition-colors";
   const themeBg = darkMode
-    ? "bg-black bg-opacity-90"
-    : "bg-white bg-opacity-90";
+      ? "bg-neutral-900 bg-opacity-95"
+      : "bg-white bg-opacity-90";
   const opacity = scrolled ? "bg-opacity-80" : "";
   const bgClasses = `${base} ${themeBg} ${opacity}`;
 
