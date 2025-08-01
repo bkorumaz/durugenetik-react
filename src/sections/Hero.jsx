@@ -1,37 +1,44 @@
-// Hero.jsx
-
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Hero({ darkMode }) {
-    return (
-        <section className="relative w-full min-h-[60vh] flex flex-col items-center justify-center overflow-hidden">
-            {/* Hero background video */}
-            <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                aria-hidden="true"
-                poster="/images/hero-poster.jpg" // poster jpeg ekle, hızlı açılır
-                className="absolute inset-0 w-full h-full object-cover -z-10 pointer-events-none select-none"
-                style={{
-                    filter: darkMode
-                        ? "brightness(1) saturate(1.5) sepia(0.8) hue-rotate(80deg)"
-                        : "invert(1) hue-rotate(120deg)",
-                }}
-            >
-                <source src="/videos/hero-optimized.mp4" type="video/mp4" />
-            </video>
+  const { t } = useTranslation();
+  const [offsetY, setOffsetY] = useState(0);
 
-            {/* HERO CONTENT */}
-            <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 py-12">
-                <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-teal-600 dark:text-teal-300 drop-shadow-lg">
-                    Bilimin Geleceği: DuruGenetik
-                </h1>
-                <p className="max-w-xl text-lg md:text-xl text-gray-800 dark:text-gray-200 font-medium drop-shadow">
-                    Genetik ve biyoteknolojide inovasyonun öncüsü!
-                </p>
-            </div>
-        </section>
-    );
+  useEffect(() => {
+    const handleScroll = () => setOffsetY(window.scrollY);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Fade out hero video as user scrolls.
+  const fadeOpacity = 1 - Math.min(offsetY / (window.innerHeight * 0.75), 1);
+
+  return (
+    <section id="home" className="h-screen pt-16 relative overflow-hidden">
+      <video
+        autoPlay
+        loop
+        muted
+        style={{ opacity: fadeOpacity }}
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/videos/hero.mp4" type="video/mp4" />
+      </video>
+      {darkMode && (
+        <div className="absolute inset-0 bg-black bg-opacity-50 z-10" />
+      )}
+      {/* No gradient fade to avoid white flash */}
+      <div className="pointer-events-none absolute bottom-0 inset-x-0 h-32 bg-gradient-to-t from-transparent to-transparent z-10" />
+      <div className="relative z-20 text-center px-6 mt-16">
+        <h1 className="text-6xl font-bold mb-4 text-gray-900 dark:text-white">
+          {t("hero.title")}
+        </h1>
+        <p className="text-xl max-w-2xl mx-auto text-gray-900 dark:text-white">
+          {t("hero.subtitle")}
+        </p>
+      </div>
+    </section>
+  );
 }
+

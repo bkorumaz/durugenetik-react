@@ -56,7 +56,7 @@ export default function Navbar({
     }, []);
 
     // Navbar BG (choose one line below):
-    const base = "fixed top-0 w-full z-30 shadow-md backdrop-blur transition-colors";
+    const base = "fixed top-0 w-full z-30 backdrop-blur transition-colors";
     const themeBg = darkMode ? "bg-neutral-900" : "bg-white"; // For pure white
     // const themeBg = darkMode ? "bg-neutral-900" : "bg-gray-50"; // For super-light gray
     const bgClasses = `${base} ${themeBg}`;
