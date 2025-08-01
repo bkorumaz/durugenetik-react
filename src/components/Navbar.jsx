@@ -2,14 +2,13 @@ import React, { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 
 export default function Navbar({
-                                   darkMode,
-                                   toggleLang,
-                                   toggleDark,
-                                   activeSection,
-                                   onMenuClick,
-                               }) {
+    darkMode,
+    toggleLang,
+    toggleDark,
+    activeSection,
+    onMenuClick,
+}) {
     const { t, i18n } = useTranslation();
-    const [scrolled, setScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
 
     const menuItems = [
@@ -24,8 +23,8 @@ export default function Navbar({
     ];
     const menuRefs = useRef(menuItems.map(() => React.createRef()));
     const menuContainerRef = useRef();
-
     const [underline, setUnderline] = useState({ left: 0, width: 0 });
+
     useEffect(() => {
         const idx = menuItems.findIndex((item) => item.id === activeSection);
         const ref = menuRefs.current[idx];
@@ -49,21 +48,13 @@ export default function Navbar({
         }
     }, [activeSection, menuItems]);
 
-    useEffect(() => {
-        const onScroll = () => setScrolled(window.scrollY > 0);
-        window.addEventListener("scroll", onScroll);
-        return () => window.removeEventListener("scroll", onScroll);
-    }, []);
-
-    // Navbar BG (choose one line below):
-    const base = "fixed top-0 w-full z-30 backdrop-blur transition-colors";
-    const themeBg = darkMode ? "bg-neutral-900" : "bg-white"; // For pure white
-    // const themeBg = darkMode ? "bg-neutral-900" : "bg-gray-50"; // For super-light gray
+    // FULL DÜZ RENK (asla opacity, blur, overlay, vs yok)
+    const base = "fixed top-0 left-0 w-full z-30 transition-colors";
+    const themeBg = darkMode ? "bg-neutral-900" : "bg-white";
     const bgClasses = `${base} ${themeBg}`;
 
     const switchBtnClass =
-        "ml-2 flex items-center justify-center w-9 h-9 rounded-full border border-gray-300 dark:border-gray-600 " +
-        "bg-gray-100/60 dark:bg-neutral-700/80 transition hover:shadow-md hover:bg-gray-200/60 dark:hover:bg-gray-700/60 focus:outline-none";
+        "ml-2 flex items-center justify-center w-9 h-9 rounded-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-neutral-900 transition hover:shadow-md focus:outline-none";
 
     const ENTRButton = (code) => (
         <span
@@ -122,7 +113,7 @@ export default function Navbar({
         if (onMenuClick) onMenuClick(sectionId);
     }
 
-    // More readable nav item classes:
+    // Nav item classes:
     const navItemBase = "relative whitespace-nowrap capitalize px-2 py-1 font-semibold transition-colors";
     const navItemLight = "text-gray-900 hover:text-teal-600";
     const navItemDark = "text-gray-200 hover:text-teal-300";
@@ -193,15 +184,6 @@ export default function Navbar({
                         <span className="block transition-all duration-200 origin-center">
                             {darkMode ? moonIcon : sunIcon}
                         </span>
-                        <span
-                            className={
-                                "pointer-events-none absolute inset-0 rounded-full opacity-40 " +
-                                (darkMode
-                                    ? "bg-neutral-600 blur-sm"
-                                    : "bg-yellow-100 blur-sm")
-                            }
-                            style={{ zIndex: -1 }}
-                        />
                     </button>
                 </div>
                 {/* Mobile hamburger */}
@@ -219,7 +201,7 @@ export default function Navbar({
                 </button>
             </div>
             {menuOpen && (
-                <div className="md:hidden bg-white dark:bg-gray-700">
+                <div className={`md:hidden ${darkMode ? "bg-neutral-900" : "bg-white"}`}>
                     <div className="flex flex-col px-6 py-4 space-y-4">
                         {menuItems.map(({ id, label }) => (
                             <a
@@ -260,15 +242,6 @@ export default function Navbar({
                                 <span className="block transition-all duration-200 origin-center">
                                     {darkMode ? moonIcon : sunIcon}
                                 </span>
-                                <span
-                                    className={
-                                        "pointer-events-none absolute inset-0 rounded-full opacity-40 " +
-                                        (darkMode
-                                            ? "bg-neutral-600 blur-sm"
-                                            : "bg-yellow-100 blur-sm")
-                                    }
-                                    style={{ zIndex: -1 }}
-                                />
                             </button>
                         </div>
                     </div>

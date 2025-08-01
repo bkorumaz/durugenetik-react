@@ -24,7 +24,7 @@ const SECTION_IDS = [
 ];
 
 export default function App() {
-    // Dark Mode (localStorage + system)
+    // Dark Mode
     const [darkMode, setDarkMode] = useState(() => {
         if (typeof window !== "undefined") {
             const userPref = localStorage.getItem("theme");
@@ -59,6 +59,19 @@ export default function App() {
             return acc;
         }, {})
     );
+
+    // Video yüklenme takibi (white flash fix)
+    const [videoLoaded, setVideoLoaded] = useState(true);
+    const videoSrc = activeSection === "products"
+        ? "/videos/hero.mp4"
+        : "/videos/dna-bg-video2.mp4";
+    const poster = activeSection === "products"
+        ? "/images/hero-poster.jpg" // varsa, yoksa dna-bg-video2 posterini kullan
+        : "/images/bg-mobile.jpg";
+    useEffect(() => {
+        setVideoLoaded(false);
+    }, [videoSrc]);
+
     useEffect(() => {
         const handleScroll = () => {
             const scrollPos = window.scrollY + 65;
@@ -92,11 +105,6 @@ export default function App() {
         }
     };
 
-    // Products'ta hero.mp4, diğer tüm sectionlarda dna-bg-video2.mp4
-    const videoSrc = activeSection === "products"
-        ? "/videos/hero.mp4"
-        : "/videos/dna-bg-video2.mp4";
-
     return (
         <div className="min-h-screen text-gray-800 dark:text-gray-200">
             <Navbar
@@ -106,7 +114,15 @@ export default function App() {
                 activeSection={activeSection}
                 onMenuClick={handleMenuClick}
             />
-
+            {/* Video yüklenene kadar poster arka plan */}
+            <div
+                className={`fixed inset-0 w-full h-full -z-20 pointer-events-none select-none transition-all duration-150`}
+                style={{
+                    background: `url(${poster}) center center / cover no-repeat`,
+                    opacity: videoLoaded ? 0 : 1,
+                    transition: "opacity 0.15s"
+                }}
+            />
             {/* Background video - sadece src değişiyor, başka hiçbir efekt yok */}
             <video
                 autoPlay
@@ -114,14 +130,15 @@ export default function App() {
                 muted
                 playsInline
                 aria-hidden="true"
-                poster="/images/bg-mobile.jpg"
+                poster={poster}
                 className="fixed inset-0 w-full h-full object-cover -z-10 pointer-events-none select-none"
                 style={{
                     filter: darkMode
                         ? "brightness(1) saturate(2) sepia(1) hue-rotate(80deg)"
                         : "invert(1) hue-rotate(120deg)"
                 }}
-                key={videoSrc} // src değişince video yeniden başlasın diye
+                key={videoSrc}
+                onLoadedData={() => setVideoLoaded(true)}
             >
                 <source src={videoSrc} type="video/mp4" />
             </video>
