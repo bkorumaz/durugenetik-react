@@ -64,36 +64,26 @@ export default function Navbar({
     const opacity = scrolled ? "bg-opacity-70" : "bg-opacity-80";
     const bgClasses = `${base} ${themeBg} ${opacity}`;
 
-    // Yuvarlak bayraklar (flat ve modern)
-    const UKFlag = (
-        <span className="inline-block w-7 h-7 rounded-full overflow-hidden border border-gray-200 shadow" title="English">
-      <svg viewBox="0 0 64 64" className="w-full h-full object-cover">
-        <circle cx="32" cy="32" r="32" fill="#012169"/>
-        <g>
-          <path d="M0 0L64 64M64 0L0 64" stroke="#FFF" strokeWidth="10"/>
-          <path d="M0 0L64 64M64 0L0 64" stroke="#C8102E" strokeWidth="6"/>
-        </g>
-        <rect x="27" width="10" height="64" fill="#FFF"/>
-        <rect y="27" width="64" height="10" fill="#FFF"/>
-        <rect x="29" width="6" height="64" fill="#C8102E"/>
-        <rect y="29" width="64" height="6" fill="#C8102E"/>
-      </svg>
-    </span>
+    // Dil ikonu olarak renksiz rozetler
+    const ENIcon = (
+        <span
+            className="inline-flex w-7 h-7 rounded-full border border-gray-400 dark:border-gray-500 items-center justify-center text-xs font-semibold text-gray-700 dark:text-gray-200"
+            title="English"
+        >
+            EN
+        </span>
     );
-    const TurkeyFlag = (
-        <span className="inline-block w-7 h-7 rounded-full overflow-hidden border border-gray-200 shadow" title="Türkçe">
-      <svg viewBox="0 0 64 64" className="w-full h-full object-cover">
-        <circle cx="32" cy="32" r="32" fill="#E30A17"/>
-        <circle cx="27" cy="32" r="14" fill="#fff"/>
-        <circle cx="32" cy="32" r="11" fill="#E30A17"/>
-        <circle cx="40" cy="32" r="4" fill="#fff"/>
-        <path d="M48 32l5 3-5 3v-6z" fill="#fff"/>
-      </svg>
-    </span>
+    const TRIcon = (
+        <span
+            className="inline-flex w-7 h-7 rounded-full border border-gray-400 dark:border-gray-500 items-center justify-center text-xs font-semibold text-gray-700 dark:text-gray-200"
+            title="Türkçe"
+        >
+            TR
+        </span>
     );
     // Geçilecek dili gösteren ikon
     const isTR = i18n.language === "tr";
-    const switchFlag = isTR ? UKFlag : TurkeyFlag;
+    const switchFlag = isTR ? ENIcon : TRIcon;
     const switchLabel = isTR ? "Switch to English" : "Türkçe'ye geç";
 
     // Gelişmiş Dark/Light switch
@@ -106,9 +96,15 @@ export default function Navbar({
     }
 
     const sunIcon = (
-        <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none">
-            <circle cx="12" cy="12" r="5" fill="#FFD93A" />
-            <g stroke="#FFD93A" strokeWidth="2">
+        <svg
+            className="w-7 h-7 text-gray-700 dark:text-gray-200"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+        >
+            <circle cx="12" cy="12" r="5" />
+            <g>
                 <line x1="12" y1="1" x2="12" y2="3" />
                 <line x1="12" y1="21" x2="12" y2="23" />
                 <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
