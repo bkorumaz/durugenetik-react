@@ -11,7 +11,7 @@ export default function Footer() {
           href="https://sers.com.tr"
           target="_blank"
           rel="noopener noreferrer"
-          className="font-bold font-league"
+          className="font-bold font-league text-xl"
         >
           sers
         </a>
