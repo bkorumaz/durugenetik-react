@@ -24,7 +24,7 @@ const SECTION_IDS = [
 ];
 
 export default function App() {
-    // ----- Final Dark Mode Logic -----
+    // Dark Mode: remembers last mode, defaults to system
     const [darkMode, setDarkMode] = useState(() => {
         if (typeof window !== "undefined") {
             const userPref = localStorage.getItem("theme");
@@ -44,14 +44,14 @@ export default function App() {
     }, [darkMode]);
     const toggleDark = () => setDarkMode((prev) => !prev);
 
-    // Dil
+    // Language
     const { i18n } = useTranslation();
     const toggleLang = () => {
         const newLang = i18n.language === "en" ? "tr" : "en";
         i18n.changeLanguage(newLang);
     };
 
-    // Section scroll
+    // Section scroll & highlight
     const [activeSection, setActiveSection] = useState("home");
     const sectionRefs = useRef(
         SECTION_IDS.reduce((acc, id) => {
@@ -59,7 +59,6 @@ export default function App() {
             return acc;
         }, {})
     );
-
     useEffect(() => {
         const handleScroll = () => {
             const scrollPos = window.scrollY + 65;
@@ -75,7 +74,6 @@ export default function App() {
             }
             setActiveSection(current);
         };
-
         window.addEventListener("scroll", handleScroll, { passive: true });
         handleScroll();
         return () => window.removeEventListener("scroll", handleScroll);
@@ -104,24 +102,38 @@ export default function App() {
                 onMenuClick={handleMenuClick}
             />
 
+            {/* Desktop/Tablet: background video */}
             <video
                 autoPlay
                 loop
                 muted
+                playsInline
+                aria-hidden="true"
+                poster="/images/bg-mobile.jpg"
+                className="hidden md:block fixed inset-0 w-full h-full object-cover -z-10 pointer-events-none select-none"
                 style={{
                     filter: darkMode
                         ? "brightness(1) saturate(2) sepia(1) hue-rotate(80deg)"
                         : "invert(1) hue-rotate(120deg)",
                 }}
-                className="fixed inset-0 w-full h-full object-cover -z-10"
             >
                 <source src="/videos/dna-bg-video2.mp4" type="video/mp4" />
             </video>
-            <div
-                className={`fixed inset-0 -z-10 ${
-                    darkMode ? "bg-transparent" : "bg-gray-100/40"
-                }`}
+            {/* Mobile: static background image */}
+            <img
+                src="/images/bg-mobile.jpg"
+                alt=""
+                aria-hidden="true"
+                className="block md:hidden fixed inset-0 w-full h-full object-cover -z-10 pointer-events-none select-none"
+                style={{
+                    filter: darkMode
+                        ? "brightness(1) saturate(2) sepia(1) hue-rotate(80deg)"
+                        : "invert(1) hue-rotate(120deg)",
+                }}
             />
+
+            {/* Remove overlays! */}
+            {/* <div className={`fixed inset-0 -z-10 ${darkMode ? "bg-transparent" : "bg-gray-100/40"}`} /> */}
 
             <main className="relative z-10 pt-16">
                 <section id="home" ref={sectionRefs.current.home}>

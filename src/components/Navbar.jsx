@@ -12,7 +12,7 @@ export default function Navbar({
     const [scrolled, setScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
 
-    // Menü item’ları ve ref’ler
+    // Menu items & refs
     const menuItems = [
         { id: "home", label: t("nav.home") },
         { id: "services", label: t("nav.services") },
@@ -26,9 +26,8 @@ export default function Navbar({
     const menuRefs = useRef(menuItems.map(() => React.createRef()));
     const menuContainerRef = useRef();
 
-    // Underline pozisyonu
+    // Underline position
     const [underline, setUnderline] = useState({ left: 0, width: 0 });
-
     useEffect(() => {
         const idx = menuItems.findIndex((item) => item.id === activeSection);
         const ref = menuRefs.current[idx];
@@ -58,18 +57,18 @@ export default function Navbar({
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
 
-    // Navbar BG: Light modda kesin bembeyaz, dark modda koyu
-    const base =
-        "fixed top-0 w-full z-30 shadow-md backdrop-blur transition-colors";
-    const themeBg = darkMode ? "bg-neutral-900" : "bg-gray-50";
-    const bgClasses = `${base} ${themeBg}`; // Opacity yok, doğrudan beyaz/koyu
+    // PURE WHITE or LIGHT GRAY NAVBAR
+    const base = "fixed top-0 w-full z-30 shadow-md backdrop-blur transition-colors";
+    // Change to bg-gray-50 for super-light gray look if you want
+    const themeBg = darkMode ? "bg-neutral-900" : "bg-white";
+    const bgClasses = `${base} ${themeBg}`;
 
-    // PIXEL PERFECT SWITCH BUTONU STILI
+    // Buttons (pixel-perfect)
     const switchBtnClass =
         "ml-2 flex items-center justify-center w-9 h-9 rounded-full border border-gray-300 dark:border-gray-600 " +
         "bg-gray-100/60 dark:bg-neutral-700/80 transition hover:shadow-md hover:bg-gray-200/60 dark:hover:bg-gray-700/60 focus:outline-none";
 
-    // Dil butonu için text tam ortalı, tam yuvarlak
+    // EN/TR Button (centered)
     const ENTRButton = (code) => (
         <span
             className="flex items-center justify-center w-7 h-7 rounded-full font-semibold text-xs"
@@ -78,13 +77,11 @@ export default function Navbar({
             {code}
         </span>
     );
-
-    // Geçilecek dili gösteren ikon
     const isTR = i18n.language === "tr";
     const switchFlag = isTR ? ENTRButton("EN") : ENTRButton("TR");
     const switchLabel = isTR ? "Switch to English" : "Türkçe'ye geç";
 
-    // Dark/Light switch
+    // Dark/Light Switch
     const [themeSwitching, setThemeSwitching] = useState(false);
     function handleThemeSwitch() {
         setThemeSwitching(true);
@@ -130,7 +127,7 @@ export default function Navbar({
         if (onMenuClick) onMenuClick(sectionId);
     }
 
-    // Menü yazıları için class, belirgin ve net renk + font-weight!
+    // Nav items: bolder, more visible
     const navItemBase = "relative whitespace-nowrap capitalize px-2 py-1 font-semibold transition-colors";
     const navItemLight = "text-gray-900 hover:text-teal-600";
     const navItemDark = "text-gray-200 hover:text-teal-300";
@@ -145,7 +142,7 @@ export default function Navbar({
                     <span className="text-green-800 dark:text-green-300">Duru</span>
                     <span className="text-teal-500 dark:text-teal-200 ml-1">genetik</span>
                 </span>
-                {/* Menü + underline */}
+                {/* Menu + underline */}
                 <div className="hidden md:flex items-center space-x-4">
                     <div className="relative flex items-center" ref={menuContainerRef}>
                         {menuItems.map(({ id, label }, idx) => (
@@ -181,7 +178,7 @@ export default function Navbar({
                             }}
                         />
                     </div>
-                    {/* DİL BUTONU */}
+                    {/* DIL BUTTON */}
                     <button
                         onClick={toggleLang}
                         className={switchBtnClass}
@@ -191,7 +188,7 @@ export default function Navbar({
                     >
                         {switchFlag}
                     </button>
-                    {/* DARK/LIGHT SWITCH */}
+                    {/* DARK/LIGHT BUTTON */}
                     <button
                         onClick={handleThemeSwitch}
                         className={switchBtnClass + (themeSwitching ? " animate-[spin_0.35s_linear]" : "")}
