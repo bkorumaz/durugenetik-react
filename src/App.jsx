@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Hero from "./sections/Hero";
@@ -10,64 +10,129 @@ import Contact from "./sections/Contact";
 import "./i18n";
 import { useTranslation } from "react-i18next";
 
+const SECTION_IDS = [
+    "home",
+    "products",
+    "blog",
+    "partners",
+    "aboutus",
+    "contact",
+];
+
 export default function App() {
-  const [darkMode, setDarkMode] = useState(false);
-  const { i18n } = useTranslation();
+    const [darkMode, setDarkMode] = useState(false);
+    const { i18n } = useTranslation();
+    const [activeSection, setActiveSection] = useState("home");
+    const sectionRefs = useRef(
+        SECTION_IDS.reduce((acc, id) => {
+            acc[id] = React.createRef();
+            return acc;
+        }, {})
+    );
 
-  useEffect(() => {
-    document.documentElement.classList.remove("dark");
-  }, []);
+    useEffect(() => {
+        document.documentElement.classList.remove("dark");
+    }, []);
 
-  const toggleDark = () => {
-    setDarkMode((prev) => !prev);
-    document.documentElement.classList.toggle("dark");
-  };
+    const toggleDark = () => {
+        setDarkMode((prev) => !prev);
+        document.documentElement.classList.toggle("dark");
+    };
 
-  const toggleLang = () => {
-    const newLang = i18n.language === "en" ? "tr" : "en";
-    i18n.changeLanguage(newLang);
-  };
+    const toggleLang = () => {
+        const newLang = i18n.language === "en" ? "tr" : "en";
+        i18n.changeLanguage(newLang);
+    };
 
-  return (
-    <div className="min-h-screen text-gray-800 dark:text-gray-200">
-      <Navbar
-        darkMode={darkMode}
-        toggleLang={toggleLang}
-        toggleDark={toggleDark}
-      />
+    // Aktif section scroll event ile takip
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollPos = window.scrollY + 65;
+            let current = SECTION_IDS[0];
+            for (let i = 0; i < SECTION_IDS.length; i++) {
+                const ref = sectionRefs.current[SECTION_IDS[i]].current;
+                if (ref) {
+                    const offsetTop = ref.offsetTop;
+                    if (scrollPos >= offsetTop) {
+                        current = SECTION_IDS[i];
+                    }
+                }
+            }
+            setActiveSection(current);
+        };
 
-      {/* Global fixed background video */}
-      <video
-        autoPlay
-        loop
-        muted
-        style={{
-          filter: darkMode
-            ? "brightness(1) saturate(2) sepia(1) hue-rotate(80deg)"
-            : "invert(1) hue-rotate(120deg)",
-        }}
-        className="fixed inset-0 w-full h-full object-cover -z-10"
-      >
-        <source src="/videos/dna-bg-video2.mp4" type="video/mp4" />
-      </video>
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        handleScroll();
 
-      {/* Light mode: white overlay; Dark mode: transparent */}
-      <div
-        className={`fixed inset-0 -z-10 ${
-          darkMode ? "bg-transparent" : "bg-gray-100/40"
-        }`}
-      />
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
-      <main className="relative z-10 pt-16">
-        <Hero darkMode={darkMode} />
-        <Products />
-        <Blog />
-        <Partners />
-        <About />
-        <Contact />
-      </main>
+    // Navbar tıklandığında scroll animasyonu
+    const handleMenuClick = (sectionId) => {
+        const ref = sectionRefs.current[sectionId];
+        if (ref?.current) {
+            window.scrollTo({
+                top:
+                    ref.current.getBoundingClientRect().top +
+                    window.scrollY -
+                    64, // Navbar yüksekliği (16 * 4 px)
+                behavior: "smooth",
+            });
+            setActiveSection(sectionId); // Tıklayınca da hemen aktif et
+        }
+    };
 
-      <Footer />
-    </div>
-  );
+    return (
+        <div className="min-h-screen text-gray-800 dark:text-gray-200">
+            <Navbar
+                darkMode={darkMode}
+                toggleLang={toggleLang}
+                toggleDark={toggleDark}
+                activeSection={activeSection}
+                onMenuClick={handleMenuClick}
+            />
+
+            <video
+                autoPlay
+                loop
+                muted
+                style={{
+                    filter: darkMode
+                        ? "brightness(1) saturate(2) sepia(1) hue-rotate(80deg)"
+                        : "invert(1) hue-rotate(120deg)",
+                }}
+                className="fixed inset-0 w-full h-full object-cover -z-10"
+            >
+                <source src="/videos/dna-bg-video2.mp4" type="video/mp4" />
+            </video>
+            <div
+                className={`fixed inset-0 -z-10 ${
+                    darkMode ? "bg-transparent" : "bg-gray-100/40"
+                }`}
+            />
+
+            <main className="relative z-10 pt-16">
+                <section id="home" ref={sectionRefs.current.home}>
+                    <Hero darkMode={darkMode} />
+                </section>
+                <section id="products" ref={sectionRefs.current.products}>
+                    <Products />
+                </section>
+                <section id="blog" ref={sectionRefs.current.blog}>
+                    <Blog />
+                </section>
+                <section id="partners" ref={sectionRefs.current.partners}>
+                    <Partners />
+                </section>
+                <section id="aboutus" ref={sectionRefs.current.aboutus}>
+                    <About />
+                </section>
+                <section id="contact" ref={sectionRefs.current.contact}>
+                    <Contact />
+                </section>
+            </main>
+
+            <Footer />
+        </div>
+    );
 }
