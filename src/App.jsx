@@ -2,20 +2,24 @@ import React, { useState, useRef, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Hero from "./sections/Hero";
+import Services from "./sections/Services";
 import Products from "./sections/Products";
 import Blog from "./sections/Blog";
 import Partners from "./sections/Partners";
 import About from "./sections/About";
+import Approach from "./sections/Approach";
 import Contact from "./sections/Contact";
 import "./i18n";
 import { useTranslation } from "react-i18next";
 
 const SECTION_IDS = [
     "home",
+    "services",
     "products",
     "blog",
     "partners",
     "aboutus",
+    "approach",
     "contact",
 ];
 
@@ -115,6 +119,9 @@ export default function App() {
                 <section id="home" ref={sectionRefs.current.home}>
                     <Hero darkMode={darkMode} />
                 </section>
+                <section id="services" ref={sectionRefs.current.services}>
+                    <Services />
+                </section>
                 <section id="products" ref={sectionRefs.current.products}>
                     <Products />
                 </section>
@@ -126,6 +133,9 @@ export default function App() {
                 </section>
                 <section id="aboutus" ref={sectionRefs.current.aboutus}>
                     <About />
+                </section>
+                <section id="approach" ref={sectionRefs.current.approach}>
+                    <Approach />
                 </section>
                 <section id="contact" ref={sectionRefs.current.contact}>
                     <Contact />
