@@ -34,6 +34,7 @@
   },
   "services": {
     "title": "Our Services",
+    "intro": "From genetic planning to on-farm training, we provide end-to-end solutions for your herd.",
     "list": [
       {
         "title": "Genetic Consulting",
@@ -46,6 +47,18 @@
       {
         "title": "Embryo Transfer",
         "description": "Modern embryo transfer solutions to multiply superior genetics quickly."
+      },
+      {
+        "title": "Reproductive Management",
+        "description": "Comprehensive breeding management and tracking service."
+      },
+      {
+        "title": "Nutrition Planning",
+        "description": "Tailored nutrition programs to maximize yield and health."
+      },
+      {
+        "title": "Training & Support",
+        "description": "On-site training and continuous technical assistance for your team."
       }
     ]
   },

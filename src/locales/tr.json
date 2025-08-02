@@ -34,6 +34,7 @@
   },
   "services": {
     "title": "Hizmetlerimiz",
+    "intro": "Genetik planlamadan çiftlik içi eğitime kadar sürünüz için uçtan uca çözümler sunuyoruz.",
     "list": [
       {
         "title": "Genetik Danışmanlık",
@@ -46,6 +47,18 @@
       {
         "title": "Embriyo Transferi",
         "description": "Üstün genetik potansiyeli hızla çoğaltmak için modern embriyo transferi çözümleri."
+      },
+      {
+        "title": "Üreme Yönetimi",
+        "description": "Çiftleşme takibi ve doğum planlamasını kapsayan kapsamlı üreme yönetimi."
+      },
+      {
+        "title": "Beslenme Planlaması",
+        "description": "Verimi maksimize etmek için sürünüze özel beslenme programları."
+      },
+      {
+        "title": "Eğitim ve Destek",
+        "description": "Çiftlik personeline yerinde eğitim ve sürekli teknik destek."
       }
     ]
   },

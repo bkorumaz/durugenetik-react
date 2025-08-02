@@ -60,17 +60,28 @@ export default function App() {
         }, {})
     );
 
-    // Video yüklenme takibi (white flash fix)
+    // Ürünler bölümünü gözlemle ve video kaynağını buna göre ayarla
     const [videoLoaded, setVideoLoaded] = useState(true);
-    const videoSrc = activeSection === "products"
+    const [productInView, setProductInView] = useState(false);
+    const videoSrc = productInView
         ? "/videos/hero.mp4"
         : "/videos/dna-bg-video2.mp4";
-    const poster = activeSection === "products"
-        ? "/images/hero-poster.jpg" // varsa, yoksa dna-bg-video2 posterini kullan
+    const poster = productInView
+        ? "/images/hero-poster.jpg"
         : "/images/bg-mobile.jpg";
     useEffect(() => {
         setVideoLoaded(false);
     }, [videoSrc]);
+    useEffect(() => {
+        const ref = sectionRefs.current.products.current;
+        if (!ref) return;
+        const observer = new IntersectionObserver(
+            ([entry]) => setProductInView(entry.intersectionRatio > 0.5),
+            { threshold: [0.5] }
+        );
+        observer.observe(ref);
+        return () => observer.disconnect();
+    }, []);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -116,11 +127,10 @@ export default function App() {
             />
             {/* Video yüklenene kadar poster arka plan */}
             <div
-                className={`fixed inset-0 w-full h-full -z-20 pointer-events-none select-none transition-all duration-150`}
+                className="fixed inset-0 w-full h-full -z-20 pointer-events-none select-none bg-black"
                 style={{
                     background: `url(${poster}) center center / cover no-repeat`,
-                    opacity: videoLoaded ? 0 : 1,
-                    transition: "opacity 0.15s"
+                    opacity: videoLoaded ? 0 : 1
                 }}
             />
             {/* Background video - sadece src değişiyor, başka hiçbir efekt yok */}
@@ -131,11 +141,9 @@ export default function App() {
                 playsInline
                 aria-hidden="true"
                 poster={poster}
-                className="fixed inset-0 w-full h-full object-cover -z-10 pointer-events-none select-none"
+                className="fixed inset-0 w-full h-full object-cover -z-10 pointer-events-none select-none bg-black"
                 style={{
-                    filter: darkMode
-                        ? "brightness(1) saturate(2) sepia(1) hue-rotate(80deg)"
-                        : "invert(1) hue-rotate(120deg)"
+                    filter: darkMode ? "brightness(0.5)" : "none"
                 }}
                 key={videoSrc}
                 onLoadedData={() => setVideoLoaded(true)}
