@@ -1,19 +1,43 @@
+// src/sections/Blog.jsx
 import React from "react";
-import { useTranslation } from "react-i18next";
+
+const posts = [
+  {
+    title: "Yeni Suni Tohumlama Teknikleri",
+    img: "/images/blog/tohumlama.jpg",
+    excerpt: "Modern laboratuvar şartlarında verim optimizasyonu...",
+    link: "#"
+  },
+  {
+    title: "Çiftlikte Sağlık Takibi",
+    img: "/images/blog/saglik.jpg",
+    excerpt: "Hayvan sağlığı verilerini düzenli takip ederek hastalıkları erkenden tespit edin...",
+    link: "#"
+  },
+  {
+    title: "Genetik Seçim Stratejileri",
+    img: "/images/blog/genetik.jpg",
+    excerpt: "Irk seçiminin süt ve et verimine etkisi üzerine bilimsel makale özeti...",
+    link: "#"
+  },
+];
 
 export default function Blog() {
-  const { t } = useTranslation();
   return (
-    <section id="blog" className="scroll-mt-16 min-h-screen px-6 py-12 relative">
-      <h2 className="text-4xl font-semibold mb-8 text-center text-gray-900 dark:text-gray-200">{t("blog.title")}</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {[...Array(3)].map((_, i) => (
-          <div key={i} className="p-6 border rounded-lg bg-white/50 dark:bg-gray-800/50">
-            <h4 className="text-xl font-medium mb-2 text-gray-900 dark:text-gray-200">{t("blog.post", { number: i + 1 })}</h4>
-            <p className="mb-4 text-gray-700 dark:text-gray-300">{t("blog.excerpt")}</p>
-            <a href="#" className="text-teal-600 dark:text-teal-300 font-medium">{t("blog.readMore")}</a>
-          </div>
-        ))}
+    <section id="blog" className="h-[100vh] py-20">
+      <div className="max-w-5xl mx-auto px-6">
+        <h2 className="text-4xl font-bold mb-8 text-center">Blog & Haberler</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {posts.map(p => (
+            <a key={p.title} href={p.link} className="block bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg dark:bg-neutral-800">
+              <img src={p.img} alt={p.title} className="w-full h-48 object-cover" />
+              <div className="p-4">
+                <h3 className="text-xl font-semibold mb-2 text-teal-700 dark:text-teal-300">{p.title}</h3>
+                <p className="text-gray-700 dark:text-gray-300 text-sm">{p.excerpt}</p>
+              </div>
+            </a>
+          ))}
+        </div>
       </div>
     </section>
   );

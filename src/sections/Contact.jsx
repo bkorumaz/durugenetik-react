@@ -1,17 +1,42 @@
+// src/sections/Contact.jsx
 import React from "react";
-import { useTranslation } from "react-i18next";
 
 export default function Contact() {
-  const { t } = useTranslation();
   return (
-    <section id="contact" className="scroll-mt-16 min-h-screen px-6 py-12 relative flex flex-col items-center justify-center">
-      <h2 className="text-4xl font-semibold mb-6 text-gray-900 dark:text-gray-200">{t("contact.title")}</h2>
-      <form className="w-full max-w-lg grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-900 dark:text-gray-200">
-        <input className="p-3 border rounded bg-white/50 dark:bg-gray-800/50" type="text" placeholder={t("contact.name")} />
-        <input className="p-3 border rounded bg-white/50 dark:bg-gray-800/50" type="email" placeholder="Email" />
-        <textarea className="p-3 border rounded bg-white/50 dark:bg-gray-800/50 md:col-span-2" rows="5" placeholder={t("contact.message")} />
-        <button type="submit" className="md:col-span-2 py-3 bg-teal-600/80 text-white rounded-lg font-medium">{t("contact.send")}</button>
-      </form>
+    <section id="contact" className="h-[100vh] py-20 bg-transparent">
+      <div className="max-w-3xl mx-auto px-6 text-gray-900 dark:text-gray-100">
+        <h2 className="text-4xl font-bold mb-8 text-center">
+          İletişim
+        </h2>
+        <div className="space-y-4 mb-8">
+          <p><strong>Adres:</strong> Hızır İlyas Mah. İ. Zeki Burdurlu Cad. No:75/A, Burdur</p>
+          <p><strong>Telefon:</strong> 0536 298 30 31</p>
+          <p><strong>Email:</strong> osmanacar@durugenetik.com</p>
+        </div>
+        <form className="grid grid-cols-1 gap-4">
+          <input
+            type="text"
+            placeholder="Adınız Soyadınız"
+            className="p-3 border border-gray-700 bg-transparent rounded text-gray-900 dark:text-gray-100 placeholder-gray-600 focus:ring-2 focus:ring-green-600"
+          />
+          <input
+            type="email"
+            placeholder="Email Adresiniz"
+            className="p-3 border border-gray-700 bg-transparent rounded text-gray-900 dark:text-gray-100 placeholder-gray-600 focus:ring-2 focus:ring-green-600"
+          />
+          <textarea
+            rows="4"
+            placeholder="Mesajınız"
+            className="p-3 border border-gray-700 bg-transparent rounded text-gray-900 dark:text-gray-100 placeholder-gray-600 focus:ring-2 focus:ring-green-600"
+          />
+          <button
+            type="submit"
+            className="px-6 py-3 bg-green-800 hover:bg-green-900 text-white rounded transition"
+          >
+            Gönder
+          </button>
+        </form>
+      </div>
     </section>
   );
 }

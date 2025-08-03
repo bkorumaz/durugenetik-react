@@ -1,17 +1,28 @@
+// src/sections/Partners.jsx
 import React from "react";
-import { useTranslation } from "react-i18next";
+
+const partners = [
+  "/images/partners/bayer.png",
+  "/images/partners/collins.png",
+  "/images/partners/semex.png",
+  "/images/partners/other.png"
+];
 
 export default function Partners() {
-  const { t } = useTranslation();
   return (
-    <section id="partners" className="scroll-mt-16 min-h-screen px-6 py-12 relative">
-      <h2 className="text-4xl font-semibold mb-8 text-center text-gray-900 dark:text-gray-200">{t("partners.title")}</h2>
-      <div className="flex flex-wrap items-center justify-center gap-12">
-        {[...Array(4)].map((_, i) => (
-          <div key={i} className="w-40 h-24 bg-white/50 dark:bg-gray-700/50 flex items-center justify-center rounded-lg text-gray-900 dark:text-gray-200">
-            {t("partners.partner", { number: i + 1 })}
-          </div>
-        ))}
+    <section id="partners" className="py-20 h-[100vh] bg-transparent">
+      <div className="max-w-5xl mx-auto px-6 text-center">
+        <h2 className="text-4xl font-bold mb-8">İş Ortaklarımız</h2>
+        <div className="flex flex-wrap justify-center items-center gap-8">
+          {partners.map((logo, i) => (
+            <img
+              key={i}
+              src={logo}
+              alt={`Partner ${i + 1}`}
+              className="h-16 object-contain filter grayscale hover:filter-none transition"
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
