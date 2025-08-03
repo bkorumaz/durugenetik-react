@@ -13,7 +13,7 @@ export default function Hero({ darkMode }) {
       <div
         className={`absolute inset-0 transition duration-300 z-0 pointer-events-none ${
           darkMode
-            ? "bg-black/60"
+            ? "bg-black/10"
             : "bg-gradient-to-b from-white/60 via-white/20 to-white/0"
         }`}
       />
