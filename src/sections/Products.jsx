@@ -139,13 +139,17 @@ export default function Products() {
             <div
               key={prod.name}
               className="min-w-[250px] flex-shrink-0 snap-center flex flex-col items-center p-6 bg-white bg-opacity-60 backdrop-blur-md rounded-xl shadow-lg dark:bg-neutral-800 dark:bg-opacity-60"
+
             >
-              <img
-                src={prod.image}
-                alt={prod.name}
-                className="w-40 h-40 object-cover rounded-full mb-4 border-4 border-teal-300 dark:border-teal-600 shadow"
-                loading="lazy"
-              />
+                <div className="relative w-40 h-40 mb-4 rounded-full overflow-hidden border-4 border-teal-300 dark:border-teal-600 shadow">
+                  <img
+                    src={prod.image}
+                    alt={prod.name}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-teal-600/20 dark:bg-teal-500/20 mix-blend-multiply hover:bg-teal-600/10 dark:hover:bg-teal-500/10 transition-colors" />
+                </div>
               <h3 className="text-lg font-bold text-teal-900 dark:text-teal-300 mb-1">
                 {prod.name}
               </h3>

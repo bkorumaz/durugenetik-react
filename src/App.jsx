@@ -19,28 +19,20 @@ const SECTION_IDS = [
 
 export default function App() {
   // Dark Mode
-  const [darkMode, setDarkMode] = useState(() => {
-    if (typeof window !== "undefined") {
-      const userPref = localStorage.getItem("theme");
-      if (userPref) return userPref === "dark";
-      return window.matchMedia("(prefers-color-scheme: dark)").matches;
-    }
-    return false;
-  });
+  const [darkMode, setDarkMode] = useState(() =>
+    typeof window !== "undefined"
+      ? window.matchMedia("(prefers-color-scheme: dark)").matches
+      : false
+  );
   useEffect(() => {
     const mq = window.matchMedia("(prefers-color-scheme: dark)");
     const handler = (e) => setDarkMode(e.matches);
     mq.addEventListener("change", handler);
+    setDarkMode(mq.matches);
     return () => mq.removeEventListener("change", handler);
   }, []);
   useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    }
+    document.documentElement.classList.toggle("dark", darkMode);
   }, [darkMode]);
   const toggleDark = () => setDarkMode((prev) => !prev);
 
