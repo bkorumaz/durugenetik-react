@@ -60,7 +60,7 @@ const products = [
 export default function Products() {
   const [videoLoaded, setVideoLoaded] = useState(false);
   return (
-    <section id="products" className="relative h-screen pt-16 bg-transparent overflow-hidden">
+    <section id="products" className="relative min-h-screen pt-16 pb-12 bg-transparent overflow-hidden">
       {/* hero.mp4 sadece bu bölüm için */}
       <video
         autoPlay
@@ -82,22 +82,49 @@ export default function Products() {
       {/* yarı saydam okunabilirlik katmanı */}
       <div className="absolute inset-0 bg-white bg-opacity-60 backdrop-blur-sm dark:bg-neutral-900 dark:bg-opacity-60 -z-10" />
 
-      <div className="relative z-10 flex flex-col items-center justify-center h-full px-6">
+      <div className="relative z-10 flex flex-col items-center w-full px-6 py-12">
         <h2 className="text-4xl font-bold mb-8 text-gray-900 dark:text-white">
           Ürünlerimiz
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl w-full mx-auto">
+        <div className="hidden sm:grid grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl w-full mx-auto">
           {products.map((prod) => (
             <div
               key={prod.name}
               className="flex flex-col items-center p-6 bg-white bg-opacity-60 backdrop-blur-md rounded-xl shadow-lg dark:bg-neutral-800 dark:bg-opacity-60"
             >
-              <img
-                src={prod.image}
-                alt={prod.name}
-                className="w-40 h-40 object-cover rounded-full mb-4 border-4 border-teal-300 dark:border-teal-600 shadow"
-                loading="lazy"
-              />
+                <div className="relative w-40 h-40 mb-4 rounded-full overflow-hidden border-4 border-teal-300 dark:border-teal-600 shadow">
+                  <img
+                    src={prod.image}
+                    alt={prod.name}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-teal-600/20 dark:bg-teal-500/20 mix-blend-multiply hover:bg-teal-600/10 dark:hover:bg-teal-500/10 transition-colors" />
+                </div>
+              <h3 className="text-lg font-bold text-teal-900 dark:text-teal-300 mb-1">
+                {prod.name}
+              </h3>
+              <p className="text-sm text-gray-700 dark:text-gray-200 text-center">
+                {prod.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+        <div className="flex sm:hidden gap-6 overflow-x-auto snap-x snap-mandatory w-full pb-4">
+          {products.map((prod) => (
+            <div
+              key={prod.name}
+              className="min-w-[250px] flex-shrink-0 snap-center flex flex-col items-center p-6 bg-white bg-opacity-60 backdrop-blur-md rounded-xl shadow-lg dark:bg-neutral-800 dark:bg-opacity-60"
+            >
+                <div className="relative w-40 h-40 mb-4 rounded-full overflow-hidden border-4 border-teal-300 dark:border-teal-600 shadow">
+                  <img
+                    src={prod.image}
+                    alt={prod.name}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-teal-600/20 dark:bg-teal-500/20 mix-blend-multiply hover:bg-teal-600/10 dark:hover:bg-teal-500/10 transition-colors" />
+                </div>
               <h3 className="text-lg font-bold text-teal-900 dark:text-teal-300 mb-1">
                 {prod.name}
               </h3>

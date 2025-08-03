@@ -28,6 +28,12 @@ export default function App() {
     return false;
   });
   useEffect(() => {
+    const mq = window.matchMedia("(prefers-color-scheme: dark)");
+    const handler = (e) => setDarkMode(e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
+  useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add("dark");
       localStorage.setItem("theme", "dark");
@@ -58,8 +64,19 @@ export default function App() {
   const [videoLoaded, setVideoLoaded] = useState(true);
   const videoSrc = "/videos/dna-bg.mp4";
   const placeholderColor = "#1a1a1a"; // dark grey fallback main
+  const bgVideoRef = useRef(null);
   useEffect(() => {
     setVideoLoaded(false);
+  }, [videoSrc]);
+
+  // Ensure autoplay on iOS devices
+  useEffect(() => {
+    if (bgVideoRef.current) {
+      const playPromise = bgVideoRef.current.play();
+      if (playPromise?.catch) {
+        playPromise.catch(() => {});
+      }
+    }
   }, [videoSrc]);
 
   useEffect(() => {
@@ -119,6 +136,7 @@ export default function App() {
       {/* background video with only the sepia/hue-rotate on darkMode;
           light mode has NO hue-rotate (→ no blue tint) */}
       <video
+        ref={bgVideoRef}
         autoPlay
         loop
         muted

@@ -17,17 +17,17 @@ export default function Contact() {
           <input
             type="text"
             placeholder="Adınız Soyadınız"
-            className="p-3 border border-gray-700 bg-transparent rounded text-gray-900 dark:text-gray-100 placeholder-gray-600 focus:ring-2 focus:ring-green-600"
+            className="p-3 border border-gray-300 dark:border-gray-600 bg-white/80 dark:bg-gray-800/80 rounded text-gray-900 dark:text-gray-100 placeholder-gray-600 focus:ring-2 focus:ring-green-600"
           />
           <input
             type="email"
             placeholder="Email Adresiniz"
-            className="p-3 border border-gray-700 bg-transparent rounded text-gray-900 dark:text-gray-100 placeholder-gray-600 focus:ring-2 focus:ring-green-600"
+            className="p-3 border border-gray-300 dark:border-gray-600 bg-white/80 dark:bg-gray-800/80 rounded text-gray-900 dark:text-gray-100 placeholder-gray-600 focus:ring-2 focus:ring-green-600"
           />
           <textarea
             rows="4"
             placeholder="Mesajınız"
-            className="p-3 border border-gray-700 bg-transparent rounded text-gray-900 dark:text-gray-100 placeholder-gray-600 focus:ring-2 focus:ring-green-600"
+            className="p-3 border border-gray-300 dark:border-gray-600 bg-white/80 dark:bg-gray-800/80 rounded text-gray-900 dark:text-gray-100 placeholder-gray-600 focus:ring-2 focus:ring-green-600"
           />
           <button
             type="submit"
