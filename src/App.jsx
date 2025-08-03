@@ -56,8 +56,8 @@ export default function App() {
 
   // Video yüklenme takibi (white flash fix)
   const [videoLoaded, setVideoLoaded] = useState(true);
-  const videoSrc = "/videos/dna-bg-video2.mp4";
-  const poster = "/images/bg-mobile.jpg";
+  const videoSrc = "/videos/dna-bg-video.mp4";
+  const placeholderColor = "#1a1a1a"; // dark grey fallback
   useEffect(() => {
     setVideoLoaded(false);
   }, [videoSrc]);
@@ -105,15 +105,16 @@ export default function App() {
         onMenuClick={handleMenuClick}
       />
 
-      {/* poster fallback during load */}
+      {/* plain color fallback during video load */}
       <div
-        className={`fixed inset-0 w-full h-full -z-20 transition-opacity duration-150`}
-        style={{
-          background: `url(${poster}) center/cover no-repeat`,
-          opacity: videoLoaded ? 0 : 1,
-        }}
+        className="fixed inset-0 w-full h-full -z-20 transition-opacity duration-150"
+        style={{ backgroundColor: placeholderColor, opacity: videoLoaded ? 0 : 1 }}
       />
-
+      {!videoLoaded && (
+        <div className="fixed inset-0 flex items-center justify-center -z-10 pointer-events-none">
+          <div className="w-10 h-10 border-4 border-teal-500 border-t-transparent rounded-full animate-spin" />
+        </div>
+      )}
 
       {/* background video with only the sepia/hue-rotate on darkMode;
           light mode has NO hue-rotate (→ no blue tint) */}
@@ -123,12 +124,11 @@ export default function App() {
         muted
         playsInline
         aria-hidden="true"
-        poster={poster}
         className="fixed inset-0 w-full h-full object-cover -z-10 pointer-events-none select-none"
         style={{
           filter: darkMode
             ? "brightness(1) saturate(2) sepia(1) hue-rotate(80deg)"
-            : "invert(1) hue-rotate(120deg)"  /* original light-mode tint */
+            : "invert(1) hue-rotate(120deg)" /* original light-mode tint */,
         }}
         key={videoSrc}
         onLoadedData={() => setVideoLoaded(true)}
