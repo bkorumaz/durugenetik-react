@@ -2,10 +2,10 @@
 import React from "react";
 
 const partners = [
-  "/images/partners/bayer.png",
-  "/images/partners/collins.png",
-  "/images/partners/semex.png",
-  "/images/partners/other.png"
+  "https://logo.clearbit.com/bayer.com",
+  "https://logo.clearbit.com/collins.com",
+  "https://logo.clearbit.com/semex.com",
+  "https://placehold.co/150x80?text=Logo",
 ];
 
 export default function Partners() {
@@ -20,6 +20,7 @@ export default function Partners() {
               src={logo}
               alt={`Partner ${i + 1}`}
               className="h-16 object-contain filter grayscale hover:filter-none transition"
+              loading="lazy"
             />
           ))}
         </div>

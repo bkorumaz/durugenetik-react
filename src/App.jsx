@@ -57,7 +57,7 @@ export default function App() {
   // Video yüklenme takibi (white flash fix)
   const [videoLoaded, setVideoLoaded] = useState(true);
   const videoSrc = "/videos/dna-bg-video2.mp4";
-  const poster = "/images/bg-mobile.jpg";
+  const poster = "https://images.unsplash.com/photo-1595664652035-0956d50e0311?auto=compress&cs=tinysrgb&w=600";
   useEffect(() => {
     setVideoLoaded(false);
   }, [videoSrc]);
@@ -113,7 +113,11 @@ export default function App() {
           opacity: videoLoaded ? 0 : 1,
         }}
       />
-
+      {!videoLoaded && (
+        <div className="fixed inset-0 flex items-center justify-center -z-10 pointer-events-none">
+          <div className="w-10 h-10 border-4 border-teal-500 border-t-transparent rounded-full animate-spin" />
+        </div>
+      )}
 
       {/* background video with only the sepia/hue-rotate on darkMode;
           light mode has NO hue-rotate (→ no blue tint) */}
