@@ -31,7 +31,7 @@ export default function Contact() {
           />
           <button
             type="submit"
-            className="px-6 py-3 bg-green-800 hover:bg-green-900 text-white rounded transition"
+            className="px-6 py-3 bg-teal-700 hover:bg-teal-800 dark:bg-teal-500 dark:hover:bg-teal-400 text-white rounded transition"
           >
             Gönder
           </button>
