@@ -1,29 +1,83 @@
 // src/sections/Products.jsx
-import React from "react";
+import React, { useState } from "react";
 
 const products = [
-  { name: "Holstein Dişi",          image: "/images/products/holstein-disi.jpg",        desc: "Yüksek verimli Holstein dişi genomları." },
-  { name: "Holstein",               image: "/images/products/holstein.jpg",             desc: "Dünyaca ünlü süt verimi taçlı Holstein hattı." },
-  { name: "Montbéliarde",           image: "/images/products/montbeliarde.jpg",         desc: "Sağlam dizi ve yüksek süt verimi için Montbéliarde." },
-  { name: "Montbéliarde Dişi",      image: "/images/products/montbeliarde-disi.jpg",    desc: "Seçkin Montbéliarde dişi genomları." },
-  { name: "Brown Swiss (Montofon)",  image: "/images/products/brown-swiss-montofon.jpg", desc: "Dayanıklı Brown Swiss (Montofon) genomları." },
-  { name: "Etçi Boğalar",           image: "/images/products/etci-bogalar.jpg",         desc: "En iyi etçi boğalarla damızlık iyileştirme." },
-  { name: "Kırmızı Holstein",       image: "/images/products/kirmizi-holstein.jpg",     desc: "Güçlü ve renkli Kırmızı Holstein genomları." },
-  { name: "Jersey",                 image: "/images/products/jersey.jpg",               desc: "Yoğun yağlı süt için seçkin Jersey hattı." },
-  { name: "Simmental",              image: "/images/products/simmental.jpg",            desc: "Çift yönlü verim: Et & süt için Simmental." },
+  {
+    name: "Holstein Dişi",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Holstein_Friesian_UK_Yorkshire_July_2011.jpg/960px-Holstein_Friesian_UK_Yorkshire_July_2011.jpg",
+    desc: "Yüksek verimli Holstein dişi genomları.",
+  },
+  {
+    name: "Holstein",
+    image:
+      "https://images.unsplash.com/photo-1527153857715-3908f2bae5e8?auto=compress&cs=tinysrgb&w=800",
+    desc: "Dünyaca ünlü süt verimi taçlı Holstein hattı.",
+  },
+  {
+    name: "Montbéliarde",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Vache_Montb%C3%A9liarde.jpg/960px-Vache_Montb%C3%A9liarde.jpg",
+    desc: "Sağlam dizi ve yüksek süt verimi için Montbéliarde.",
+  },
+  {
+    name: "Montbéliarde Dişi",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Vache_Montb%C3%A9liarde.jpg/1200px-Vache_Montb%C3%A9liarde.jpg",
+    desc: "Seçkin Montbéliarde dişi genomları.",
+  },
+  {
+    name: "Brown Swiss (Montofon)",
+    image: "https://upload.wikimedia.org/wikipedia/commons/e/e9/Brown_swiss.jpg",
+    desc: "Dayanıklı Brown Swiss (Montofon) genomları.",
+  },
+  {
+    name: "Etçi Boğalar",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/b/b5/A_Friesian_Bull%2C_Llandeilo_Graban_-_geograph.org.uk_-_579885.jpg",
+    desc: "En iyi etçi boğalarla damızlık iyileştirme.",
+  },
+  {
+    name: "Kırmızı Holstein",
+    image:
+      "https://images.unsplash.com/photo-1561043394-9f7d16d9ae37?auto=compress&cs=tinysrgb&w=800",
+    desc: "Güçlü ve renkli Kırmızı Holstein genomları.",
+  },
+  {
+    name: "Jersey",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Bou%C3%ABts_d%27J%C3%A8rri_%C3%8Agypte_5_J%C3%A8rri_Mai_2009.jpg/960px-Bou%C3%ABts_d%27J%C3%A8rri_Mai_2009.jpg",
+    desc: "Yoğun yağlı süt için seçkin Jersey hattı.",
+  },
+  {
+    name: "Simmental",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Simmentaler_Fleckvieh.jpg/960px-Simmentaler_Fleckvieh.jpg",
+    desc: "Çift yönlü verim: Et & süt için Simmental.",
+  },
 ];
 
 export default function Products() {
+  const [videoLoaded, setVideoLoaded] = useState(false);
   return (
     <section id="products" className="relative h-screen pt-16 bg-transparent overflow-hidden">
       {/* hero.mp4 sadece bu bölüm için */}
       <video
-        autoPlay loop muted playsInline
-        poster="/images/hero-poster.jpg"
+        autoPlay
+        loop
+        muted
+        playsInline
+        poster="https://images.unsplash.com/photo-1546445317-29f4545e9d53?auto=compress&cs=tinysrgb&w=1600"
         className="absolute inset-0 w-full h-full object-cover -z-20"
+        onLoadedData={() => setVideoLoaded(true)}
       >
         <source src="/videos/hero.mp4" type="video/mp4" />
       </video>
+      {!videoLoaded && (
+        <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">
+          <div className="w-10 h-10 border-4 border-teal-500 border-t-transparent rounded-full animate-spin" />
+        </div>
+      )}
 
       {/* yarı saydam okunabilirlik katmanı */}
       <div className="absolute inset-0 bg-white bg-opacity-60 backdrop-blur-sm dark:bg-neutral-900 dark:bg-opacity-60 -z-10" />
