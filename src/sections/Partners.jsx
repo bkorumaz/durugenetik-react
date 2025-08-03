@@ -10,7 +10,7 @@ const partners = [
 
 export default function Partners() {
   return (
-    <section id="partners" className="py-20 h-[100vh] bg-transparent">
+    <section id="partners" className="py-20 min-h-screen bg-transparent">
       <div className="max-w-5xl mx-auto px-6 text-center">
         <h2 className="text-4xl font-bold mb-8">İş Ortaklarımız</h2>
         <div className="flex flex-wrap justify-center items-center gap-8">
