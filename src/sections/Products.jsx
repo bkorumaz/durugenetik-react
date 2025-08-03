@@ -71,7 +71,7 @@ export default function Products() {
         className="absolute inset-0 w-full h-full object-cover -z-20"
         onLoadedData={() => setVideoLoaded(true)}
       >
-        <source src="/videos/hero.mp4" type="video/mp4" />
+        <source src="/videos/products-bg.mp4" type="video/mp4" />
       </video>
       {!videoLoaded && (
         <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">
