@@ -7,7 +7,7 @@ export default function Hero({ darkMode }) {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex flex-col pt-16 pb-12 overflow-hidden select-none"
+      className="relative min-h-[calc(100vh-64px)] flex items-center justify-center pt-16 pb-12 overflow-hidden select-none"
     >
       {/* Karartma layer (gece/gündüz efekti) */}
       <div
@@ -21,7 +21,7 @@ export default function Hero({ darkMode }) {
       <div className="absolute inset-0 z-0 pointer-events-none backdrop-blur-[2px]" />
 
       {/* Content */}
-      <div className="relative z-10 flex-1 flex flex-col items-center justify-center w-full text-center px-6">
+      <div className="relative z-10 flex flex-col items-center justify-center w-full text-center px-6">
         <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-5 text-green-900 dark:text-green-300 drop-shadow-xl tracking-tight">
           Duru<span className="text-teal-600 dark:text-teal-300">genetik</span>
         </h1>
@@ -37,7 +37,7 @@ export default function Hero({ darkMode }) {
         </a>
       </div>
       {/* Aşağı ok animasyonu */}
-      <div className="z-20 flex justify-center">
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20">
         <a href="#products" aria-label="Scroll to products" className="animate-bounce">
           <svg
             width="38"
