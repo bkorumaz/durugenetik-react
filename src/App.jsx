@@ -19,22 +19,20 @@ const SECTION_IDS = [
 
 export default function App() {
   // Dark Mode
-  const [darkMode, setDarkMode] = useState(() => {
-    if (typeof window !== "undefined") {
-      const userPref = localStorage.getItem("theme");
-      if (userPref) return userPref === "dark";
-      return window.matchMedia("(prefers-color-scheme: dark)").matches;
-    }
-    return false;
-  });
+  const [darkMode, setDarkMode] = useState(() =>
+    typeof window !== "undefined"
+      ? window.matchMedia("(prefers-color-scheme: dark)").matches
+      : false
+  );
   useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    }
+    const mq = window.matchMedia("(prefers-color-scheme: dark)");
+    const handler = (e) => setDarkMode(e.matches);
+    mq.addEventListener("change", handler);
+    setDarkMode(mq.matches);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", darkMode);
   }, [darkMode]);
   const toggleDark = () => setDarkMode((prev) => !prev);
 
@@ -58,8 +56,19 @@ export default function App() {
   const [videoLoaded, setVideoLoaded] = useState(true);
   const videoSrc = "/videos/dna-bg.mp4";
   const placeholderColor = "#1a1a1a"; // dark grey fallback main
+  const bgVideoRef = useRef(null);
   useEffect(() => {
     setVideoLoaded(false);
+  }, [videoSrc]);
+
+  // Ensure autoplay on iOS devices
+  useEffect(() => {
+    if (bgVideoRef.current) {
+      const playPromise = bgVideoRef.current.play();
+      if (playPromise?.catch) {
+        playPromise.catch(() => {});
+      }
+    }
   }, [videoSrc]);
 
   useEffect(() => {
@@ -119,6 +128,7 @@ export default function App() {
       {/* background video with only the sepia/hue-rotate on darkMode;
           light mode has NO hue-rotate (→ no blue tint) */}
       <video
+        ref={bgVideoRef}
         autoPlay
         loop
         muted
