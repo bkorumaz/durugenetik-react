@@ -57,7 +57,7 @@ export default function App() {
   // Video yüklenme takibi (white flash fix)
   const [videoLoaded, setVideoLoaded] = useState(true);
   const videoSrc = "/videos/dna-bg-video.mp4";
-  const placeholderColor = "#1a1a1a"; // dark grey fallback
+  const placeholderColor = "#1a1a1a"; // dark grey fallback main
   useEffect(() => {
     setVideoLoaded(false);
   }, [videoSrc]);
