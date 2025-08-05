@@ -9,14 +9,6 @@ export default function Hero({ darkMode }) {
       id="home"
       className="relative min-h-[calc(100vh-64px)] flex items-center justify-center pt-16 pb-12 overflow-hidden select-none"
     >
-      {/* Karartma layer (gece/gündüz efekti) */}
-      <div
-        className={`absolute inset-0 transition duration-300 z-0 pointer-events-none ${
-          darkMode
-            ? "bg-black/10"
-            : "bg-gradient-to-b from-white/60 via-white/20 to-white/0"
-        }`}
-      />
       {/* Üstten çok hafif bir blur/fade */}
       <div className="absolute inset-0 z-0 pointer-events-none backdrop-blur-[2px]" />
 

@@ -35,15 +35,14 @@ const services = [
   {
     title: "Embriyo Transferi",
     icon: (
-      <svg
+       <svg
         className="w-12 h-12 text-green-800 dark:text-green-300 mb-4"
         fill="none"
         stroke="currentColor"
         strokeWidth="2"
         viewBox="0 0 24 24"
       >
-        <path d="M12 2a10 10 0 100 20 10 10 0 000-20z" />
-        <path d="M12 6v6l4 2" />
+        <path d="M6 12h12M12 6v12" />
       </svg>
     ),
     desc: "Yüksek başarı oranlı embriyo transfer çözümleri.",
