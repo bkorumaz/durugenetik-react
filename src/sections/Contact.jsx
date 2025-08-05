@@ -17,21 +17,21 @@ export default function Contact() {
           <input
             type="text"
             placeholder="Adınız Soyadınız"
-            className="p-3 border border-gray-300 dark:border-gray-600 bg-white/80 dark:bg-gray-800/80 rounded text-gray-900 dark:text-gray-100 placeholder-gray-600 focus:ring-2 focus:ring-green-600"
+            className="p-4 bg-white bg-opacity-60 backdrop-blur-md rounded-xl shadow-lg dark:bg-neutral-800 dark:bg-opacity-80 placeholder-gray-400 focus:ring-2 focus:ring-green-600"
           />
           <input
             type="email"
             placeholder="Email Adresiniz"
-            className="p-3 border border-gray-300 dark:border-gray-600 bg-white/80 dark:bg-gray-800/80 rounded text-gray-900 dark:text-gray-100 placeholder-gray-600 focus:ring-2 focus:ring-green-600"
+            className="p-4 bg-white bg-opacity-60 backdrop-blur-md rounded-xl shadow-lg dark:bg-neutral-800 dark:bg-opacity-80 placeholder-gray-400 focus:ring-2 focus:ring-green-600"
           />
           <textarea
             rows="4"
             placeholder="Mesajınız"
-            className="p-3 border border-gray-300 dark:border-gray-600 bg-white/80 dark:bg-gray-800/80 rounded text-gray-900 dark:text-gray-100 placeholder-gray-600 focus:ring-2 focus:ring-green-600"
+            className="p-4 bg-white bg-opacity-60 backdrop-blur-md rounded-xl shadow-lg dark:bg-neutral-800 dark:bg-opacity-80 placeholder-gray focus:ring-2 focus:ring-green-600"
           />
           <button
             type="submit"
-            className="px-6 py-3 bg-teal-700 hover:bg-teal-800 dark:bg-teal-500 dark:hover:bg-teal-400 text-white rounded transition"
+            className="px-6 py-3 bg-teal-700 hover:bg-green-800 dark:bg-green-300 dark:hover:bg-teal-400 text-white dark:text-gray-800 rounded-xl transition"
           >
             Gönder
           </button>
