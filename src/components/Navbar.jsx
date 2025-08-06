@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
 export default function Navbar({
@@ -11,16 +11,19 @@ export default function Navbar({
     const { t, i18n } = useTranslation();
     const [menuOpen, setMenuOpen] = useState(false);
 
-    const menuItems = [
-        { id: "home", label: t("nav.home") },
-        { id: "services", label: t("nav.services") },
-        { id: "products", label: t("nav.products") },
-        { id: "blog", label: t("nav.blog") },
-        { id: "partners", label: t("nav.partners") },
-        { id: "aboutus", label: t("nav.aboutus") },
-        { id: "approach", label: t("nav.approach") },
-        { id: "contact", label: t("nav.contact") },
-    ];
+    const menuItems = useMemo(
+        () => [
+            { id: "home", label: t("nav.home") },
+            { id: "services", label: t("nav.services") },
+            { id: "products", label: t("nav.products") },
+            { id: "blog", label: t("nav.blog") },
+            { id: "partners", label: t("nav.partners") },
+            { id: "aboutus", label: t("nav.aboutus") },
+            { id: "approach", label: t("nav.approach") },
+            { id: "contact", label: t("nav.contact") },
+        ],
+        [i18n.language]
+    );
     const menuRefs = useRef(menuItems.map(() => React.createRef()));
     const menuContainerRef = useRef();
     const [underline, setUnderline] = useState({ left: 0, width: 0 });
