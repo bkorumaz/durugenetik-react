@@ -110,11 +110,11 @@ export default function Products() {
             </div>
           ))}
         </div>
-        <div className="flex sm:hidden overflow-x-auto snap-x snap-mandatory w-screen -mx-6 h-[calc(100vh-12rem)] pb-4">
+        <div className="flex sm:hidden overflow-x-auto snap-x snap-mandatory w-screen px-6 h-[calc(100vh-12rem)] gap-6 pb-4">
           {products.map((prod) => (
             <div
               key={prod.name}
-              className="flex-shrink-0 w-screen snap-start flex flex-col items-center justify-center p-6 bg-white bg-opacity-60 backdrop-blur-md rounded-xl shadow-lg dark:bg-neutral-800 dark:bg-opacity-60 h-full"
+              className="flex-shrink-0  w-[90vw] snap-center snap-start flex flex-col items-center justify-center p-6 bg-white bg-opacity-60 backdrop-blur-md rounded-xl shadow-lg dark:bg-neutral-800 dark:bg-opacity-60 h-full"
             >
                 <div className="relative w-40 h-40 mb-4 rounded-full overflow-hidden border-4 border-teal-300 dark:border-teal-600 shadow">
                   <img
