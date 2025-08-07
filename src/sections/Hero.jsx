@@ -7,7 +7,7 @@ export default function Hero({ darkMode }) {
   return (
     <section
       id="home"
-      className="relative min-h-[calc(100vh-64px)] flex items-center justify-center pt-16 pb-12 overflow-hidden select-none"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden select-none"
     >
       {/* Üstten çok hafif bir blur/fade */}
       <div className="absolute inset-0 z-0 pointer-events-none backdrop-blur-[2px]" />

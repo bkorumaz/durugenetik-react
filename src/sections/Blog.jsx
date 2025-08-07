@@ -24,7 +24,7 @@ const posts = [
 
 export default function Blog() {
   return (
-    <section id="blog" className="min-h-screen py-20">
+    <section id="blog" className="min-h-screen flex flex-col justify-center items-center scroll-mt-16">
       <div className="max-w-5xl mx-auto px-6">
         <h2 className="text-4xl font-bold mb-8 text-center">Blog & Haberler</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

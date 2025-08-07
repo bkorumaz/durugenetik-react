@@ -10,7 +10,7 @@ const steps = [
 
 export default function Approach() {
   return (
-    <section id="approach" className="h-[100vh] py-20 bg-transparent">
+    <section id="approach" className="min-h-screen flex flex-col justify-center items-center bg-transparent scroll-mt-16">
       <div className="max-w-5xl mx-auto px-6">
         <h2 className="text-4xl font-bold mb-12 text-center">Çalışma Prensibimiz</h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">

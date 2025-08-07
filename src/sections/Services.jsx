@@ -51,7 +51,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="min-h-screen py-20 bg-transparent">
+    <section id="services" className="min-h-screen flex flex-col justify-center items-center bg-transparent scroll-mt-16">
       <div className="max-w-5xl mx-auto px-6 text-center">
         <h2 className="text-4xl font-bold mb-8 text-gray-900 dark:text-gray-100">
           Hizmetlerimiz
