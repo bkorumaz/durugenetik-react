@@ -22,8 +22,8 @@ const partnersRow2 = [
 
 export default function Partners() {
   return (
-    <section id="partners" className="py-20 min-h-screen bg-transparent">
-      <div className="max-w-5xl mx-auto px-6 text-center">
+    <section id="partners" className="min-h-screen flex items-center bg-transparent">
+      <div className="max-w-5xl mx-auto px-6 py-16 text-center">
         <h2 className="text-4xl font-bold mb-12">İş Ortaklarımız</h2>
         <div className="flex flex-col gap-8">
           <Marquee

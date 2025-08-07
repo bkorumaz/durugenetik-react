@@ -60,7 +60,7 @@ const products = [
 export default function Products() {
   const [videoLoaded, setVideoLoaded] = useState(false);
   return (
-    <section id="products" className="relative min-h-screen pt-16 pb-12 bg-transparent overflow-hidden">
+    <section id="products" className="relative min-h-screen flex items-center justify-center bg-transparent overflow-hidden">
       {/* hero.mp4 sadece bu bölüm için */}
       <video
         autoPlay

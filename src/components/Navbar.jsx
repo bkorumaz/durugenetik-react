@@ -76,6 +76,12 @@ export default function Navbar({
         setThemeSwitching(true);
         setTimeout(() => setThemeSwitching(false), 350);
         toggleDark();
+        setMenuOpen(false);
+    }
+
+    function handleLangSwitch() {
+        toggleLang();
+        setMenuOpen(false);
     }
 
     const sunIcon = (
@@ -169,7 +175,7 @@ export default function Navbar({
                     </div>
                     {/* DIL BUTTON */}
                     <button
-                        onClick={toggleLang}
+                        onClick={handleLangSwitch}
                         className={switchBtnClass}
                         aria-label={switchLabel}
                         title={switchLabel}
@@ -228,7 +234,7 @@ export default function Navbar({
                         ))}
                         <div className="flex items-center space-x-4">
                             <button
-                                onClick={toggleLang}
+                                onClick={handleLangSwitch}
                                 className={switchBtnClass}
                                 aria-label={switchLabel}
                                 title={switchLabel}

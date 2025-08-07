@@ -10,8 +10,8 @@ const steps = [
 
 export default function Approach() {
   return (
-    <section id="approach" className="h-[100vh] py-20 bg-transparent">
-      <div className="max-w-5xl mx-auto px-6">
+    <section id="approach" className="min-h-screen flex items-center bg-transparent">
+      <div className="max-w-5xl mx-auto px-6 py-16">
         <h2 className="text-4xl font-bold mb-12 text-center">Çalışma Prensibimiz</h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {steps.map(({ step, desc }) => (
