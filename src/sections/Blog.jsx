@@ -4,7 +4,7 @@ import React from "react";
 const posts = [
   {
     title: "Yeni Suni Tohumlama Teknikleri",
-    img: "https://picsum.photos/seed/artificial-insemination/800/600",
+    img: "https://images.unsplash.com/photo-1654119938236-de0d8ed4641d?auto=compress&cs=tinysrgb&w=800",
     excerpt: "Modern laboratuvar şartlarında verim optimizasyonu...",
     link: "#"
   },
@@ -16,7 +16,7 @@ const posts = [
   },
   {
     title: "Genetik Seçim Stratejileri",
-    img: "https://picsum.photos/seed/genetic-selection/800/600",
+    img: "https://images.unsplash.com/photo-1643780668909-580822430155?auto=compress&cs=tinysrgb&w=800",
     excerpt: "Irk seçiminin süt ve et verimine etkisi üzerine bilimsel makale özeti...",
     link: "#"
   },
