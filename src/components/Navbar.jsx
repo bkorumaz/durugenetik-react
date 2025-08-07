@@ -52,7 +52,7 @@ export default function Navbar({
     }, [activeSection, menuItems]);
 
     // FULL DÜZ RENK (asla opacity, blur, overlay, vs yok)
-    const base = "fixed top-0 left-0 w-full z-30 transition-colors";
+    const base = "fixed top-0 left-0 w-screen z-30 transition-colors";
     const themeBg = darkMode ? "bg-neutral-900" : "bg-white";
     const bgClasses = `${base} ${themeBg}`;
 
@@ -131,7 +131,7 @@ export default function Navbar({
 
     return (
         <nav className={bgClasses}>
-            <div className="max-w-6xl mx-auto px-6 flex justify-between items-center h-16">
+            <div className="max-w-6xl w-full mx-auto px-6 flex justify-between items-center h-16">
                 {/* Logo */}
                 <span className="font-extrabold text-2xl flex">
                     <span className="text-green-800 dark:text-green-300">Duru</span>
@@ -210,7 +210,7 @@ export default function Navbar({
                 </button>
             </div>
             {menuOpen && (
-                <div className={`md:hidden ${darkMode ? "bg-neutral-900" : "bg-white"}`}>
+                <div className={`md:hidden w-full ${darkMode ? "bg-neutral-900" : "bg-white"}`}>
                     <div className="flex flex-col px-6 py-4 space-y-4">
                         {menuItems.map(({ id, label }) => (
                             <a

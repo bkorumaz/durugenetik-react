@@ -3,8 +3,8 @@ import React from "react";
 
 export default function Contact() {
   return (
-    <section id="contact" className="min-h-screen flex items-center bg-transparent">
-      <div className="max-w-3xl mx-auto px-6 py-16 text-gray-900 dark:text-gray-100">
+    <section id="contact" className="min-h-screen flex flex-col justify-center items-center bg-transparent scroll-mt-16">
+      <div className="max-w-3xl mx-auto px-6 text-gray-900 dark:text-gray-100">
         <h2 className="text-4xl font-bold mb-8 text-center">
           İletişim
         </h2>
