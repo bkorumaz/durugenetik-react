@@ -18,22 +18,21 @@ const SECTION_IDS = [
 ];
 
 export default function App() {
-  // Dark Mode
-  const [darkMode, setDarkMode] = useState(() =>
-    typeof window !== "undefined"
-      ? window.matchMedia("(prefers-color-scheme: dark)").matches
-      : false
-  );
-  useEffect(() => {
-    const mq = window.matchMedia("(prefers-color-scheme: dark)");
-    const handler = (e) => setDarkMode(e.matches);
-    mq.addEventListener("change", handler);
-    setDarkMode(mq.matches);
-    return () => mq.removeEventListener("change", handler);
-  }, []);
+  // Dark Mode (no default OS theme detection)
+  const [darkMode, setDarkMode] = useState(() => {
+    if (typeof window !== "undefined") {
+      return localStorage.getItem("theme") === "dark";
+    }
+    return false;
+  });
+
   useEffect(() => {
     document.documentElement.classList.toggle("dark", darkMode);
+    if (typeof window !== "undefined") {
+      localStorage.setItem("theme", darkMode ? "dark" : "light");
+    }
   }, [darkMode]);
+
   const toggleDark = () => setDarkMode((prev) => !prev);
 
   // Language
