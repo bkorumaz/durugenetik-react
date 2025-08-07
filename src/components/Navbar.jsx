@@ -52,9 +52,12 @@ export default function Navbar({
     }, [activeSection, menuItems]);
 
     // FULL DÜZ RENK (asla opacity, blur, overlay, vs yok)
-    const base = "fixed top-0 left-0 w-screen z-30 transition-colors";
-    const themeBg = darkMode ? "bg-neutral-900" : "bg-white";
-    const bgClasses = `${base} ${themeBg}`;
+    // iOS sometimes fails to repaint fixed elements when their className
+    // changes, so rely on Tailwind's dark: variant instead of switching
+    // classes via JS. This ensures the navbar background always matches
+    // the active theme.
+    const bgClasses =
+        "fixed top-0 left-0 w-screen z-30 transition-colors bg-white dark:bg-neutral-900";
 
     const switchBtnClass =
         "ml-2 flex items-center justify-center w-9 h-9 rounded-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-neutral-900 transition hover:shadow-md focus:outline-none";
@@ -130,7 +133,7 @@ export default function Navbar({
     const navItemActiveDark = "text-teal-300 font-bold";
 
     return (
-        <nav className={bgClasses}>
+        <nav key={darkMode ? 'dark' : 'light'} className={bgClasses}>
             <div className="max-w-6xl w-full mx-auto px-6 flex justify-between items-center h-16">
                 {/* Logo */}
                 <span className="font-extrabold text-2xl flex">
@@ -210,7 +213,7 @@ export default function Navbar({
                 </button>
             </div>
             {menuOpen && (
-                <div className={`md:hidden w-full ${darkMode ? "bg-neutral-900" : "bg-white"}`}>
+                <div className="md:hidden w-full bg-white dark:bg-neutral-900">
                     <div className="flex flex-col px-6 py-4 space-y-4">
                         {menuItems.map(({ id, label }) => (
                             <a
