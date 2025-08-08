@@ -4,7 +4,7 @@ import React from "react";
 const posts = [
   {
     title: "Yeni Suni Tohumlama Teknikleri",
-    img: "https://images.unsplash.com/photo-1654119938236-de0d8ed4641d?auto=compress&cs=tinysrgb&w=800",
+    img: "https://images.unsplash.com/photo-1631651361952-4505762bedcc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8Mnx8Y293JTIwdmV0ZXJpbmFyaWFufGVufDB8fHx8MTc1NDYyNDA1N3ww&ixlib=rb-4.1.0&q=80&w=1080",
     excerpt: "Modern laboratuvar şartlarında verim optimizasyonu...",
     link: "#"
   },
@@ -16,7 +16,7 @@ const posts = [
   },
   {
     title: "Genetik Seçim Stratejileri",
-    img: "https://images.unsplash.com/photo-1643780668909-580822430155?auto=compress&cs=tinysrgb&w=800",
+    img: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MjJ8fEROQXxlbnwwfHx8fDE3NTQ2MjQwNjd8MA&ixlib=rb-4.1.0&q=80&w=1080",
     excerpt: "Irk seçiminin süt ve et verimine etkisi üzerine bilimsel makale özeti...",
     link: "#"
   },
