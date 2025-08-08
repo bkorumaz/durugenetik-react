@@ -1,6 +1,7 @@
 // src/sections/Partners.jsx
 import React from "react";
 import Marquee from "react-fast-marquee";
+import { useTranslation } from "react-i18next";
 
 const partnersRow1 = [
   "https://logo.clearbit.com/bayer.com?size=256",
@@ -21,13 +22,14 @@ const partnersRow2 = [
 ];
 
 export default function Partners() {
+  const { t } = useTranslation();
   return (
     <section
       id="partners"
       className="min-h-screen flex flex-col justify-center items-center bg-transparent scroll-mt-16"
     >
       <div className="w-full px-4 sm:px-6 text-center">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-12">İş Ortaklarımız</h2>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-12">{t("partners.title")}</h2>
         <div className="flex flex-col gap-6 md:gap-8">
           <Marquee
             direction="right"

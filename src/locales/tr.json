@@ -11,18 +11,56 @@
   },
   "hero": {
     "title": "Verimli Bir Gelecek İnşa Ediyoruz",
-    "subtitle": "Dünya standartlarında boğa genetiği, seksli semen, embriyo transferi—sürü verimliliğinizi artırmak için.",
-    "cta": "Ürünlerimizi Keşfet"
+    "subtitle": "Sürünüzü güçlendirmek için premium sığır genetiği, seksli sperma ve embriyo hizmetleri.",
+    "cta": "Genetikleri İncele"
   },
   "products": {
-    "title": "Ürünlerimiz",
-    "item": "Ürün {{number}}",
-    "description": "Detaylı hizmet açıklaması burada."
+    "title": "Genetik Portföyümüz",
+    "list": [
+      {
+        "name": "Holstein Düve",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Holstein_Friesian_UK_Yorkshire_July_2011.jpg/960px-Holstein_Friesian_UK_Yorkshire_July_2011.jpg",
+        "desc": "Süt verimliliği yüksek Holstein dişi hatları."
+      },
+      {
+        "name": "Holstein Boğa",
+        "image": "https://images.unsplash.com/photo-1527153857715-3908f2bae5e8?auto=compress&cs=tinysrgb&w=800",
+        "desc": "Süt kalitesi ve uzun ömür için seçilmiş Holstein boğaları."
+      },
+      {
+        "name": "Montofon",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Brown_swiss.jpg",
+        "desc": "Güçlü ayak yapısıyla dayanıklı Montofon genetiği."
+      },
+      {
+        "name": "Simmental",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Simmentaler_Fleckvieh.jpg/960px-Simmentaler_Fleckvieh.jpg",
+        "desc": "Et ve süt dengesini sağlayan Simmental hatları."
+      }
+    ]
   },
   "blog": {
-    "title": "Son Yazılar",
-    "post": "Yazı Başlığı {{number}}",
-    "excerpt": "Kısa özet buraya.",
+    "title": "Haberler & Güncellemeler",
+    "posts": [
+      {
+        "title": "Yeni Yapay Tohumlama Yaklaşımları",
+        "img": "https://images.unsplash.com/photo-1631651361952-4505762bedcc?auto=compress&cs=tinysrgb&w=800",
+        "excerpt": "Dijital araçlar tohumlama programlarını nasıl dönüştürüyor.",
+        "link": "#"
+      },
+      {
+        "title": "Çiftlikte Sağlık İzleme",
+        "img": "https://images.unsplash.com/photo-1530268782463-418534b0affa?auto=compress&cs=tinysrgb&w=800",
+        "excerpt": "Sürü sağlığını erken tespit için takip yöntemleri.",
+        "link": "#"
+      },
+      {
+        "title": "Genetik Seçim Stratejileri",
+        "img": "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=compress&cs=tinysrgb&w=800",
+        "excerpt": "Süt ve et verimini artıran boğa seçimi.",
+        "link": "#"
+      }
+    ],
     "readMore": "Devamını oku"
   },
   "partners": {
@@ -31,41 +69,49 @@
   },
   "about": {
     "title": "Hakkımızda",
-    "description": "DuruGenetik, 2010'dan bu yana damızlık seçiminden doğum sonrası takibe kadar her adımda çiftçinin yanında olan bir genetik teknolojileri şirketidir. Amacımız, yüksek verimli ve sağlıklı sürüler oluşturmak için bilimsel yenilikleri pratik deneyimle buluşturmaktır."
+    "description": "2010 yılında Burdur’da kurulan DuruGenetik, Türkiye genelindeki çiftliklere dünya standartlarında hayvan genetiği ve saha desteği sağlar."
   },
   "services": {
     "title": "Hizmetlerimiz",
     "list": [
       {
-        "title": "Genetik Danışmanlık",
-        "description": "Sürü yönetimi ve damızlık seçiminde uzman rehberlik."
+        "title": "Genetik Planlama",
+        "description": "Genomik analizlerle desteklenen özel damızlık programları."
       },
       {
-        "title": "Seksli Semen",
-        "description": "Yüksek gebelik oranları için sertifikalı seksli semen tedariki."
+        "title": "Seksli Sperma Tedariki",
+        "description": "Sürü büyümesini hızlandıran dişi ağırlıklı sperma."
       },
       {
         "title": "Embriyo Transferi",
-        "description": "Üstün genetik potansiyeli hızla çoğaltmak için modern embriyo transferi çözümleri."
+        "description": "Donör ve taşıyıcı yönetimiyle yüksek başarı oranlı embriyo transferi."
       }
     ]
   },
   "approach": {
-    "title": "DuruGenetik Yaklaşımı",
-    "description": "Bilimsel altyapı ve saha deneyimini bir araya getirerek sürülerinizi geleceğe hazırlarız.",
-    "points": [
-      "Çiftçilere özel strateji ve planlama",
-      "Düzenli performans takibi ve raporlama",
-      "Sürdürülebilir üretim için yenilikçi çözümler"
+    "title": "Nasıl Çalışırız",
+    "description": "Laboratuvar bilimi ve saha deneyimini birleştirerek sürü performansını yükseltiriz.",
+    "steps": [
+      { "step": "1. Analiz", "desc": "Çiftlik ziyareti ve numune toplama." },
+      { "step": "2. Değerlendirme", "desc": "Genetik indeks hesaplaması ve raporlama." },
+      { "step": "3. Uygulama", "desc": "Seçilen genetiklerle suni tohumlama." },
+      { "step": "4. İzleme", "desc": "Düzenli kontroller ve performans takibi." }
     ]
   },
   "contact": {
     "title": "İletişim",
+    "addressLabel": "Adres",
+    "address": "Hızır İlyas Mah. İ. Zeki Burdurlu Cad. No:75/A, Burdur",
+    "phoneLabel": "Telefon",
+    "phone": "0536 298 30 31",
+    "emailLabel": "E-posta",
+    "email": "info@durugenetik.com",
     "name": "İsim",
+    "emailField": "E-posta",
     "message": "Mesaj",
     "send": "Gönder"
   },
   "footer": {
-    "developed_by": "Geliştirici"
+    "developed_by": "Geliştiren"
   }
 }

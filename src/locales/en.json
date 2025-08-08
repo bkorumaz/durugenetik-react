@@ -11,18 +11,56 @@
   },
   "hero": {
     "title": "Building a Productive Future",
-    "subtitle": "World-class bull genetics, sexed semen, embryo transfer—all to boost your herd’s productivity.",
-    "cta": "Explore Our Products"
+    "subtitle": "Premium cattle genetics, sexed semen and embryo services to strengthen your herd.",
+    "cta": "Browse Genetics"
   },
   "products": {
-    "title": "Our Products",
-    "item": "Product {{number}}",
-    "description": "Detailed service description here."
+    "title": "Genetic Portfolio",
+    "list": [
+      {
+        "name": "Holstein Heifer",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Holstein_Friesian_UK_Yorkshire_July_2011.jpg/960px-Holstein_Friesian_UK_Yorkshire_July_2011.jpg",
+        "desc": "High-output Holstein heifer lines for dairy efficiency."
+      },
+      {
+        "name": "Holstein Bull",
+        "image": "https://images.unsplash.com/photo-1527153857715-3908f2bae5e8?auto=compress&cs=tinysrgb&w=800",
+        "desc": "Proven Holstein sires selected for milk quality and longevity."
+      },
+      {
+        "name": "Brown Swiss",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Brown_swiss.jpg",
+        "desc": "Robust Brown Swiss genetics with strong feet and legs."
+      },
+      {
+        "name": "Simmental",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Simmentaler_Fleckvieh.jpg/960px-Simmentaler_Fleckvieh.jpg",
+        "desc": "Dual-purpose Simmental lines for meat and milk balance."
+      }
+    ]
   },
   "blog": {
-    "title": "Latest Posts",
-    "post": "Blog Title {{number}}",
-    "excerpt": "Short excerpt goes here.",
+    "title": "News & Updates",
+    "posts": [
+      {
+        "title": "New Approaches to AI Breeding",
+        "img": "https://images.unsplash.com/photo-1631651361952-4505762bedcc?auto=compress&cs=tinysrgb&w=800",
+        "excerpt": "How digital tools are reshaping insemination programs.",
+        "link": "#"
+      },
+      {
+        "title": "Farm Health Monitoring",
+        "img": "https://images.unsplash.com/photo-1530268782463-418534b0affa?auto=compress&cs=tinysrgb&w=800",
+        "excerpt": "Track herd wellness to catch issues early.",
+        "link": "#"
+      },
+      {
+        "title": "Genetic Selection Strategies",
+        "img": "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=compress&cs=tinysrgb&w=800",
+        "excerpt": "Choosing sires that improve milk and meat yield.",
+        "link": "#"
+      }
+    ],
     "readMore": "Read more"
   },
   "partners": {
@@ -31,41 +69,49 @@
   },
   "about": {
     "title": "About Us",
-    "description": "Since 2010, DuruGenetik has stood beside farmers at every step—from sire selection to post-calving monitoring. Our goal is to blend scientific innovation with field expertise to build healthy, highly productive herds."
+    "description": "Founded in 2010 in Burdur, DuruGenetik brings world-class livestock genetics and hands-on support to farms across the region."
   },
   "services": {
     "title": "Our Services",
     "list": [
       {
-        "title": "Genetic Consulting",
-        "description": "Expert guidance on herd management and sire selection."
+        "title": "Genetic Planning",
+        "description": "Customized breeding programs backed by genomic analysis."
       },
       {
-        "title": "Sexed Semen",
-        "description": "Certified sexed semen supplies for high conception rates."
+        "title": "Sexed Semen Supply",
+        "description": "Certified female-biased semen for rapid herd growth."
       },
       {
         "title": "Embryo Transfer",
-        "description": "Modern embryo transfer solutions to multiply superior genetics quickly."
+        "description": "High-success embryo transfer with donor and recipient management."
       }
     ]
   },
   "approach": {
-    "title": "The DuruGenetik Approach",
-    "description": "We combine scientific expertise with field experience to prepare your herd for the future.",
-    "points": [
-      "Tailored strategies for every farm",
-      "Ongoing performance monitoring and reporting",
-      "Innovative solutions for sustainable production"
+    "title": "How We Work",
+    "description": "We blend laboratory science with field expertise to elevate herd performance.",
+    "steps": [
+      { "step": "1. Analysis", "desc": "Farm visit and sample collection." },
+      { "step": "2. Evaluation", "desc": "Genetic index calculation and reporting." },
+      { "step": "3. Implementation", "desc": "Artificial insemination with selected genetics." },
+      { "step": "4. Monitoring", "desc": "Regular check-ups and performance tracking." }
     ]
   },
   "contact": {
     "title": "Contact",
+    "addressLabel": "Address",
+    "address": "Hızır İlyas Mah. İ. Zeki Burdurlu Cad. No:75/A, Burdur",
+    "phoneLabel": "Phone",
+    "phone": "0536 298 30 31",
+    "emailLabel": "Email",
+    "email": "info@durugenetik.com",
     "name": "Name",
+    "emailField": "Email",
     "message": "Message",
     "send": "Send"
   },
   "footer": {
-    "developed_by": "Powered by"
+    "developed_by": "Developed by"
   }
 }
