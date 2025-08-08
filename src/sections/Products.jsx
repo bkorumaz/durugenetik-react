@@ -1,63 +1,10 @@
 // src/sections/Products.jsx
 import React, { useState } from "react";
-
-const products = [
-  {
-    name: "Holstein Dişi",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Holstein_Friesian_UK_Yorkshire_July_2011.jpg/960px-Holstein_Friesian_UK_Yorkshire_July_2011.jpg",
-    desc: "Yüksek verimli Holstein dişi genomları.",
-  },
-  {
-    name: "Holstein",
-    image:
-      "https://images.unsplash.com/photo-1527153857715-3908f2bae5e8?auto=compress&cs=tinysrgb&w=800",
-    desc: "Dünyaca ünlü süt verimi taçlı Holstein hattı.",
-  },
-  {
-    name: "Montbéliarde",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Vache_Montb%C3%A9liarde.jpg/960px-Vache_Montb%C3%A9liarde.jpg",
-    desc: "Sağlam dizi ve yüksek süt verimi için Montbéliarde.",
-  },
-  {
-    name: "Montbéliarde Dişi",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Vache_Montb%C3%A9liarde.jpg/1200px-Vache_Montb%C3%A9liarde.jpg",
-    desc: "Seçkin Montbéliarde dişi genomları.",
-  },
-  {
-    name: "Brown Swiss (Montofon)",
-    image: "https://upload.wikimedia.org/wikipedia/commons/e/e9/Brown_swiss.jpg",
-    desc: "Dayanıklı Brown Swiss (Montofon) genomları.",
-  },
-  {
-    name: "Etçi Boğalar",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/b/b5/A_Friesian_Bull%2C_Llandeilo_Graban_-_geograph.org.uk_-_579885.jpg",
-    desc: "En iyi etçi boğalarla damızlık iyileştirme.",
-  },
-  {
-    name: "Kırmızı Holstein",
-    image:
-      "https://images.unsplash.com/photo-1561043394-9f7d16d9ae37?auto=compress&cs=tinysrgb&w=800",
-    desc: "Güçlü ve renkli Kırmızı Holstein genomları.",
-  },
-  {
-    name: "Jersey",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Bou%C3%ABts_d%27J%C3%A8rri_%C3%8Agypte_5_J%C3%A8rri_Mai_2009.jpg/960px-Bou%C3%ABts_d%27J%C3%A8rri_Mai_2009.jpg",
-    desc: "Yoğun yağlı süt için seçkin Jersey hattı.",
-  },
-  {
-    name: "Simmental",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Simmentaler_Fleckvieh.jpg/960px-Simmentaler_Fleckvieh.jpg",
-    desc: "Çift yönlü verim: Et & süt için Simmental.",
-  },
-];
+import { useTranslation } from "react-i18next";
 
 export default function Products() {
+  const { t } = useTranslation();
+  const products = t("products.list", { returnObjects: true });
   const [videoLoaded, setVideoLoaded] = useState(false);
   return (
     <section id="products" className="relative min-h-screen flex items-center justify-center bg-transparent overflow-hidden scroll-mt-16">
@@ -83,9 +30,7 @@ export default function Products() {
       <div className="absolute inset-0 bg-white bg-opacity-60 backdrop-blur-sm dark:bg-neutral-900 dark:bg-opacity-60 -z-10" />
 
       <div className="relative z-10 flex flex-col items-center w-full px-6 py-12">
-        <h2 className="text-4xl font-bold mb-8 text-gray-900 dark:text-white">
-          Ürünlerimiz
-        </h2>
+        <h2 className="text-4xl font-bold mb-8 text-gray-900 dark:text-white">{t("products.title")}</h2>
         <div className="hidden sm:grid grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl w-full mx-auto">
           {products.map((prod) => (
             <div
