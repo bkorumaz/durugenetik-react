@@ -37,9 +37,13 @@ export default function App() {
 
   // Language
   const { i18n } = useTranslation();
+  useEffect(() => {
+    document.documentElement.lang = i18n.language;
+  }, [i18n.language]);
   const toggleLang = () => {
     const newLang = i18n.language === "en" ? "tr" : "en";
     i18n.changeLanguage(newLang);
+    document.documentElement.lang = newLang;
   };
 
   // Section scroll & highlight
