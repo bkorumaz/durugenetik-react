@@ -57,22 +57,43 @@ export default function App() {
 
   // Video yüklenme takibi (white flash fix)
   const [videoLoaded, setVideoLoaded] = useState(true);
+  const [loadBgVideo, setLoadBgVideo] = useState(false);
   const videoSrc = "/videos/dna-bg.mp4";
   const placeholderColor = "#1a1a1a"; // dark grey fallback main
   const bgVideoRef = useRef(null);
+
+  // Start loading the background video when the home section nears view
   useEffect(() => {
-    setVideoLoaded(false);
-  }, [videoSrc]);
+    const homeSection = sectionRefs.current["home"]?.current;
+    if (!homeSection) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setLoadBgVideo(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "200px" }
+    );
+
+    observer.observe(homeSection);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (loadBgVideo) setVideoLoaded(false);
+  }, [loadBgVideo]);
 
   // Ensure autoplay on iOS devices
   useEffect(() => {
-    if (bgVideoRef.current) {
+    if (loadBgVideo && bgVideoRef.current) {
       const playPromise = bgVideoRef.current.play();
       if (playPromise?.catch) {
         playPromise.catch(() => {});
       }
     }
-  }, [videoSrc]);
+  }, [loadBgVideo]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -137,6 +158,8 @@ export default function App() {
         muted
         playsInline
         aria-hidden="true"
+        poster="/images/dna-placeholder.svg"
+        preload="none"
         className="fixed inset-0 w-full h-full object-cover -z-10 pointer-events-none select-none"
         style={{
           filter: darkMode
@@ -146,7 +169,7 @@ export default function App() {
         key={videoSrc}
         onLoadedData={() => setVideoLoaded(true)}
       >
-        <source src={videoSrc} type="video/mp4" />
+        {loadBgVideo && <source src={videoSrc} type="video/mp4" />}
       </video>
 
       <main className="relative z-10 pt-16">
