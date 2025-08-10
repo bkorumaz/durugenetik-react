@@ -1,10 +1,12 @@
 // src/sections/Services.jsx
 import React from "react";
+import { useTranslation } from "react-i18next";
 
-const services = [
-  {
-    title: "Genetik Danışmanlık",
-    icon: (
+export default function Services() {
+  const { t } = useTranslation();
+  const services = t("services.list", { returnObjects: true });
+  const icons = [
+    (
       <svg
         className="w-12 h-12 text-green-800 dark:text-green-300 mb-4"
         fill="none"
@@ -15,11 +17,7 @@ const services = [
         <path d="M12 2v20M2 12h20" />
       </svg>
     ),
-    desc: "Sürüdünüzün genetik potansiyelini açığa çıkarmak için saha analizleri."
-  },
-  {
-    title: "Suni Tohumlama",
-    icon: (
+    (
       <svg
         className="w-12 h-12 text-green-800 dark:text-green-300 mb-4"
         fill="none"
@@ -30,12 +28,8 @@ const services = [
         <path d="M6 12h12M12 6v12" />
       </svg>
     ),
-    desc: "En yeni tekniklerle yüksek verimli damızlık hizmeti."
-  },
-  {
-    title: "Embriyo Transferi",
-    icon: (
-       <svg
+    (
+      <svg
         className="w-12 h-12 text-green-800 dark:text-green-300 mb-4"
         fill="none"
         stroke="currentColor"
@@ -44,29 +38,22 @@ const services = [
       >
         <path d="M6 12h12M12 6v12" />
       </svg>
-    ),
-    desc: "Yüksek başarı oranlı embriyo transfer çözümleri.",
-  },
-];
+    )
+  ];
 
-export default function Services() {
   return (
     <section id="services" className="min-h-screen flex flex-col justify-center items-center bg-transparent scroll-mt-16">
       <div className="max-w-5xl mx-auto px-6 text-center">
-        <h2 className="text-4xl font-bold mb-8 text-gray-900 dark:text-gray-100">
-          Hizmetlerimiz
-        </h2>
+        <h2 className="text-4xl font-bold mb-8 text-gray-900 dark:text-gray-100">{t("services.title")}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map(({ title, icon, desc }) => (
+          {services.map(({ title, description }, idx) => (
             <div
               key={title}
               className="p-6 bg-white bg-opacity-60 backdrop-blur-md rounded-xl shadow-lg dark:bg-neutral-800 dark:bg-opacity-60"
             >
-              {icon}
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-gray-100">
-                {title}
-              </h3>
-              <p className="text-gray-700 dark:text-gray-300">{desc}</p>
+              {icons[idx]}
+              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-gray-100">{title}</h3>
+              <p className="text-gray-700 dark:text-gray-300">{description}</p>
             </div>
           ))}
         </div>
