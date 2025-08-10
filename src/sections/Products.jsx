@@ -1,24 +1,55 @@
 // src/sections/Products.jsx
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 
 export default function Products() {
   const { t } = useTranslation();
   const products = t("products.list", { returnObjects: true });
-  const [videoLoaded, setVideoLoaded] = useState(false);
+  const [videoLoaded, setVideoLoaded] = useState(true);
+  const [loadVideo, setLoadVideo] = useState(false);
+  const sectionRef = useRef(null);
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setLoadVideo(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "200px" }
+    );
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (loadVideo) setVideoLoaded(false);
+  }, [loadVideo]);
+
+  useEffect(() => {
+    if (loadVideo && videoRef.current) {
+      const p = videoRef.current.play();
+      if (p?.catch) p.catch(() => {});
+    }
+  }, [loadVideo]);
+
   return (
-    <section id="products" className="relative min-h-screen flex items-center justify-center bg-transparent overflow-hidden scroll-mt-16">
+    <section ref={sectionRef} id="products" className="relative min-h-screen flex items-center justify-center bg-transparent overflow-hidden scroll-mt-16">
       {/* hero.mp4 sadece bu bölüm için */}
       <video
+        ref={videoRef}
         autoPlay
         loop
         muted
         playsInline
-        poster="https://images.unsplash.com/photo-1546445317-29f4545e9d53?auto=compress&cs=tinysrgb&w=1600"
+        poster="/images/products-placeholder.svg"
+        preload="none"
         className="absolute inset-0 w-full h-full object-cover -z-20"
         onLoadedData={() => setVideoLoaded(true)}
       >
-        <source src="/videos/products-bg.mp4" type="video/mp4" />
+        {loadVideo && <source src="/videos/products-bg.mp4" type="video/mp4" />}
       </video>
       {!videoLoaded && (
         <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">
