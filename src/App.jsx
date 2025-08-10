@@ -1,15 +1,15 @@
 // src/App.jsx
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, Suspense } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Hero from "./sections/Hero";
-import Services from "./sections/Services";
-import Products from "./sections/Products";
-import Blog from "./sections/Blog";
-import Partners from "./sections/Partners";
-import About from "./sections/About";
-import Approach from "./sections/Approach";
-import Contact from "./sections/Contact";
+const Hero = React.lazy(() => import("./sections/Hero"));
+const Services = React.lazy(() => import("./sections/Services"));
+const Products = React.lazy(() => import("./sections/Products"));
+const Blog = React.lazy(() => import("./sections/Blog"));
+const Partners = React.lazy(() => import("./sections/Partners"));
+const About = React.lazy(() => import("./sections/About"));
+const Approach = React.lazy(() => import("./sections/Approach"));
+const Contact = React.lazy(() => import("./sections/Contact"));
 import "./i18n";
 import { useTranslation } from "react-i18next";
 
@@ -153,16 +153,24 @@ export default function App() {
             ref={sectionRefs.current[id]}
             className="bg-transparent"
           >
-            {{
-              home: <Hero darkMode={darkMode} />,
-              services: <Services />,
-              products: <Products />,
-              blog: <Blog />,
-              partners: <Partners />,
-              aboutus: <About />,
-              approach: <Approach />,
-              contact: <Contact />,
-            }[id]}
+            <Suspense
+              fallback={
+                <div className="flex items-center justify-center py-10">
+                  <div className="w-10 h-10 border-4 border-teal-500 border-t-transparent rounded-full animate-spin" />
+                </div>
+              }
+            >
+              {{
+                home: <Hero darkMode={darkMode} />,
+                services: <Services />,
+                products: <Products />,
+                blog: <Blog />,
+                partners: <Partners />,
+                aboutus: <About />,
+                approach: <Approach />,
+                contact: <Contact />,
+              }[id]}
+            </Suspense>
           </section>
         ))}
       </main>
