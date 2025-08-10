@@ -18,10 +18,15 @@ const SECTION_IDS = [
 ];
 
 export default function App() {
-  // Dark Mode (no default OS theme detection)
+  // Dark Mode (respect system preference if no stored theme)
   const [darkMode, setDarkMode] = useState(() => {
     if (typeof window !== "undefined") {
-      return localStorage.getItem("theme") === "dark";
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const storedTheme = localStorage.getItem("theme");
+      if (storedTheme === null) {
+        return prefersDark;
+      }
+      return storedTheme === "dark";
     }
     return false;
   });
