@@ -17,46 +17,65 @@
   "products": {
     "title": "Genetik Portföyümüz",
     "tagline": "Saha Onaylı Genetikler",
-    "intro": "Anadolu koşullarında doğrulanmış yüksek etkili genetikleri seçerek her uygulamada daha sağlıklı ve verimli sürüler elde etmenizi sağlıyoruz.",
+    "intro": "Saha sonuçlarıyla kanıtlanmış genetikleri seçerek süt ve et performansını güçlendiriyoruz.",
     "highlights": [
       {
         "title": "Seçilmiş Boğa Kadroları",
-        "description": "Holstein, Montofon ve Simmental soyları bölgesel performans verilerine göre eşleştirilir."
+        "description": "Holstein, Montofon ve Simmental soylarını çiftlik hedefleriyle eşliyoruz."
       },
       {
         "title": "Yaşam Döngüsü Takibi",
-        "description": "Tohumlamadan buzağılamaya kadar her yavruyu sürü hedeflerinizle kıyaslıyoruz."
+        "description": "Her yavruyu doğumdan verim çağına kadar raporluyoruz."
       },
       {
         "title": "Hızlı Tedarik",
-        "description": "Soğuk zincir lojistiği sayesinde ihtiyaç anında premium genetik erişimi sağlıyoruz."
+        "description": "Soğuk zincir lojistiği ile ihtiyaç anında teslimat yapıyoruz."
       }
     ],
     "metrics": [
-      { "label": "Sürü Programı", "value": "120+" },
-      { "label": "Donör Ailesi", "value": "48" },
-      { "label": "Gebelik Oranı", "value": "%92" }
+      {
+        "label": "Sürü Programı",
+        "value": "120+"
+      },
+      {
+        "label": "Donör Ailesi",
+        "value": "48"
+      },
+      {
+        "label": "Gebelik Oranı",
+        "value": "%92"
+      }
     ],
     "list": [
       {
-        "name": "Holstein Düve",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Holstein_Friesian_UK_Yorkshire_July_2011.jpg/960px-Holstein_Friesian_UK_Yorkshire_July_2011.jpg",
-        "desc": "Süt verimliliği yüksek Holstein dişi hatları."
-      },
-      {
-        "name": "Holstein Boğa",
+        "name": "Holstein Boğaları",
         "image": "https://images.unsplash.com/photo-1527153857715-3908f2bae5e8?auto=compress&cs=tinysrgb&w=800",
-        "desc": "Süt kalitesi ve uzun ömür için seçilmiş Holstein boğaları."
+        "desc": "Süt verimine odaklı yüksek PTA değerleri."
       },
       {
-        "name": "Montofon",
+        "name": "Holstein Düveleri",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Holstein_Friesian_UK_Yorkshire_July_2011.jpg/960px-Holstein_Friesian_UK_Yorkshire_July_2011.jpg",
+        "desc": "Erken laktasyon başarısı için dengeli dişi hatları."
+      },
+      {
+        "name": "Montofon Hatları",
         "image": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Brown_swiss.jpg",
-        "desc": "Güçlü ayak yapısıyla dayanıklı Montofon genetiği."
+        "desc": "Dayanıklı yapı ve yüksek yağ oranı."
       },
       {
-        "name": "Simmental",
+        "name": "Simmental Programı",
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Simmentaler_Fleckvieh.jpg/960px-Simmentaler_Fleckvieh.jpg",
-        "desc": "Et ve süt dengesini sağlayan Simmental hatları."
+        "desc": "Et ve süt dengesini sağlayan kalıtsal güç."
+      },
+      {
+        "name": "Jersey Seçkisi",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Jersey_cow.jpg",
+        "desc": "Yüksek yağ oranı sunan kompakt dişi hatlar."
+      },
+      {
+        "name": "Angus Et Programı",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Black_Angus_cattle.jpg",
+        "desc": "Kas gelişimini hızlandıran Angus genetiği."
       }
     ]
   },
@@ -159,63 +178,76 @@
   "services": {
     "badge": "Uzman Ekip",
     "title": "Hizmetlerimiz",
-    "intro": "Sürü stratejisinden sahadaki uygulamaya kadar uzmanlarımız laboratuvar bilgisini saha disipliniyle birleştirerek yatırımınızı korur.",
+    "intro": "Veteriner ekibimiz hedeflenen verimi korumak için planlama, tedarik ve saha desteğini tek çatı altında yönetir.",
     "highlights": [
-      { "label": "Yönettiğimiz Çiftlik", "value": "1.200+" },
-      { "label": "Yıllık Ziyaret", "value": "350" },
-      { "label": "Saha Uzmanı", "value": "18" }
+      {
+        "label": "Yönettiğimiz Çiftlik",
+        "value": "1.200+"
+      },
+      {
+        "label": "Yıllık Ziyaret",
+        "value": "350"
+      },
+      {
+        "label": "Saha Uzmanı",
+        "value": "18"
+      }
     ],
     "list": [
       {
-        "title": "Genetik Planlama ve Denetim",
+        "title": "Genetik Planlama",
         "pillar": "PLAN",
-        "description": "Genomik değerlendirmeler ve çiftlik ekonomisiyle şekillenen kişiye özel damızlık yol haritaları.",
+        "description": "Sürü verilerini inceleyerek hedefe uygun eşleşme tabloları kuruyoruz.",
         "points": [
-          "Sürü skorlaması ve KPI tanımları",
-          "Genomik ve lineer özellik haritalaması",
-          "Çeyreklik ilerleme raporlaması"
+          "Sürü skoru ve hedef takvimi",
+          "Genomik eşleşme haritaları"
         ]
       },
       {
-        "title": "Dişi Odaklı Genetik Tedariki",
-        "pillar": "TEDARİK",
-        "description": "Sürü büyümesini hızlandıran sertifikalı sexlenmiş genetik ve elit embriyolar.",
+        "title": "Dişi Hat Yönetimi",
+        "pillar": "YENİLE",
+        "description": "Yüksek verimli dişi hatlarıyla sürü yenilenmesini hızlandırıyoruz.",
         "points": [
-          "Yüksek fertiliteli sexlenmiş sperma portföyü",
-          "Embriyo rezervasyonu ve depolama yönetimi",
-          "İzlenebilirlik ve mevzuat dokümantasyonu"
+          "Onaylı dişi hat listeleri",
+          "Lojistik ve kayıt koordinasyonu"
         ]
       },
       {
         "title": "İleri Transfer Programları",
         "pillar": "TRANSFER",
-        "description": "Donör senkronizasyonu ve taşıyıcı takibiyle desteklenen yüksek başarı oranlı transfer süreçleri.",
+        "description": "Donör ve taşıyıcı senkronizasyonu ile gebelik oranını yükseltiyoruz.",
         "points": [
-          "Donör uyarımı ve yıkama takvimleri",
-          "Taşıyıcı senkronizasyonu ve puanlaması",
-          "Sahada transfer ekibi ve sonrası takip"
+          "Donör takvimi",
+          "Transfer sonrası saha kontrolü"
         ]
       },
       {
         "title": "Yaşam Döngüsü Saha Desteği",
         "pillar": "DESTEK",
-        "description": "Sürü sağlığı, besleme ve veri bütünlüğünü yıl boyu sürdüren veterinerlik uzmanlığı.",
+        "description": "Besleme, sağlık ve kayıt yönetimini düzenli ziyaretlerle takip ediyoruz.",
         "points": [
-          "Rutin fertilite kontrolleri ve ultrason",
-          "Besleme ve barınak optimizasyonu",
-          "Acil müdahale ve uzaktan yönlendirme"
+          "Aylık saha ziyareti planı",
+          "Uzaktan izleme raporları"
         ]
       }
     ]
   },
   "approach": {
-    "title": "Nasıl Çalışırız",
-    "description": "Laboratuvar bilimi ve saha deneyimini birleştirerek sürü performansını yükseltiriz.",
+    "title": "Saha Programımız",
+    "description": "Her çiftlik için ölçümlenebilir sonuçlar üreten şeffaf bir çalışma akışı izliyoruz.",
     "steps": [
-      { "step": "1. Analiz", "desc": "Çiftlik ziyareti ve numune toplama." },
-      { "step": "2. Değerlendirme", "desc": "Genetik indeks hesaplaması ve raporlama." },
-      { "step": "3. Uygulama", "desc": "Seçilen genetiklerle suni tohumlama." },
-      { "step": "4. İzleme", "desc": "Düzenli kontroller ve performans takibi." }
+      {
+        "step": "Yerinde Analiz",
+        "desc": "Çiftlik verilerini ve hedeflerinizi inceleriz."
+      },
+      {
+        "step": "Uygulama Planı",
+        "desc": "Genetik seçimi ve saha aksiyonlarını programlarız."
+      },
+      {
+        "step": "Sürekli Takip",
+        "desc": "Performansı ölçer, raporları düzenli paylaşırız."
+      }
     ]
   },
   "contact": {

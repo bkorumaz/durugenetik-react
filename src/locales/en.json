@@ -17,46 +17,65 @@
   "products": {
     "title": "Genetic Portfolio",
     "tagline": "Field-Proven Genetics",
-    "intro": "We curate high-impact genetics that are validated in Anatolian field conditions so every straw contributes to healthier, more productive herds.",
+    "intro": "We select proven genetics with field data so milk and beef performance stay on track.",
     "highlights": [
       {
-        "title": "Curated Sire Lineups",
-        "description": "Holstein, Brown Swiss, and Simmental pedigrees matched to regional performance data."
+        "title": "Curated Bull Teams",
+        "description": "Holstein, Brown Swiss, and Simmental sires are matched to herd priorities."
       },
       {
-        "title": "Lifecycle Monitoring",
-        "description": "From conception to calving, we benchmark every calf crop against your herd goals."
+        "title": "Lifecycle Tracking",
+        "description": "Each calf is benchmarked from birth to production."
       },
       {
-        "title": "Rapid Supply",
-        "description": "Cold-chain logistics keep premium genetics accessible exactly when farms need them."
+        "title": "Rapid Fulfilment",
+        "description": "Cold-chain logistics deliver premium genetics right when you need them."
       }
     ],
     "metrics": [
-      { "label": "Herd Programs", "value": "120+" },
-      { "label": "Donor Families", "value": "48" },
-      { "label": "Avg. Conception", "value": "92%" }
+      {
+        "label": "Herd Programs",
+        "value": "120+"
+      },
+      {
+        "label": "Donor Families",
+        "value": "48"
+      },
+      {
+        "label": "Avg. Conception",
+        "value": "92%"
+      }
     ],
     "list": [
       {
-        "name": "Holstein Heifer",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Holstein_Friesian_UK_Yorkshire_July_2011.jpg/960px-Holstein_Friesian_UK_Yorkshire_July_2011.jpg",
-        "desc": "High-output Holstein heifer lines for dairy efficiency."
-      },
-      {
-        "name": "Holstein Bull",
+        "name": "Holstein Bulls",
         "image": "https://images.unsplash.com/photo-1527153857715-3908f2bae5e8?auto=compress&cs=tinysrgb&w=800",
-        "desc": "Proven Holstein sires selected for milk quality and longevity."
+        "desc": "High PTA sires focused on milk output and longevity."
       },
       {
-        "name": "Brown Swiss",
+        "name": "Holstein Heifers",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Holstein_Friesian_UK_Yorkshire_July_2011.jpg/960px-Holstein_Friesian_UK_Yorkshire_July_2011.jpg",
+        "desc": "Balanced female lines that settle fast and milk early."
+      },
+      {
+        "name": "Brown Swiss Lines",
         "image": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Brown_swiss.jpg",
-        "desc": "Robust Brown Swiss genetics with strong feet and legs."
+        "desc": "Durable frames with elevated butterfat production."
       },
       {
-        "name": "Simmental",
+        "name": "Simmental Program",
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Simmentaler_Fleckvieh.jpg/960px-Simmentaler_Fleckvieh.jpg",
-        "desc": "Dual-purpose Simmental lines for meat and milk balance."
+        "desc": "Dual-purpose power with reliable growth."
+      },
+      {
+        "name": "Jersey Selection",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Jersey_cow.jpg",
+        "desc": "Compact cows driving rich milk solids."
+      },
+      {
+        "name": "Angus Beef Line",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Black_Angus_cattle.jpg",
+        "desc": "Muscle-forward genetics for beef-focused herds."
       }
     ]
   },
@@ -159,63 +178,76 @@
   "services": {
     "badge": "Expert Team",
     "title": "Our Services",
-    "intro": "From herd strategy to on-site implementation, our specialists bring together laboratory insight and field discipline to protect your investment.",
+    "intro": "Our veterinary team manages planning, sourcing, and on-site support under one roof to keep every herd on target.",
     "highlights": [
-      { "label": "Farms Guided", "value": "1.200+" },
-      { "label": "Annual Visits", "value": "350" },
-      { "label": "Field Specialists", "value": "18" }
+      {
+        "label": "Farms Guided",
+        "value": "1.200+"
+      },
+      {
+        "label": "Annual Visits",
+        "value": "350"
+      },
+      {
+        "label": "Field Specialists",
+        "value": "18"
+      }
     ],
     "list": [
       {
-        "title": "Genetic Planning & Audit",
+        "title": "Genetic Planning",
         "pillar": "PLAN",
-        "description": "Customized breeding roadmaps informed by genomic evaluations and farm economics.",
+        "description": "We translate herd data into tailored mating maps that protect your goals.",
         "points": [
-          "Baseline herd scoring and KPI definition",
-          "Genomic and linear trait mapping",
-          "Quarterly progress reports for stakeholders"
+          "Herd scoring & goal timeline",
+          "Genomic pairing charts"
         ]
       },
       {
-        "title": "Female-Centric Genetic Supply",
-        "pillar": "SUPPLY",
-        "description": "Certified sexed genetics and elite embryos positioned to accelerate herd growth.",
+        "title": "Female Line Management",
+        "pillar": "RENEW",
+        "description": "High-performing female lines accelerate replacements without disruption.",
         "points": [
-          "High-fertility sexed semen portfolio",
-          "Embryo reservation and storage management",
-          "Traceability and compliance documentation"
+          "Approved female rosters",
+          "Logistics & compliance oversight"
         ]
       },
       {
         "title": "Advanced Transfer Programs",
         "pillar": "TRANSFER",
-        "description": "High-success transfer workflows supported by donor synchrony and recipient monitoring.",
+        "description": "Coordinated donor and recipient schedules push pregnancy rates higher.",
         "points": [
-          "Donor stimulation and flush schedules",
-          "Recipient synchronization and scoring",
-          "On-site transfer team and aftercare"
+          "Donor calendar",
+          "Post-transfer field follow-up"
         ]
       },
       {
         "title": "Lifecycle Field Support",
         "pillar": "SUPPORT",
-        "description": "Hands-on veterinary expertise to maintain herd health, nutrition, and data integrity year-round.",
+        "description": "Routine visits align nutrition, health, and records all season long.",
         "points": [
-          "Routine fertility checks and ultrasound",
-          "Feeding and housing optimization",
-          "Emergency call-out and remote guidance"
+          "Monthly farm visits",
+          "Remote monitoring reports"
         ]
       }
     ]
   },
   "approach": {
-    "title": "How We Work",
-    "description": "We blend laboratory science with field expertise to elevate herd performance.",
+    "title": "How We Deliver",
+    "description": "A clear workflow keeps every engagement measurable and aligned with your targets.",
     "steps": [
-      { "step": "1. Analysis", "desc": "Farm visit and sample collection." },
-      { "step": "2. Evaluation", "desc": "Genetic index calculation and reporting." },
-      { "step": "3. Implementation", "desc": "Artificial insemination with selected genetics." },
-      { "step": "4. Monitoring", "desc": "Regular check-ups and performance tracking." }
+      {
+        "step": "On-Farm Review",
+        "desc": "We audit herd data, facilities, and goals."
+      },
+      {
+        "step": "Action Blueprint",
+        "desc": "Genetic choices and field tasks are scheduled."
+      },
+      {
+        "step": "Ongoing Tracking",
+        "desc": "Performance metrics are shared in regular reports."
+      }
     ]
   },
   "contact": {
