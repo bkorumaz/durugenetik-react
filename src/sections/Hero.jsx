@@ -14,10 +14,10 @@ export default function Hero({ darkMode }) {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center w-full text-center px-6">
-        <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-5 text-green-900 dark:text-green-300 drop-shadow-xl tracking-tight">
-          Duru<span className="text-teal-600 dark:text-teal-300">genetik</span>
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 text-green-900 dark:text-green-300 drop-shadow-xl tracking-tight">
+          {t("hero.title") || "Veteriner Medikal Ürünleri San.Tic.Ltd.Şti"}
         </h1>
-        <p className="text-xl sm:text-2xl md:text-3xl font-medium text-gray-800 dark:text-gray-100 mb-7 max-w-2xl mx-auto drop-shadow">
+        <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium text-gray-800 dark:text-gray-100 mb-7 max-w-3xl mx-auto drop-shadow">
           {t("hero.subtitle") ||
             "Geleceğin genetiği, sürdürülebilir tarım ve yüksek verimlilik için yeni nesil çözümler."}
         </p>

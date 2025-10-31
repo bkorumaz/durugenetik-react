@@ -10,8 +10,8 @@
     "contact": "İletişim"
   },
   "hero": {
-    "title": "Verimli Bir Gelecek İnşa Ediyoruz",
-    "subtitle": "Sürünüzü güçlendirmek için premium sığır genetiği, seksli sperma ve embriyo hizmetleri.",
+    "title": "Veteriner Medikal Ürünleri San.Tic.Ltd.Şti",
+    "subtitle": "Sahadaki ihtiyaçlara uygun premium sığır genetiği ve yenilikçi üreme çözümleri sunuyoruz.",
     "cta": "Genetikleri İncele"
   },
   "products": {
@@ -65,7 +65,70 @@
   },
   "partners": {
     "title": "Ortaklarımız",
-    "partner": "Ortak {{number}}"
+    "subtitle": "Küresel üreticilerle kurduğumuz güçlü iş birlikleri sayesinde çiftliklerin ihtiyaçlarına hızlı ve güvenilir çözümler ulaştırıyoruz.",
+    "partner": "Ortak {{number}}",
+    "items": {
+      "bayer": {
+        "name": "Bayer",
+        "description": "Hayvan sağlığı için entegre ilaç ve koruyucu çözümler.",
+        "focus": "Veteriner Sağlık"
+      },
+      "zoetis": {
+        "name": "Zoetis",
+        "description": "Saha operasyonlarına uygun gelişmiş teşhis ve destek platformları.",
+        "focus": "Teşhis Teknolojileri"
+      },
+      "semex": {
+        "name": "Semex",
+        "description": "Sürü verimini yükselten genomik odaklı damızlık programları.",
+        "focus": "Genetik Programlar"
+      },
+      "syngenta": {
+        "name": "Syngenta",
+        "description": "Yem kalitesini destekleyen tohum ve besleme stratejileri.",
+        "focus": "Besleme Destekleri"
+      },
+      "cargill": {
+        "name": "Cargill",
+        "description": "Büyüme performansını optimize eden beslenme çözümleri.",
+        "focus": "Sürü Besleme"
+      },
+      "dupont": {
+        "name": "DuPont",
+        "description": "Üretim süreçlerinde sürdürülebilirliği güçlendiren teknolojiler.",
+        "focus": "Sürdürülebilir Teknoloji"
+      },
+      "basf": {
+        "name": "BASF",
+        "description": "Ürün kalitesini artıran yenilikçi kimyasal bileşenler.",
+        "focus": "Kimyasal Çözümler"
+      },
+      "elanco": {
+        "name": "Elanco",
+        "description": "Enfeksiyon risklerini azaltan veteriner ilaç portföyü.",
+        "focus": "İleri İlaçlar"
+      },
+      "pfizer": {
+        "name": "Pfizer",
+        "description": "Hayvancılık için kanıtlanmış aşı ve biyoteknoloji çözümleri.",
+        "focus": "Biyoteknoloji"
+      },
+      "boehringer": {
+        "name": "Boehringer Ingelheim",
+        "description": "Sürü sağlığını sürekli takip eden koruyucu programlar.",
+        "focus": "Koruyucu Sağlık"
+      },
+      "merck": {
+        "name": "Merck",
+        "description": "İleri teşhis sistemleriyle risk yönetimini kolaylaştırır.",
+        "focus": "Tanı Sistemleri"
+      },
+      "novartis": {
+        "name": "Novartis",
+        "description": "Veteriner tedavilerde yenilikçi araştırma ve geliştirme gücü.",
+        "focus": "Ar-Ge Ortaklığı"
+      }
+    }
   },
   "about": {
     "title": "Hakkımızda",
@@ -79,12 +142,12 @@
         "description": "Genomik analizlerle desteklenen özel damızlık programları."
       },
       {
-        "title": "Seksli Sperma Tedariki",
-        "description": "Sürü büyümesini hızlandıran dişi ağırlıklı sperma."
+        "title": "Dişi Odaklı Genetik Tedariki",
+        "description": "Sürü büyümesini hızlandıran dişi ağırlıklı genetik çözümler."
       },
       {
-        "title": "Embriyo Transferi",
-        "description": "Donör ve taşıyıcı yönetimiyle yüksek başarı oranlı embriyo transferi."
+        "title": "İleri Transfer Programları",
+        "description": "Donör ve taşıyıcı yönetimiyle yüksek başarı oranlı gelişmiş transfer süreçleri."
       }
     ]
   },
