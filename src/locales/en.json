@@ -15,21 +15,21 @@
     "cta": "Browse Genetics"
   },
   "products": {
-    "title": "Our Genetic Portfolio",
-    "tagline": "Tailored Lines for Every Farm",
-    "intro": "Our sire and female lines are field-proven to lift performance quickly.",
+    "title": "Farm-Ready Genetics",
+    "tagline": "Proven Lines for Turkish Herds",
+    "intro": "Each sire and female line is field-tested so you gain results without the guesswork.",
     "highlights": [
       {
-        "title": "Farm-Specific Plans",
-        "description": "Mating sets crafted from the data of your herd."
+        "title": "Data-Led Pairing",
+        "description": "Mating sets aligned to your herd’s current metrics."
       },
       {
-        "title": "Traceable Records",
-        "description": "Digital reports track every calf from birth to production."
+        "title": "Live Tracking",
+        "description": "Mobile-ready records follow every calf from birth."
       },
       {
-        "title": "Seamless Logistics",
-        "description": "Cold-chain deliveries with proactive stock updates."
+        "title": "Cold-Chain Logistics",
+        "description": "Timed deliveries and inventory alerts across the region."
       }
     ],
     "metrics": [
@@ -48,49 +48,64 @@
     ],
     "list": [
       {
-        "name": "Holstein Success Line",
+        "name": "Holstein Prime Series",
         "image": "https://images.unsplash.com/photo-1522844990619-4951c40f7eda?auto=compress&cs=tinysrgb&w=900",
-        "desc": "High-yield Holstein sires with dependable udder structure."
+        "desc": "High-output Holsteins built for reliable udders and stamina."
       },
       {
         "name": "Holstein Heifer Program",
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Holstein_Friesian_UK_Yorkshire_July_2011.jpg/960px-Holstein_Friesian_UK_Yorkshire_July_2011.jpg",
-        "desc": "Balanced female pedigrees for confident first lactations."
+        "desc": "Balanced female pedigrees that calve smoothly and stay productive."
       },
       {
-        "name": "Brown Swiss Resilience Pack",
+        "name": "Brown Swiss Endurance Pack",
         "image": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Brown_swiss.jpg",
-        "desc": "Hard-wearing lines with naturally higher butterfat."
+        "desc": "Durable Brown Swiss genetics with consistent butterfat levels."
       },
       {
         "name": "Simmental Dual-Purpose Series",
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Simmentaler_Fleckvieh.jpg/960px-Simmentaler_Fleckvieh.jpg",
-        "desc": "Genetics that balance carcass development and milk output."
+        "desc": "Balanced carcass and milk traits for mixed production herds."
       },
       {
         "name": "Jersey Premium",
         "image": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Jersey_cow.jpg",
-        "desc": "Compact herds delivering rich butterfat and protein."
+        "desc": "Compact Jerseys that lift butterfat and protein ratios fast."
       },
       {
         "name": "Fleckvieh Elite Herd",
         "image": "https://images.unsplash.com/photo-1615924011523-79fba399a097?auto=compress&cs=tinysrgb&w=900",
-        "desc": "German Fleckvieh donors that hold milk and muscling together."
+        "desc": "German Fleckvieh donors known for muscle and persistent milk."
       },
       {
         "name": "Red Holstein Momentum",
         "image": "https://images.unsplash.com/photo-1600693217359-1f5c281f52d2?auto=compress&cs=tinysrgb&w=900",
-        "desc": "Heat-tolerant red lines with elevated component yield."
+        "desc": "Heat-tolerant red Holsteins with standout component yield."
       },
       {
         "name": "Angus Muscle Program",
         "image": "https://images.unsplash.com/photo-1542718618-21b17487e004?auto=compress&cs=tinysrgb&w=900",
-        "desc": "Calving-ease Angus sires bred for dense muscling."
+        "desc": "Calving-ease Angus lines engineered for dense muscling."
       },
       {
         "name": "Limousin Finishing Select",
         "image": "https://images.unsplash.com/photo-1589442306514-0f8e754e665d?auto=compress&cs=tinysrgb&w=900",
-        "desc": "Robust carcass genetics that drive feed conversion."
+        "desc": "Robust Limousin sires that drive feed-to-gain efficiency."
+      },
+      {
+        "name": "Charolais Frame Advantage",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/22/Charolais_bull.jpg",
+        "desc": "Wide-framed Charolais bulls for rapid growth and frame."
+      },
+      {
+        "name": "Hereford Pasture Line",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Hereford_bull_breed.jpg",
+        "desc": "Efficient Herefords that thrive on grazing systems."
+      },
+      {
+        "name": "Brangus Heat Adapted",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Brangus_bull.jpg",
+        "desc": "Tropical-ready Brangus genetics for resilience in warm zones."
       }
     ]
   },
@@ -121,7 +136,7 @@
   "partners": {
     "badge": "Trusted Alliances",
     "title": "Our Partners",
-    "subtitle": "We collaborate with global producers to deliver reliable, fast solutions for every farm we support.",
+    "subtitle": "We pair global innovators with local insight so every farm receives responsive, modern support.",
     "partner": "Partner {{number}}",
     "items": {
       "bayer": {
@@ -193,7 +208,7 @@
   "services": {
     "badge": "Expert Team",
     "title": "Our Services",
-    "intro": "We manage planning through calving as one team so every farm goal stays visible.",
+    "intro": "From pairing to calving we work beside your crew, keeping every milestone on schedule.",
     "highlights": [
       {
         "label": "Farms Guided",
@@ -212,37 +227,37 @@
       {
         "title": "Genetic Planning",
         "pillar": "PLAN",
-        "description": "We translate herd data into mating plans shaped around your goals.",
+        "description": "We map your herd data into clear, season-ready mating sets.",
         "points": [
           "Herd scoring review",
-          "Genomic mating guidance"
+          "Genomic pairing tips"
         ]
       },
       {
-        "title": "Female Line Management",
+        "title": "Female Line Renewal",
         "pillar": "RENEW",
-        "description": "Proven female lines accelerate replacements without disruption.",
+        "description": "Elite replacements keep production and fertility on track.",
         "points": [
-          "Performance-based female selection",
-          "Replacement planning"
+          "Performance-based picks",
+          "Replacement roadmaps"
         ]
       },
       {
-        "title": "Advanced Transfer Programs",
+        "title": "Transfer Programs",
         "pillar": "TRANSFER",
-        "description": "Coordinated donor and recipient care keeps pregnancy rates higher.",
+        "description": "Donor to recipient workflows run end-to-end by our team.",
         "points": [
-          "Donor and recipient schedules",
+          "Donor scheduling",
           "Embryo logistics"
         ]
       },
       {
-        "title": "Lifecycle Field Support",
+        "title": "Lifecycle Support",
         "pillar": "SUPPORT",
-        "description": "Routine visits align nutrition, health, and records all season long.",
+        "description": "Regular visits align feed, health and reporting routines.",
         "points": [
-          "Nutrition and health checkpoints",
-          "Shared digital records"
+          "Feed & health reviews",
+          "Digital summaries"
         ]
       }
     ]

@@ -50,59 +50,54 @@ const highlightIcons = [
 export default function Products() {
   const { t } = useTranslation();
   const productsContent = t("products", { returnObjects: true }) || {};
-  const {
-    title,
-    tagline,
-    intro,
-    highlights = [],
-    list = [],
-    metrics = [],
-  } = productsContent;
-  const featuredBreeds = list.slice(0, 4);
-  const galleryBreeds = list.slice(4);
+  const { title, tagline, intro, highlights = [], list = [], metrics = [] } = productsContent;
+  const featuredBreeds = list.slice(0, 3);
+  const spotlightBreeds = list.slice(3, 6);
+  const galleryBreeds = list.slice(6);
 
   return (
     <section id="products" className="relative py-24 sm:py-32 scroll-mt-16">
-      <div className="mx-auto flex max-w-6xl flex-col gap-16 px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-[1.05fr_1fr] lg:items-start">
-          <div className="space-y-8 rounded-3xl border border-emerald-300/20 bg-slate-950/60 p-8 shadow-2xl backdrop-blur">
-            {tagline && (
-              <span className="inline-flex items-center rounded-full border border-emerald-300/40 bg-emerald-400/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-emerald-100">
-                {tagline}
-              </span>
-            )}
-            <div className="space-y-4">
-              <h2 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl drop-shadow">{title}</h2>
-              {intro && <p className="text-base text-emerald-100/80 sm:text-lg">{intro}</p>}
-            </div>
-            {highlights?.length > 0 && (
-              <div className="grid gap-4 sm:grid-cols-2">
-                {highlights.map((item, index) => (
-                  <div
-                    key={`${item.title}-${index}`}
-                    className="flex items-start gap-4 rounded-2xl border border-emerald-400/20 bg-emerald-500/10 px-5 py-4 text-white shadow-lg"
-                  >
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 text-emerald-200">
-                      {highlightIcons[index % highlightIcons.length]}
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-white">{item.title}</h3>
-                      {item.description && <p className="mt-1 text-sm text-emerald-100/80">{item.description}</p>}
-                    </div>
-                  </div>
-                ))}
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="grid gap-12 xl:grid-cols-12">
+          <div className="space-y-10 xl:col-span-5">
+            <div className="space-y-8 rounded-[2.5rem] border border-emerald-400/15 bg-slate-950/80 p-8 shadow-2xl backdrop-blur">
+              {tagline && (
+                <span className="inline-flex items-center rounded-full border border-emerald-300/30 bg-emerald-500/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-emerald-100">
+                  {tagline}
+                </span>
+              )}
+              <div className="space-y-4">
+                <h2 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl drop-shadow">{title}</h2>
+                {intro && <p className="text-base text-emerald-50/90 sm:text-lg leading-relaxed">{intro}</p>}
               </div>
-            )}
+              {highlights?.length > 0 && (
+                <div className="grid gap-4 sm:grid-cols-2">
+                  {highlights.map((item, index) => (
+                    <div
+                      key={`${item.title}-${index}`}
+                      className="flex items-start gap-4 rounded-2xl border border-emerald-400/20 bg-emerald-900/40 px-5 py-4 text-white shadow-xl"
+                    >
+                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-200">
+                        {highlightIcons[index % highlightIcons.length]}
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+                        {item.description && <p className="mt-1 text-sm text-emerald-100/80">{item.description}</p>}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+
             {metrics?.length > 0 && (
               <dl className="grid gap-4 sm:grid-cols-3">
                 {metrics.map((metric, index) => (
                   <div
                     key={`${metric.value}-${index}`}
-                    className="rounded-2xl border border-white/10 bg-slate-900/80 px-4 py-5 text-center text-emerald-100 shadow-xl"
+                    className="rounded-2xl border border-emerald-400/20 bg-slate-900/80 px-4 py-5 text-center text-emerald-100 shadow-xl backdrop-blur"
                   >
-                    <dt className="text-xs font-semibold uppercase tracking-[0.3em] text-emerald-300/80">
-                      {metric.label}
-                    </dt>
+                    <dt className="text-xs font-semibold uppercase tracking-[0.3em] text-emerald-300/80">{metric.label}</dt>
                     <dd className="mt-3 text-3xl font-bold text-white">{metric.value}</dd>
                   </div>
                 ))}
@@ -110,31 +105,55 @@ export default function Products() {
             )}
           </div>
 
-          <div className="space-y-8">
+          <div className="space-y-10 xl:col-span-7">
             {featuredBreeds.length > 0 && (
-              <div className="grid gap-5">
+              <div className="grid gap-6 sm:grid-cols-2">
                 {featuredBreeds.map((prod, index) => (
                   <article
                     key={`${prod.name}-${index}`}
-                    className="flex items-start gap-5 rounded-3xl border border-emerald-300/20 bg-slate-950/60 p-5 text-white shadow-xl backdrop-blur"
+                    className="group relative overflow-hidden rounded-[2.5rem] border border-emerald-400/20 bg-slate-950/80 text-white shadow-2xl backdrop-blur transition-transform duration-500 hover:-translate-y-1 hover:border-emerald-300/30 sm:col-span-1"
                   >
-                    <div className="flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-emerald-300/40 bg-emerald-400/10">
-                      {prod.image ? (
+                    {prod.image && (
+                      <div className="relative h-44 w-full overflow-hidden">
                         <img
                           src={prod.image}
                           alt={prod.name}
-                          className="h-full w-full object-cover"
+                          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                           loading="lazy"
                         />
-                      ) : (
-                        <div className="text-xl font-semibold text-emerald-200">
-                          {prod.name?.charAt(0)}
-                        </div>
-                      )}
-                    </div>
-                    <div className="space-y-2">
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/20 to-transparent" />
+                      </div>
+                    )}
+                    <div className="space-y-2 px-6 py-5">
                       <h3 className="text-xl font-semibold text-white drop-shadow">{prod.name}</h3>
-                      <p className="text-sm text-emerald-100/80">{prod.desc}</p>
+                      <p className="text-sm text-emerald-50/80 leading-relaxed">{prod.desc}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            )}
+
+            {spotlightBreeds.length > 0 && (
+              <div className="grid gap-6 md:grid-cols-3">
+                {spotlightBreeds.map((prod, index) => (
+                  <article
+                    key={`${prod.name}-${index}`}
+                    className="group relative flex flex-col overflow-hidden rounded-[2.25rem] border border-emerald-400/15 bg-slate-950/75 text-white shadow-xl backdrop-blur transition-transform duration-500 hover:-translate-y-1"
+                  >
+                    {prod.image && (
+                      <div className="relative h-36 w-full overflow-hidden">
+                        <img
+                          src={prod.image}
+                          alt={prod.name}
+                          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          loading="lazy"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
+                      </div>
+                    )}
+                    <div className="space-y-2 px-5 py-4">
+                      <h3 className="text-lg font-semibold text-white drop-shadow">{prod.name}</h3>
+                      <p className="text-sm text-emerald-50/80 leading-relaxed">{prod.desc}</p>
                     </div>
                   </article>
                 ))}
@@ -142,23 +161,26 @@ export default function Products() {
             )}
 
             {galleryBreeds.length > 0 && (
-              <div className="grid gap-6 sm:grid-cols-2">
+              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {galleryBreeds.map((prod, index) => (
                   <article
                     key={`${prod.name}-${index}`}
-                    className="group overflow-hidden rounded-3xl border border-emerald-300/10 bg-slate-950/60 text-white shadow-xl backdrop-blur transition-transform duration-500 hover:-translate-y-2"
+                    className="group relative overflow-hidden rounded-[2rem] border border-emerald-400/10 bg-slate-950/70 text-white shadow-xl backdrop-blur transition-transform duration-500 hover:-translate-y-1"
                   >
                     {prod.image && (
-                      <img
-                        src={prod.image}
-                        alt={prod.name}
-                        className="h-44 w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                        loading="lazy"
-                      />
+                      <div className="relative h-32 w-full overflow-hidden">
+                        <img
+                          src={prod.image}
+                          alt={prod.name}
+                          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          loading="lazy"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
+                      </div>
                     )}
                     <div className="space-y-2 px-5 py-4">
-                      <h3 className="text-lg font-semibold text-white drop-shadow">{prod.name}</h3>
-                      <p className="text-sm text-emerald-100/80">{prod.desc}</p>
+                      <h3 className="text-base font-semibold text-white drop-shadow">{prod.name}</h3>
+                      <p className="text-sm text-emerald-100/75 leading-relaxed">{prod.desc}</p>
                     </div>
                   </article>
                 ))}

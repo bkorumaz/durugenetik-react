@@ -15,21 +15,21 @@
     "cta": "Genetikleri İncele"
   },
   "products": {
-    "title": "Genetik Portföyümüz",
-    "tagline": "Çiftliklere Özel Hatlar",
-    "intro": "Saha deneyimine dayalı boğa ve dişi hatlarımızla sürü verimini hızla güçlendiriyoruz.",
+    "title": "Çiftliklere Hazır Genetikler",
+    "tagline": "Türkiye Koşullarına Uyumlu Hatlar",
+    "intro": "Saha testlerinden geçen boğa ve dişi hatlarımızla sonuçları hızla görürsünüz.",
     "highlights": [
       {
-        "title": "Çiftlik Bazlı Planlar",
-        "description": "Sürü verilerine göre hazırlanan eşleşme setleri."
+        "title": "Veri Tabanlı Eşleştirme",
+        "description": "Sürü ölçümlerine göre şekillenen eşleşme setleri."
       },
       {
-        "title": "İzlenebilir Takip",
-        "description": "Her yavru için kayıttan performansa kadar dijital rapor."
+        "title": "Canlı Takip",
+        "description": "Her buzağıyı doğumdan itibaren dijitalde izleyin."
       },
       {
-        "title": "Kesintisiz Lojistik",
-        "description": "Soğuk zincir destekli dağıtım ve stok bildirimi."
+        "title": "Soğuk Zincir Lojistik",
+        "description": "Zamanında teslimat ve stok uyarıları."
       }
     ],
     "metrics": [
@@ -48,49 +48,64 @@
     ],
     "list": [
       {
-        "name": "Holstein Başarı Serisi",
+        "name": "Holstein Prime Serisi",
         "image": "https://images.unsplash.com/photo-1522844990619-4951c40f7eda?auto=compress&cs=tinysrgb&w=900",
-        "desc": "Yüksek süt verimi ve sağlam meme yapısıyla seçilmiş boğa soyları."
+        "desc": "Sağlam meme yapısıyla yüksek verimli Holstein boğaları."
       },
       {
         "name": "Holstein Düve Programı",
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Holstein_Friesian_UK_Yorkshire_July_2011.jpg/960px-Holstein_Friesian_UK_Yorkshire_July_2011.jpg",
-        "desc": "Erken laktasyon başarısı için dengeli dişi hatlar."
+        "desc": "Sorunsuz buzağılama ve hızlı verim için dengeli dişiler."
       },
       {
-        "name": "Montofon Direnç Paketi",
+        "name": "Brown Swiss Dayanıklılık Paketi",
         "image": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Brown_swiss.jpg",
-        "desc": "Zorlu koşullara dayanıklı, yağ oranı yüksek soylar."
+        "desc": "Doğal yağ oranı yüksek dayanıklı Montofon hatları."
       },
       {
         "name": "Simmental Çift Amaçlı Seri",
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Simmentaler_Fleckvieh.jpg/960px-Simmentaler_Fleckvieh.jpg",
-        "desc": "Et ve süt dengesini koruyan güçlü genetikler."
+        "desc": "Et ve süt dengesini birlikte sunan Simmental genetiği."
       },
       {
         "name": "Jersey Premium",
         "image": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Jersey_cow.jpg",
-        "desc": "Yüksek yağ ve protein profiline sahip kompakt sürüler."
+        "desc": "Yağ ve protein oranını hızla artıran kompakt Jersey sürüleri."
       },
       {
         "name": "Fleckvieh Elite Sürüsü",
         "image": "https://images.unsplash.com/photo-1615924011523-79fba399a097?auto=compress&cs=tinysrgb&w=900",
-        "desc": "Süt ve kas dengesini koruyan Alman fleckvieh damızlıkları."
+        "desc": "Kas ve sürekli süt verimiyle öne çıkan Fleckvieh damızlıkları."
       },
       {
-        "name": "Kırmızı Holstein Atılımı",
+        "name": "Kırmızı Holstein Momentum",
         "image": "https://images.unsplash.com/photo-1600693217359-1f5c281f52d2?auto=compress&cs=tinysrgb&w=900",
-        "desc": "Isı stresine dayanıklı yüksek bileşenli kırmızı hatlar."
+        "desc": "Isı stresine dayanıklı yüksek bileşenli kırmızı Holstein hatları."
       },
       {
         "name": "Angus Kas Programı",
         "image": "https://images.unsplash.com/photo-1542718618-21b17487e004?auto=compress&cs=tinysrgb&w=900",
-        "desc": "Doğum kolaylığı yüksek kas yoğun Angus boğaları."
+        "desc": "Yüksek kas yoğunluğuna sahip doğum kolaylığı Angus soyları."
       },
       {
         "name": "Limousin Besi Seçkisi",
         "image": "https://images.unsplash.com/photo-1589442306514-0f8e754e665d?auto=compress&cs=tinysrgb&w=900",
-        "desc": "Beside yem dönüşümünü hızlandıran sağlam karkas genetiği."
+        "desc": "Yemden ete dönüşümü hızlandıran Limousin boğaları."
+      },
+      {
+        "name": "Charolais Çerçeve Avantajı",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/22/Charolais_bull.jpg",
+        "desc": "Geniş gövdeli Charolais boğalarıyla hızlı büyüme."
+      },
+      {
+        "name": "Hereford Mera Hattı",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Hereford_bull_breed.jpg",
+        "desc": "Merada verim sağlayan dayanıklı Hereford sürüleri."
+      },
+      {
+        "name": "Brangus Sıcak İklim Serisi",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Brangus_bull.jpg",
+        "desc": "Sıcak bölgelere uyumlu dayanıklı Brangus genetiği."
       }
     ]
   },
@@ -121,7 +136,7 @@
   "partners": {
     "badge": "Güvenilir İş Birlikleri",
     "title": "Ortaklarımız",
-    "subtitle": "Küresel üreticilerle kurduğumuz güçlü iş birlikleri sayesinde çiftliklerin ihtiyaçlarına hızlı ve güvenilir çözümler ulaştırıyoruz.",
+    "subtitle": "Küresel inovasyonları saha deneyimimizle birleştirerek her çiftliğe hızlı ve modern destek sunuyoruz.",
     "partner": "Ortak {{number}}",
     "items": {
       "bayer": {
@@ -193,7 +208,7 @@
   "services": {
     "badge": "Uzman Ekip",
     "title": "Hizmetlerimiz",
-    "intro": "Planlamadan doğuma kadar tüm süreci tek ekip olarak yönetip çiftlik hedeflerini görünür kılıyoruz.",
+    "intro": "Eşleştirmeden doğuma kadar tüm adımları ekibinizle birlikte planlıyoruz.",
     "highlights": [
       {
         "label": "Yönettiğimiz Çiftlik",
@@ -212,37 +227,37 @@
       {
         "title": "Genetik Planlama",
         "pillar": "PLAN",
-        "description": "Sürü verilerini analiz ederek hedefe uygun eşleşme planları oluşturuyoruz.",
+        "description": "Sürü verilerinizi sezona hazır eşleşme setlerine dönüştürüyoruz.",
         "points": [
           "Sürü skoru analizi",
-          "Genomik eşleştirme önerileri"
+          "Genomik eşleştirme notları"
         ]
       },
       {
-        "title": "Dişi Hat Yönetimi",
+        "title": "Dişi Hat Yenileme",
         "pillar": "YENİLE",
-        "description": "Verimliliği yüksek dişi hatlarla sürü yenilenmesini hızlandırıyoruz.",
+        "description": "Seçilmiş dişilerle verim ve döl verimini dengede tutuyoruz.",
         "points": [
-          "Performans bazlı dişi seçimi",
-          "Yedek dişi planlaması"
+          "Performans bazlı seçim",
+          "Yedek planı"
         ]
       },
       {
-        "title": "İleri Transfer Programları",
+        "title": "Transfer Programları",
         "pillar": "TRANSFER",
-        "description": "Donör ve taşıyıcı yönetimiyle gebelik oranını artırıyoruz.",
+        "description": "Donör ve taşıyıcı süreçlerini uçtan uca yönetiyoruz.",
         "points": [
-          "Donör ve taşıyıcı takvimi",
-          "Embriyo ve lojistik koordinasyonu"
+          "Donör takvimi",
+          "Embriyo lojistiği"
         ]
       },
       {
-        "title": "Yaşam Döngüsü Saha Desteği",
+        "title": "Saha Destek Döngüsü",
         "pillar": "DESTEK",
-        "description": "Besleme, sağlık ve kayıt yönetimini düzenli ziyaretlerle takip ediyoruz.",
+        "description": "Rutin ziyaretlerle besleme, sağlık ve raporlamayı eşgüdümlü tutuyoruz.",
         "points": [
-          "Besleme ve sağlık kontrolleri",
-          "Dijital rapor paylaşımı"
+          "Besleme & sağlık kontrolleri",
+          "Dijital özetler"
         ]
       }
     ]

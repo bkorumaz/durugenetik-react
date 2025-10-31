@@ -150,7 +150,7 @@ export default function App() {
       />
       {!videoLoaded && (
         <div className="fixed inset-0 flex items-center justify-center -z-10 pointer-events-none">
-          <div className="w-10 h-10 border-4 border-teal-500 border-t-transparent rounded-full animate-spin" />
+          <div className="w-10 h-10 border-4 border-emerald-400 border-t-transparent rounded-full animate-spin" />
         </div>
       )}
 
@@ -188,7 +188,7 @@ export default function App() {
             <Suspense
               fallback={
                 <div className="flex items-center justify-center py-10">
-                  <div className="w-10 h-10 border-4 border-teal-500 border-t-transparent rounded-full animate-spin" />
+                  <div className="w-10 h-10 border-4 border-emerald-400 border-t-transparent rounded-full animate-spin" />
                 </div>
               }
             >
