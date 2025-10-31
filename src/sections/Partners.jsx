@@ -18,10 +18,10 @@ const partnerCards = [
 ];
 
 const sizeClasses = {
-  xl: "min-w-[420px] lg:min-w-[480px] min-h-[320px]",
-  lg: "min-w-[360px] lg:min-w-[400px] min-h-[260px]",
-  md: "min-w-[300px] lg:min-w-[340px] min-h-[220px]",
-  sm: "min-w-[240px] lg:min-w-[280px] min-h-[180px]",
+  xl: "min-w-[420px] lg:min-w-[520px] min-h-[320px]",
+  lg: "min-w-[360px] lg:min-w-[420px] min-h-[260px]",
+  md: "min-w-[300px] lg:min-w-[360px] min-h-[220px]",
+  sm: "min-w-[240px] lg:min-w-[300px] min-h-[180px]",
 };
 
 const offsetClasses = [
@@ -57,28 +57,28 @@ export default function Partners() {
   ];
 
   return (
-    <section id="partners" className="relative py-24 sm:py-32 scroll-mt-16">
+    <section id="partners" className="relative overflow-hidden py-24 sm:py-32 scroll-mt-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 text-center text-white">
         <span className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-emerald-100">
           {t("partners.badge")}
         </span>
-        <h2 className="mt-6 text-3xl sm:text-4xl lg:text-5xl font-bold text-white drop-shadow">{t("partners.title")}</h2>
+        <h2 className="mt-6 text-3xl font-bold text-white drop-shadow sm:text-4xl lg:text-5xl">{t("partners.title")}</h2>
         <p className="mt-6 text-base sm:text-lg md:text-xl text-emerald-100/80 max-w-3xl mx-auto">
           {t("partners.subtitle")}
         </p>
 
-        <div className="relative mt-16 -mx-4 sm:-mx-6 lg:-mx-12">
-          <div className="relative overflow-hidden rounded-[3rem] border border-white/10 bg-black/45 py-12 backdrop-blur">
-            <div className="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-black/70 via-black/20 to-transparent" />
-            <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-black/70 via-black/20 to-transparent" />
-            <div className="flex flex-col gap-12 px-8">
+        <div className="relative mt-16 left-1/2 w-screen -translate-x-1/2 px-4 sm:px-6 lg:px-16">
+          <div className="relative overflow-hidden rounded-[3rem] border border-emerald-300/15 bg-slate-950/70 py-14 backdrop-blur">
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-slate-950/80 via-slate-950/10 to-transparent" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-slate-950/80 via-slate-950/10 to-transparent" />
+            <div className="flex flex-col gap-12 px-10">
               {trackConfigurations.map((track, trackIndex) => {
                 const marqueeItems = [...track.items, ...track.items];
 
                 return (
                   <div
                     key={`track-${trackIndex}`}
-                    className={`flex w-[230%] items-stretch gap-10 ${track.animation}`}
+                    className={`flex w-max items-stretch gap-10 ${track.animation}`}
                     style={{ [track.durationVar]: track.duration }}
                   >
                     {marqueeItems.map((partner, index) => {
@@ -92,12 +92,12 @@ export default function Partners() {
                       return (
                         <article
                           key={`${partner.id}-${trackIndex}-${index}`}
-                          className={`group relative flex shrink-0 flex-col justify-between overflow-hidden rounded-[2.5rem] bg-white/85 px-8 py-8 text-left text-slate-900 shadow-2xl ring-1 ring-black/5 transition-transform duration-500 hover:-translate-y-3 ${sizeClass} ${offsetClass}`}
+                          className={`group relative flex shrink-0 flex-col justify-between overflow-hidden rounded-[2.5rem] border border-emerald-300/20 bg-slate-950/70 px-8 py-9 text-left text-white shadow-2xl transition-transform duration-500 hover:-translate-y-3 ${sizeClass} ${offsetClass}`}
                         >
-                          <div className={`pointer-events-none absolute inset-0 bg-gradient-to-br ${partner.accent} opacity-30 transition-opacity duration-500 group-hover:opacity-60`} />
+                          <div className={`pointer-events-none absolute inset-0 bg-gradient-to-br ${partner.accent} opacity-20 transition-opacity duration-500 group-hover:opacity-60`} />
                           <div className="relative flex flex-col gap-5">
                             {focus && (
-                              <span className="inline-flex w-fit items-center rounded-full bg-emerald-50/80 px-4 py-1 text-xs font-semibold uppercase tracking-[0.28em] text-emerald-700">
+                              <span className="inline-flex w-fit items-center rounded-full border border-emerald-300/30 bg-emerald-400/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.28em] text-emerald-100">
                                 {focus}
                               </span>
                             )}
@@ -108,8 +108,8 @@ export default function Partners() {
                               loading="lazy"
                             />
                             <div className="space-y-2">
-                              <h3 className="text-xl font-semibold">{label}</h3>
-                              <p className="text-sm text-slate-600 leading-relaxed">{description}</p>
+                              <h3 className="text-xl font-semibold text-white drop-shadow">{label}</h3>
+                              <p className="text-sm text-emerald-100/80 leading-relaxed">{description}</p>
                             </div>
                           </div>
                         </article>

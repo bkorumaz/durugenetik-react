@@ -15,21 +15,21 @@
     "cta": "Browse Genetics"
   },
   "products": {
-    "title": "Our Genetic Products",
-    "tagline": "Field-Proven Genetics",
-    "intro": "We strengthen herd health and output with curated lines that deliver practical results.",
+    "title": "Our Genetic Portfolio",
+    "tagline": "Tailored Lines for Every Farm",
+    "intro": "Our sire and female lines are field-proven to lift performance quickly.",
     "highlights": [
       {
-        "title": "Expert Sire Teams",
-        "description": "Holstein, Brown Swiss, and Simmental pedigrees aligned with your herd goals."
+        "title": "Farm-Specific Plans",
+        "description": "Mating sets crafted from the data of your herd."
       },
       {
-        "title": "Transparent Tracking",
-        "description": "Every calf remains on record throughout its productive lifetime."
+        "title": "Traceable Records",
+        "description": "Digital reports track every calf from birth to production."
       },
       {
         "title": "Seamless Logistics",
-        "description": "Cold-chain deliveries keep premium genetics ready right when needed."
+        "description": "Cold-chain deliveries with proactive stock updates."
       }
     ],
     "metrics": [
@@ -48,9 +48,9 @@
     ],
     "list": [
       {
-        "name": "Holstein Performance Series",
+        "name": "Holstein Success Line",
         "image": "https://images.unsplash.com/photo-1522844990619-4951c40f7eda?auto=compress&cs=tinysrgb&w=900",
-        "desc": "Selected sires with strong udders and dependable milk flow."
+        "desc": "High-yield Holstein sires with dependable udder structure."
       },
       {
         "name": "Holstein Heifer Program",
@@ -71,6 +71,26 @@
         "name": "Jersey Premium",
         "image": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Jersey_cow.jpg",
         "desc": "Compact herds delivering rich butterfat and protein."
+      },
+      {
+        "name": "Fleckvieh Elite Herd",
+        "image": "https://images.unsplash.com/photo-1615924011523-79fba399a097?auto=compress&cs=tinysrgb&w=900",
+        "desc": "German Fleckvieh donors that hold milk and muscling together."
+      },
+      {
+        "name": "Red Holstein Momentum",
+        "image": "https://images.unsplash.com/photo-1600693217359-1f5c281f52d2?auto=compress&cs=tinysrgb&w=900",
+        "desc": "Heat-tolerant red lines with elevated component yield."
+      },
+      {
+        "name": "Angus Muscle Program",
+        "image": "https://images.unsplash.com/photo-1542718618-21b17487e004?auto=compress&cs=tinysrgb&w=900",
+        "desc": "Calving-ease Angus sires bred for dense muscling."
+      },
+      {
+        "name": "Limousin Finishing Select",
+        "image": "https://images.unsplash.com/photo-1589442306514-0f8e754e665d?auto=compress&cs=tinysrgb&w=900",
+        "desc": "Robust carcass genetics that drive feed conversion."
       }
     ]
   },
@@ -173,7 +193,7 @@
   "services": {
     "badge": "Expert Team",
     "title": "Our Services",
-    "intro": "We unite planning, sourcing, and on-site support under one expert team so every herd goal is clear.",
+    "intro": "We manage planning through calving as one team so every farm goal stays visible.",
     "highlights": [
       {
         "label": "Farms Guided",
@@ -194,7 +214,8 @@
         "pillar": "PLAN",
         "description": "We translate herd data into mating plans shaped around your goals.",
         "points": [
-          "Herd scoring review"
+          "Herd scoring review",
+          "Genomic mating guidance"
         ]
       },
       {
@@ -202,7 +223,8 @@
         "pillar": "RENEW",
         "description": "Proven female lines accelerate replacements without disruption.",
         "points": [
-          "Approved female rosters"
+          "Performance-based female selection",
+          "Replacement planning"
         ]
       },
       {
@@ -210,7 +232,8 @@
         "pillar": "TRANSFER",
         "description": "Coordinated donor and recipient care keeps pregnancy rates higher.",
         "points": [
-          "Donor calendar"
+          "Donor and recipient schedules",
+          "Embryo logistics"
         ]
       },
       {
@@ -218,26 +241,41 @@
         "pillar": "SUPPORT",
         "description": "Routine visits align nutrition, health, and records all season long.",
         "points": [
-          "Monthly farm visits"
+          "Nutrition and health checkpoints",
+          "Shared digital records"
         ]
       }
     ]
   },
   "approach": {
-    "title": "How We Deliver",
-    "description": "A clear workflow keeps every engagement measurable and aligned with your targets.",
+    "title": "How We Work in the Field",
+    "description": "We guide every engagement with transparent milestones from planning to reporting.",
+    "highlights": [
+      {
+        "label": "Initial Visit",
+        "value": "48 Hours"
+      },
+      {
+        "label": "Plan Refresh",
+        "value": "90 Days"
+      },
+      {
+        "label": "Rapid Support",
+        "value": "24/7"
+      }
+    ],
     "steps": [
       {
-        "step": "On-Farm Review",
-        "desc": "We audit herd data, facilities, and goals."
+        "step": "Farm Analysis",
+        "desc": "We evaluate herd data, feed, and your goals on-site."
       },
       {
-        "step": "Action Blueprint",
-        "desc": "Genetic choices and field tasks are scheduled."
+        "step": "Program Design",
+        "desc": "Actionable genetics, nutrition, and staffing roadmap."
       },
       {
-        "step": "Ongoing Tracking",
-        "desc": "Performance metrics are shared in regular reports."
+        "step": "Performance Tracking",
+        "desc": "Monthly reviews keep progress visible to your team."
       }
     ]
   },

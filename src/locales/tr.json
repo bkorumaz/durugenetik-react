@@ -15,21 +15,21 @@
     "cta": "Genetikleri İncele"
   },
   "products": {
-    "title": "Genetik Ürünlerimiz",
-    "tagline": "Saha Onaylı Genetikler",
-    "intro": "Seçilmiş hatlarımızla sürü sağlığını ve verimi pratik çözümlerle güçlendiriyoruz.",
+    "title": "Genetik Portföyümüz",
+    "tagline": "Çiftliklere Özel Hatlar",
+    "intro": "Saha deneyimine dayalı boğa ve dişi hatlarımızla sürü verimini hızla güçlendiriyoruz.",
     "highlights": [
       {
-        "title": "Uzman Boğa Kadroları",
-        "description": "Holstein, Montofon ve Simmental genlerini hedeflerinize göre eşliyoruz."
+        "title": "Çiftlik Bazlı Planlar",
+        "description": "Sürü verilerine göre hazırlanan eşleşme setleri."
       },
       {
-        "title": "Şeffaf Takip",
-        "description": "Her yavrunun verim dönemine kadar süren kayıtlı yaşam döngüsü."
+        "title": "İzlenebilir Takip",
+        "description": "Her yavru için kayıttan performansa kadar dijital rapor."
       },
       {
         "title": "Kesintisiz Lojistik",
-        "description": "Soğuk zincir destekli teslimatlar ile ihtiyaç anında yanınızdayız."
+        "description": "Soğuk zincir destekli dağıtım ve stok bildirimi."
       }
     ],
     "metrics": [
@@ -71,6 +71,26 @@
         "name": "Jersey Premium",
         "image": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Jersey_cow.jpg",
         "desc": "Yüksek yağ ve protein profiline sahip kompakt sürüler."
+      },
+      {
+        "name": "Fleckvieh Elite Sürüsü",
+        "image": "https://images.unsplash.com/photo-1615924011523-79fba399a097?auto=compress&cs=tinysrgb&w=900",
+        "desc": "Süt ve kas dengesini koruyan Alman fleckvieh damızlıkları."
+      },
+      {
+        "name": "Kırmızı Holstein Atılımı",
+        "image": "https://images.unsplash.com/photo-1600693217359-1f5c281f52d2?auto=compress&cs=tinysrgb&w=900",
+        "desc": "Isı stresine dayanıklı yüksek bileşenli kırmızı hatlar."
+      },
+      {
+        "name": "Angus Kas Programı",
+        "image": "https://images.unsplash.com/photo-1542718618-21b17487e004?auto=compress&cs=tinysrgb&w=900",
+        "desc": "Doğum kolaylığı yüksek kas yoğun Angus boğaları."
+      },
+      {
+        "name": "Limousin Besi Seçkisi",
+        "image": "https://images.unsplash.com/photo-1589442306514-0f8e754e665d?auto=compress&cs=tinysrgb&w=900",
+        "desc": "Beside yem dönüşümünü hızlandıran sağlam karkas genetiği."
       }
     ]
   },
@@ -173,7 +193,7 @@
   "services": {
     "badge": "Uzman Ekip",
     "title": "Hizmetlerimiz",
-    "intro": "Planlama, tedarik ve saha desteğini tek ekip içinde yöneterek sürü hedeflerini kolaylaştırıyoruz.",
+    "intro": "Planlamadan doğuma kadar tüm süreci tek ekip olarak yönetip çiftlik hedeflerini görünür kılıyoruz.",
     "highlights": [
       {
         "label": "Yönettiğimiz Çiftlik",
@@ -194,7 +214,8 @@
         "pillar": "PLAN",
         "description": "Sürü verilerini analiz ederek hedefe uygun eşleşme planları oluşturuyoruz.",
         "points": [
-          "Sürü skoru analizi"
+          "Sürü skoru analizi",
+          "Genomik eşleştirme önerileri"
         ]
       },
       {
@@ -202,7 +223,8 @@
         "pillar": "YENİLE",
         "description": "Verimliliği yüksek dişi hatlarla sürü yenilenmesini hızlandırıyoruz.",
         "points": [
-          "Onaylı dişi hat listeleri"
+          "Performans bazlı dişi seçimi",
+          "Yedek dişi planlaması"
         ]
       },
       {
@@ -210,7 +232,8 @@
         "pillar": "TRANSFER",
         "description": "Donör ve taşıyıcı yönetimiyle gebelik oranını artırıyoruz.",
         "points": [
-          "Donör takvimi"
+          "Donör ve taşıyıcı takvimi",
+          "Embriyo ve lojistik koordinasyonu"
         ]
       },
       {
@@ -218,26 +241,41 @@
         "pillar": "DESTEK",
         "description": "Besleme, sağlık ve kayıt yönetimini düzenli ziyaretlerle takip ediyoruz.",
         "points": [
-          "Aylık saha ziyareti"
+          "Besleme ve sağlık kontrolleri",
+          "Dijital rapor paylaşımı"
         ]
       }
     ]
   },
   "approach": {
-    "title": "Saha Programımız",
-    "description": "Her çiftlik için ölçümlenebilir sonuçlar üreten şeffaf bir çalışma akışı izliyoruz.",
+    "title": "Sahada Nasıl Çalışıyoruz",
+    "description": "Planlamadan raporlamaya kadar süreci şeffaf kilometre taşlarıyla yönetiyoruz.",
+    "highlights": [
+      {
+        "label": "İlk Ziyaret",
+        "value": "48 Saat"
+      },
+      {
+        "label": "Plan Güncelleme",
+        "value": "90 Gün"
+      },
+      {
+        "label": "Acil Destek",
+        "value": "7/24"
+      }
+    ],
     "steps": [
       {
-        "step": "Yerinde Analiz",
-        "desc": "Çiftlik verilerini ve hedeflerinizi inceleriz."
+        "step": "Çiftlik Analizi",
+        "desc": "Verileri, beslemeyi ve hedefleri yerinde inceleriz."
       },
       {
-        "step": "Uygulama Planı",
-        "desc": "Genetik seçimi ve saha aksiyonlarını programlarız."
+        "step": "Plan Tasarımı",
+        "desc": "Genetik, besleme ve saha aksiyonlarını tek takvimde toplarız."
       },
       {
-        "step": "Sürekli Takip",
-        "desc": "Performansı ölçer, raporları düzenli paylaşırız."
+        "step": "Saha Takibi",
+        "desc": "Aylık ziyaretlerle sonuçları ölçer, raporları paylaşırız."
       }
     ]
   },

@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 const highlightIcons = [
   (
     <svg
-      className="h-8 w-8 text-emerald-700 dark:text-emerald-300"
+      className="h-8 w-8 text-emerald-200"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -18,7 +18,7 @@ const highlightIcons = [
   ),
   (
     <svg
-      className="h-8 w-8 text-emerald-700 dark:text-emerald-300"
+      className="h-8 w-8 text-emerald-200"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -32,7 +32,7 @@ const highlightIcons = [
   ),
   (
     <svg
-      className="h-8 w-8 text-emerald-700 dark:text-emerald-300"
+      className="h-8 w-8 text-emerald-200"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -58,42 +58,36 @@ export default function Products() {
     list = [],
     metrics = [],
   } = productsContent;
-  const featuredBreeds = list.slice(0, 3);
-  const galleryBreeds = list.slice(3);
+  const featuredBreeds = list.slice(0, 4);
+  const galleryBreeds = list.slice(4);
 
   return (
     <section id="products" className="relative py-24 sm:py-32 scroll-mt-16">
       <div className="mx-auto flex max-w-6xl flex-col gap-16 px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[1.05fr_1fr] lg:items-start">
-          <div className="space-y-8 rounded-3xl bg-white/90 p-8 shadow-2xl ring-1 ring-black/5 backdrop-blur">
+          <div className="space-y-8 rounded-3xl border border-emerald-300/20 bg-slate-950/60 p-8 shadow-2xl backdrop-blur">
             {tagline && (
-              <span className="inline-flex items-center rounded-full bg-emerald-50 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-emerald-700">
+              <span className="inline-flex items-center rounded-full border border-emerald-300/40 bg-emerald-400/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-emerald-100">
                 {tagline}
               </span>
             )}
             <div className="space-y-4">
-              <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl lg:text-5xl">{title}</h2>
-              {intro && (
-                <p className="text-base text-slate-600 sm:text-lg">
-                  {intro}
-                </p>
-              )}
+              <h2 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl drop-shadow">{title}</h2>
+              {intro && <p className="text-base text-emerald-100/80 sm:text-lg">{intro}</p>}
             </div>
             {highlights?.length > 0 && (
               <div className="grid gap-4 sm:grid-cols-2">
                 {highlights.map((item, index) => (
                   <div
                     key={`${item.title}-${index}`}
-                    className="flex items-start gap-4 rounded-2xl bg-emerald-50/90 px-5 py-4 shadow-lg ring-1 ring-emerald-500/10"
+                    className="flex items-start gap-4 rounded-2xl border border-emerald-400/20 bg-emerald-500/10 px-5 py-4 text-white shadow-lg"
                   >
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white text-emerald-600">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 text-emerald-200">
                       {highlightIcons[index % highlightIcons.length]}
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-slate-900">{item.title}</h3>
-                      {item.description && (
-                        <p className="mt-1 text-sm text-slate-600">{item.description}</p>
-                      )}
+                      <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+                      {item.description && <p className="mt-1 text-sm text-emerald-100/80">{item.description}</p>}
                     </div>
                   </div>
                 ))}
@@ -104,12 +98,12 @@ export default function Products() {
                 {metrics.map((metric, index) => (
                   <div
                     key={`${metric.value}-${index}`}
-                    className="rounded-2xl bg-slate-900 px-4 py-5 text-center text-white shadow-xl"
+                    className="rounded-2xl border border-white/10 bg-slate-900/80 px-4 py-5 text-center text-emerald-100 shadow-xl"
                   >
-                    <dt className="text-xs font-semibold uppercase tracking-[0.3em] text-emerald-200/80">
+                    <dt className="text-xs font-semibold uppercase tracking-[0.3em] text-emerald-300/80">
                       {metric.label}
                     </dt>
-                    <dd className="mt-3 text-3xl font-bold">{metric.value}</dd>
+                    <dd className="mt-3 text-3xl font-bold text-white">{metric.value}</dd>
                   </div>
                 ))}
               </dl>
@@ -122,9 +116,9 @@ export default function Products() {
                 {featuredBreeds.map((prod, index) => (
                   <article
                     key={`${prod.name}-${index}`}
-                    className="flex items-start gap-5 rounded-3xl bg-white/85 p-5 shadow-xl ring-1 ring-emerald-500/10 backdrop-blur"
+                    className="flex items-start gap-5 rounded-3xl border border-emerald-300/20 bg-slate-950/60 p-5 text-white shadow-xl backdrop-blur"
                   >
-                    <div className="flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-2xl bg-emerald-100">
+                    <div className="flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-emerald-300/40 bg-emerald-400/10">
                       {prod.image ? (
                         <img
                           src={prod.image}
@@ -133,14 +127,14 @@ export default function Products() {
                           loading="lazy"
                         />
                       ) : (
-                        <div className="text-xl font-semibold text-emerald-700">
+                        <div className="text-xl font-semibold text-emerald-200">
                           {prod.name?.charAt(0)}
                         </div>
                       )}
                     </div>
                     <div className="space-y-2">
-                      <h3 className="text-xl font-semibold text-slate-900">{prod.name}</h3>
-                      <p className="text-sm text-slate-600">{prod.desc}</p>
+                      <h3 className="text-xl font-semibold text-white drop-shadow">{prod.name}</h3>
+                      <p className="text-sm text-emerald-100/80">{prod.desc}</p>
                     </div>
                   </article>
                 ))}
@@ -152,7 +146,7 @@ export default function Products() {
                 {galleryBreeds.map((prod, index) => (
                   <article
                     key={`${prod.name}-${index}`}
-                    className="group overflow-hidden rounded-3xl bg-white/85 shadow-xl ring-1 ring-black/5 backdrop-blur transition-transform duration-500 hover:-translate-y-2"
+                    className="group overflow-hidden rounded-3xl border border-emerald-300/10 bg-slate-950/60 text-white shadow-xl backdrop-blur transition-transform duration-500 hover:-translate-y-2"
                   >
                     {prod.image && (
                       <img
@@ -163,8 +157,8 @@ export default function Products() {
                       />
                     )}
                     <div className="space-y-2 px-5 py-4">
-                      <h3 className="text-lg font-semibold text-slate-900">{prod.name}</h3>
-                      <p className="text-sm text-slate-600">{prod.desc}</p>
+                      <h3 className="text-lg font-semibold text-white drop-shadow">{prod.name}</h3>
+                      <p className="text-sm text-emerald-100/80">{prod.desc}</p>
                     </div>
                   </article>
                 ))}
