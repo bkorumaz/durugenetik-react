@@ -57,10 +57,10 @@ export default function Navbar({
     // classes via JS. This ensures the navbar background always matches
     // the active theme.
     const bgClasses =
-        "fixed top-0 left-0 w-screen z-30 transition-colors bg-white dark:bg-neutral-900";
+        "fixed top-0 left-0 w-screen z-30 border-b border-emerald-400/20 bg-emerald-950 text-white transition-colors";
 
     const switchBtnClass =
-        "ml-2 flex items-center justify-center w-9 h-9 rounded-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-neutral-900 transition hover:shadow-md focus:outline-none";
+        "ml-2 flex items-center justify-center w-9 h-9 rounded-full border border-emerald-400/30 bg-slate-950 text-emerald-100 transition hover:border-emerald-300 focus:outline-none";
 
     const ENTRButton = (code) => (
         <span
@@ -89,7 +89,7 @@ export default function Navbar({
 
     const sunIcon = (
         <svg
-            className="w-7 h-7 text-gray-700 dark:text-gray-200"
+            className="w-7 h-7 text-emerald-200"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -109,11 +109,11 @@ export default function Navbar({
         </svg>
     );
     const moonIcon = (
-        <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none">
+        <svg className="w-7 h-7 text-emerald-200" viewBox="0 0 24 24" fill="none">
             <path
                 d="M21 12.79A9 9 0 0112.21 3a.75.75 0 00-.91.91A7.5 7.5 0 1012 21a7.53 7.53 0 009-8.21z"
-                fill="#F9FAFB"
-                stroke="#F9FAFB"
+                fill="currentColor"
+                stroke="currentColor"
                 strokeWidth="1.5"
             />
         </svg>
@@ -127,18 +127,18 @@ export default function Navbar({
 
     // Nav item classes:
     const navItemBase = "relative whitespace-nowrap capitalize px-2 py-1 font-semibold transition-colors";
-    const navItemLight = "text-gray-900 hover:text-teal-600";
-    const navItemDark = "text-gray-200 hover:text-teal-300";
-    const navItemActiveLight = "text-teal-700 font-bold";
-    const navItemActiveDark = "text-teal-300 font-bold";
+    const navItemLight = "text-emerald-100/70 hover:text-emerald-300";
+    const navItemDark = "text-emerald-100/70 hover:text-emerald-300";
+    const navItemActiveLight = "text-white font-bold";
+    const navItemActiveDark = "text-white font-bold";
 
     return (
         <nav key={darkMode ? 'dark' : 'light'} className={bgClasses}>
             <div className="max-w-6xl w-full mx-auto px-6 flex justify-between items-center h-16">
                 {/* Logo */}
                 <span className="font-extrabold text-2xl flex">
-                    <span className="text-green-800 dark:text-green-300">Duru</span>
-                    <span className="text-teal-500 dark:text-teal-200 ml-1">genetik</span>
+                    <span className="text-emerald-300">Duru</span>
+                    <span className="text-emerald-400 ml-1">genetik</span>
                 </span>
                 {/* Menu + underline */}
                 <div className="hidden md:flex items-center space-x-4">
@@ -166,7 +166,7 @@ export default function Navbar({
                             </a>
                         ))}
                         <div
-                            className="absolute bottom-0 left-0 h-[3px] bg-teal-600 dark:bg-teal-300 rounded"
+                            className="absolute bottom-0 left-0 h-[3px] bg-emerald-400 rounded"
                             style={{
                                 width: `${underline.width}px`,
                                 transform: `translateX(${underline.left}px)`,
@@ -213,7 +213,7 @@ export default function Navbar({
                 </button>
             </div>
             {menuOpen && (
-                <div className="md:hidden w-full bg-white dark:bg-neutral-900">
+                <div className="md:hidden w-full border-t border-emerald-400/20 bg-emerald-950 text-white">
                     <div className="flex flex-col px-6 py-4 space-y-4">
                         {menuItems.map(({ id, label }) => (
                             <a

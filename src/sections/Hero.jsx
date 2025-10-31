@@ -14,16 +14,16 @@ export default function Hero({ darkMode }) {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center w-full text-center px-6">
-        <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-5 text-green-900 dark:text-green-300 drop-shadow-xl tracking-tight">
-          Duru<span className="text-teal-600 dark:text-teal-300">genetik</span>
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 text-emerald-200 drop-shadow-xl tracking-tight">
+          {t("hero.title") || "Veteriner Medikal Ürünleri San.Tic.Ltd.Şti"}
         </h1>
-        <p className="text-xl sm:text-2xl md:text-3xl font-medium text-gray-800 dark:text-gray-100 mb-7 max-w-2xl mx-auto drop-shadow">
+        <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium text-emerald-50/90 mb-7 max-w-3xl mx-auto drop-shadow">
           {t("hero.subtitle") ||
             "Geleceğin genetiği, sürdürülebilir tarım ve yüksek verimlilik için yeni nesil çözümler."}
         </p>
         <a
           href="#products"
-          className="inline-block mt-3 px-8 py-3 rounded-2xl bg-teal-600 hover:bg-teal-700 transition text-lg font-bold text-white shadow-xl hover:scale-105 active:scale-95"
+          className="inline-block mt-3 px-8 py-3 rounded-2xl bg-emerald-500 hover:bg-emerald-400 transition text-lg font-bold text-slate-950 shadow-xl hover:scale-105 active:scale-95"
         >
           {t("hero.cta") || "Ürünlerimizi Keşfet"}
         </a>
@@ -37,7 +37,7 @@ export default function Hero({ darkMode }) {
             fill="none"
             stroke="currentColor"
             strokeWidth={2}
-            className="text-teal-600 dark:text-teal-300"
+            className="text-emerald-300"
           >
             <circle cx="19" cy="19" r="17" strokeOpacity=".15" />
             <path d="M12 18l7 7 7-7" strokeLinecap="round" strokeLinejoin="round" />

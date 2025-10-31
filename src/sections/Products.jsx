@@ -1,116 +1,193 @@
 // src/sections/Products.jsx
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
+
+const highlightIcons = [
+  (
+    <svg
+      className="h-8 w-8 text-emerald-200"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M12 3l2.4 5.6 6.1.5-4.6 3.9 1.4 6-5.3-3.2L6.7 19l1.4-6L3.5 9.1l6.1-.5L12 3z" />
+    </svg>
+  ),
+  (
+    <svg
+      className="h-8 w-8 text-emerald-200"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M12 20c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z" />
+      <path d="M12 12l3-3" />
+    </svg>
+  ),
+  (
+    <svg
+      className="h-8 w-8 text-emerald-200"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M4 12h16" />
+      <path d="M4 8h16" />
+      <path d="M4 16h16" />
+    </svg>
+  ),
+];
 
 export default function Products() {
   const { t } = useTranslation();
-  const products = t("products.list", { returnObjects: true });
-  const [videoLoaded, setVideoLoaded] = useState(true);
-  const [loadVideo, setLoadVideo] = useState(false);
-  const sectionRef = useRef(null);
-  const videoRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setLoadVideo(true);
-          observer.disconnect();
-        }
-      },
-      { rootMargin: "200px" }
-    );
-    if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => observer.disconnect();
-  }, []);
-
-  useEffect(() => {
-    if (loadVideo) setVideoLoaded(false);
-  }, [loadVideo]);
-
-  useEffect(() => {
-    if (loadVideo && videoRef.current) {
-      const p = videoRef.current.play();
-      if (p?.catch) p.catch(() => {});
-    }
-  }, [loadVideo]);
+  const productsContent = t("products", { returnObjects: true }) || {};
+  const { title, tagline, intro, highlights = [], list = [], metrics = [] } = productsContent;
+  const featuredBreeds = list.slice(0, 3);
+  const spotlightBreeds = list.slice(3, 6);
+  const galleryBreeds = list.slice(6);
 
   return (
-    <section ref={sectionRef} id="products" className="relative min-h-screen flex items-center justify-center bg-transparent overflow-hidden scroll-mt-16">
-      {/* hero.mp4 sadece bu bölüm için */}
-      <video
-        ref={videoRef}
-        autoPlay
-        loop
-        muted
-        playsInline
-        poster="/images/products-placeholder.svg"
-        preload="none"
-        className="absolute inset-0 w-full h-full object-cover -z-20"
-        onLoadedData={() => setVideoLoaded(true)}
-      >
-        {loadVideo && <source src="/videos/products-bg.mp4" type="video/mp4" />}
-      </video>
-      {!videoLoaded && (
-        <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">
-          <div className="w-10 h-10 border-4 border-teal-500 border-t-transparent rounded-full animate-spin" />
-        </div>
-      )}
-
-      {/* yarı saydam okunabilirlik katmanı */}
-      <div className="absolute inset-0 bg-white bg-opacity-60 backdrop-blur-sm dark:bg-neutral-900 dark:bg-opacity-60 -z-10" />
-
-      <div className="relative z-10 flex flex-col items-center w-full px-6 py-12">
-        <h2 className="text-4xl font-bold mb-8 text-gray-900 dark:text-white">{t("products.title")}</h2>
-        <div className="hidden sm:grid grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl w-full mx-auto">
-          {products.map((prod) => (
-            <div
-              key={prod.name}
-              className="flex flex-col items-center justify-between p-6 bg-white bg-opacity-60 backdrop-blur-md rounded-xl shadow-lg dark:bg-neutral-800 dark:bg-opacity-60 h-full"
-            >
-                <div className="relative w-40 h-40 mb-4 rounded-full overflow-hidden border-4 border-teal-300 dark:border-teal-600 shadow">
-                  <img
-                    src={prod.image}
-                    alt={prod.name}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-teal-600/20 dark:bg-teal-500/20 mix-blend-multiply hover:bg-teal-600/10 dark:hover:bg-teal-500/10 transition-colors" />
+    <section id="products" className="relative py-24 sm:py-32 scroll-mt-16">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="grid gap-12 xl:grid-cols-12">
+          <div className="space-y-10 xl:col-span-5">
+            <div className="space-y-8 rounded-[2.5rem] border border-emerald-400/15 bg-slate-950/80 p-8 shadow-2xl backdrop-blur">
+              {tagline && (
+                <span className="inline-flex items-center rounded-full border border-emerald-300/30 bg-emerald-500/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-emerald-100">
+                  {tagline}
+                </span>
+              )}
+              <div className="space-y-4">
+                <h2 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl drop-shadow">{title}</h2>
+                {intro && <p className="text-base text-emerald-50/90 sm:text-lg leading-relaxed">{intro}</p>}
+              </div>
+              {highlights?.length > 0 && (
+                <div className="grid gap-4 sm:grid-cols-2">
+                  {highlights.map((item, index) => (
+                    <div
+                      key={`${item.title}-${index}`}
+                      className="flex items-start gap-4 rounded-2xl border border-emerald-400/20 bg-emerald-900/40 px-5 py-4 text-white shadow-xl"
+                    >
+                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-200">
+                        {highlightIcons[index % highlightIcons.length]}
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+                        {item.description && <p className="mt-1 text-sm text-emerald-100/80">{item.description}</p>}
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              <h3 className="text-lg font-bold text-teal-900 dark:text-teal-300 mb-1">
-                {prod.name}
-              </h3>
-              <p className="text-sm text-gray-700 dark:text-gray-200 text-center">
-                {prod.desc}
-              </p>
+              )}
             </div>
-          ))}
+
+            {metrics?.length > 0 && (
+              <dl className="grid gap-4 sm:grid-cols-3">
+                {metrics.map((metric, index) => (
+                  <div
+                    key={`${metric.value}-${index}`}
+                    className="rounded-2xl border border-emerald-400/20 bg-slate-900/80 px-4 py-5 text-center text-emerald-100 shadow-xl backdrop-blur"
+                  >
+                    <dt className="text-xs font-semibold uppercase tracking-[0.3em] text-emerald-300/80">{metric.label}</dt>
+                    <dd className="mt-3 text-3xl font-bold text-white">{metric.value}</dd>
+                  </div>
+                ))}
+              </dl>
+            )}
+          </div>
+
+          <div className="space-y-10 xl:col-span-7">
+            {featuredBreeds.length > 0 && (
+              <div className="grid gap-6 sm:grid-cols-2">
+                {featuredBreeds.map((prod, index) => (
+                  <article
+                    key={`${prod.name}-${index}`}
+                    className="group relative overflow-hidden rounded-[2.5rem] border border-emerald-400/20 bg-slate-950/80 text-white shadow-2xl backdrop-blur transition-transform duration-500 hover:-translate-y-1 hover:border-emerald-300/30 sm:col-span-1"
+                  >
+                    {prod.image && (
+                      <div className="relative h-44 w-full overflow-hidden">
+                        <img
+                          src={prod.image}
+                          alt={prod.name}
+                          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          loading="lazy"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/20 to-transparent" />
+                      </div>
+                    )}
+                    <div className="space-y-2 px-6 py-5">
+                      <h3 className="text-xl font-semibold text-white drop-shadow">{prod.name}</h3>
+                      <p className="text-sm text-emerald-50/80 leading-relaxed">{prod.desc}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            )}
+
+            {spotlightBreeds.length > 0 && (
+              <div className="grid gap-6 md:grid-cols-3">
+                {spotlightBreeds.map((prod, index) => (
+                  <article
+                    key={`${prod.name}-${index}`}
+                    className="group relative flex flex-col overflow-hidden rounded-[2.25rem] border border-emerald-400/15 bg-slate-950/75 text-white shadow-xl backdrop-blur transition-transform duration-500 hover:-translate-y-1"
+                  >
+                    {prod.image && (
+                      <div className="relative h-36 w-full overflow-hidden">
+                        <img
+                          src={prod.image}
+                          alt={prod.name}
+                          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          loading="lazy"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
+                      </div>
+                    )}
+                    <div className="space-y-2 px-5 py-4">
+                      <h3 className="text-lg font-semibold text-white drop-shadow">{prod.name}</h3>
+                      <p className="text-sm text-emerald-50/80 leading-relaxed">{prod.desc}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            )}
+
+            {galleryBreeds.length > 0 && (
+              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {galleryBreeds.map((prod, index) => (
+                  <article
+                    key={`${prod.name}-${index}`}
+                    className="group relative overflow-hidden rounded-[2rem] border border-emerald-400/10 bg-slate-950/70 text-white shadow-xl backdrop-blur transition-transform duration-500 hover:-translate-y-1"
+                  >
+                    {prod.image && (
+                      <div className="relative h-32 w-full overflow-hidden">
+                        <img
+                          src={prod.image}
+                          alt={prod.name}
+                          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          loading="lazy"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
+                      </div>
+                    )}
+                    <div className="space-y-2 px-5 py-4">
+                      <h3 className="text-base font-semibold text-white drop-shadow">{prod.name}</h3>
+                      <p className="text-sm text-emerald-100/75 leading-relaxed">{prod.desc}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
-        <div className="flex sm:hidden overflow-x-auto snap-x snap-mandatory w-screen px-6 h-[calc(100vh-12rem)] gap-6 pb-4">
-          {products.map((prod) => (
-            <div
-              key={prod.name}
-              className="flex-shrink-0  w-[90vw] snap-center snap-start flex flex-col items-center justify-center p-6 bg-white bg-opacity-60 backdrop-blur-md rounded-xl shadow-lg dark:bg-neutral-800 dark:bg-opacity-60 h-full"
-            >
-                <div className="relative w-40 h-40 mb-4 rounded-full overflow-hidden border-4 border-teal-300 dark:border-teal-600 shadow">
-                  <img
-                    src={prod.image}
-                    alt={prod.name}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-teal-600/20 dark:bg-teal-500/20 mix-blend-multiply hover:bg-teal-600/10 dark:hover:bg-teal-500/10 transition-colors" />
-                </div>
-              <h3 className="text-lg font-bold text-teal-900 dark:text-teal-300 mb-1">
-                {prod.name}
-              </h3>
-              <p className="text-sm text-gray-700 dark:text-gray-200 text-center">
-                {prod.desc}
-              </p>
-            </div>
-          ))}
-        </div>
-       
       </div>
     </section>
   );

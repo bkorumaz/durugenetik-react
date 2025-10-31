@@ -10,32 +10,102 @@
     "contact": "Contact"
   },
   "hero": {
-    "title": "Building a Productive Future",
-    "subtitle": "Premium cattle genetics, sexed semen and embryo services to strengthen your herd.",
+    "title": "Veteriner Medikal Ürünleri San.Tic.Ltd.Şti",
+    "subtitle": "Delivering premium cattle genetics with innovative reproductive solutions tailored to field conditions.",
     "cta": "Browse Genetics"
   },
   "products": {
-    "title": "Genetic Portfolio",
+    "title": "Farm-Ready Genetics",
+    "tagline": "Proven Lines for Turkish Herds",
+    "intro": "Each sire and female line is field-tested so you gain results without the guesswork.",
+    "highlights": [
+      {
+        "title": "Data-Led Pairing",
+        "description": "Mating sets aligned to your herd’s current metrics."
+      },
+      {
+        "title": "Live Tracking",
+        "description": "Mobile-ready records follow every calf from birth."
+      },
+      {
+        "title": "Cold-Chain Logistics",
+        "description": "Timed deliveries and inventory alerts across the region."
+      }
+    ],
+    "metrics": [
+      {
+        "label": "Herd Programs",
+        "value": "120+"
+      },
+      {
+        "label": "Donor Families",
+        "value": "48"
+      },
+      {
+        "label": "Avg. Conception",
+        "value": "92%"
+      }
+    ],
     "list": [
       {
-        "name": "Holstein Heifer",
+        "name": "Holstein Prime Series",
+        "image": "https://images.unsplash.com/photo-1522844990619-4951c40f7eda?auto=compress&cs=tinysrgb&w=900",
+        "desc": "High-output Holsteins built for reliable udders and stamina."
+      },
+      {
+        "name": "Holstein Heifer Program",
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Holstein_Friesian_UK_Yorkshire_July_2011.jpg/960px-Holstein_Friesian_UK_Yorkshire_July_2011.jpg",
-        "desc": "High-output Holstein heifer lines for dairy efficiency."
+        "desc": "Balanced female pedigrees that calve smoothly and stay productive."
       },
       {
-        "name": "Holstein Bull",
-        "image": "https://images.unsplash.com/photo-1527153857715-3908f2bae5e8?auto=compress&cs=tinysrgb&w=800",
-        "desc": "Proven Holstein sires selected for milk quality and longevity."
-      },
-      {
-        "name": "Brown Swiss",
+        "name": "Brown Swiss Endurance Pack",
         "image": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Brown_swiss.jpg",
-        "desc": "Robust Brown Swiss genetics with strong feet and legs."
+        "desc": "Durable Brown Swiss genetics with consistent butterfat levels."
       },
       {
-        "name": "Simmental",
+        "name": "Simmental Dual-Purpose Series",
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Simmentaler_Fleckvieh.jpg/960px-Simmentaler_Fleckvieh.jpg",
-        "desc": "Dual-purpose Simmental lines for meat and milk balance."
+        "desc": "Balanced carcass and milk traits for mixed production herds."
+      },
+      {
+        "name": "Jersey Premium",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Jersey_cow.jpg",
+        "desc": "Compact Jerseys that lift butterfat and protein ratios fast."
+      },
+      {
+        "name": "Fleckvieh Elite Herd",
+        "image": "https://images.unsplash.com/photo-1615924011523-79fba399a097?auto=compress&cs=tinysrgb&w=900",
+        "desc": "German Fleckvieh donors known for muscle and persistent milk."
+      },
+      {
+        "name": "Red Holstein Momentum",
+        "image": "https://images.unsplash.com/photo-1600693217359-1f5c281f52d2?auto=compress&cs=tinysrgb&w=900",
+        "desc": "Heat-tolerant red Holsteins with standout component yield."
+      },
+      {
+        "name": "Angus Muscle Program",
+        "image": "https://images.unsplash.com/photo-1542718618-21b17487e004?auto=compress&cs=tinysrgb&w=900",
+        "desc": "Calving-ease Angus lines engineered for dense muscling."
+      },
+      {
+        "name": "Limousin Finishing Select",
+        "image": "https://images.unsplash.com/photo-1589442306514-0f8e754e665d?auto=compress&cs=tinysrgb&w=900",
+        "desc": "Robust Limousin sires that drive feed-to-gain efficiency."
+      },
+      {
+        "name": "Charolais Frame Advantage",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/22/Charolais_bull.jpg",
+        "desc": "Wide-framed Charolais bulls for rapid growth and frame."
+      },
+      {
+        "name": "Hereford Pasture Line",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Hereford_bull_breed.jpg",
+        "desc": "Efficient Herefords that thrive on grazing systems."
+      },
+      {
+        "name": "Brangus Heat Adapted",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Brangus_bull.jpg",
+        "desc": "Tropical-ready Brangus genetics for resilience in warm zones."
       }
     ]
   },
@@ -64,38 +134,164 @@
     "readMore": "Read more"
   },
   "partners": {
+    "badge": "Trusted Alliances",
     "title": "Our Partners",
-    "partner": "Partner {{number}}"
+    "subtitle": "We pair global innovators with local insight so every farm receives responsive, modern support.",
+    "partner": "Partner {{number}}",
+    "items": {
+      "bayer": {
+        "name": "Bayer",
+        "description": "Integrated pharmaceuticals and preventive care for animal health.",
+        "focus": "Animal Health"
+      },
+      "zoetis": {
+        "name": "Zoetis",
+        "description": "Advanced diagnostics and service platforms built for field operations.",
+        "focus": "Diagnostics"
+      },
+      "semex": {
+        "name": "Semex",
+        "description": "Genomics-driven breeding programs that lift herd performance.",
+        "focus": "Genetic Programs"
+      },
+      "syngenta": {
+        "name": "Syngenta",
+        "description": "Feed strategies and seed technologies supporting forage quality.",
+        "focus": "Forage Support"
+      },
+      "cargill": {
+        "name": "Cargill",
+        "description": "Nutrition expertise that optimizes daily production results.",
+        "focus": "Nutrition"
+      },
+      "dupont": {
+        "name": "DuPont",
+        "description": "Technologies that strengthen sustainability across operations.",
+        "focus": "Sustainable Tech"
+      },
+      "basf": {
+        "name": "BASF",
+        "description": "Innovative chemistry improving the quality of final products.",
+        "focus": "Chemistry"
+      },
+      "elanco": {
+        "name": "Elanco",
+        "description": "Veterinary pharmaceuticals that help reduce infection risks.",
+        "focus": "Advanced Pharma"
+      },
+      "pfizer": {
+        "name": "Pfizer",
+        "description": "Proven vaccines and biotech solutions for livestock systems.",
+        "focus": "Biotechnology"
+      },
+      "boehringer": {
+        "name": "Boehringer Ingelheim",
+        "description": "Preventive programs built to keep herds healthy year-round.",
+        "focus": "Preventive Care"
+      },
+      "merck": {
+        "name": "Merck",
+        "description": "Diagnostic systems that simplify risk management decisions.",
+        "focus": "Diagnostics"
+      },
+      "novartis": {
+        "name": "Novartis",
+        "description": "Research strength that advances veterinary treatment options.",
+        "focus": "R&D Alliance"
+      }
+    }
   },
   "about": {
     "title": "About Us",
     "description": "Founded in 2010 in Burdur, DuruGenetik brings world-class livestock genetics and hands-on support to farms across the region."
   },
   "services": {
+    "badge": "Expert Team",
     "title": "Our Services",
+    "intro": "From pairing to calving we work beside your crew, keeping every milestone on schedule.",
+    "highlights": [
+      {
+        "label": "Farms Guided",
+        "value": "1,200+"
+      },
+      {
+        "label": "Annual Visits",
+        "value": "350"
+      },
+      {
+        "label": "Field Specialists",
+        "value": "18"
+      }
+    ],
     "list": [
       {
         "title": "Genetic Planning",
-        "description": "Customized breeding programs backed by genomic analysis."
+        "pillar": "PLAN",
+        "description": "We map your herd data into clear, season-ready mating sets.",
+        "points": [
+          "Herd scoring review",
+          "Genomic pairing tips"
+        ]
       },
       {
-        "title": "Sexed Semen Supply",
-        "description": "Certified female-biased semen for rapid herd growth."
+        "title": "Female Line Renewal",
+        "pillar": "RENEW",
+        "description": "Elite replacements keep production and fertility on track.",
+        "points": [
+          "Performance-based picks",
+          "Replacement roadmaps"
+        ]
       },
       {
-        "title": "Embryo Transfer",
-        "description": "High-success embryo transfer with donor and recipient management."
+        "title": "Transfer Programs",
+        "pillar": "TRANSFER",
+        "description": "Donor to recipient workflows run end-to-end by our team.",
+        "points": [
+          "Donor scheduling",
+          "Embryo logistics"
+        ]
+      },
+      {
+        "title": "Lifecycle Support",
+        "pillar": "SUPPORT",
+        "description": "Regular visits align feed, health and reporting routines.",
+        "points": [
+          "Feed & health reviews",
+          "Digital summaries"
+        ]
       }
     ]
   },
   "approach": {
-    "title": "How We Work",
-    "description": "We blend laboratory science with field expertise to elevate herd performance.",
+    "title": "How We Work in the Field",
+    "description": "We guide every engagement with transparent milestones from planning to reporting.",
+    "highlights": [
+      {
+        "label": "Initial Visit",
+        "value": "48 Hours"
+      },
+      {
+        "label": "Plan Refresh",
+        "value": "90 Days"
+      },
+      {
+        "label": "Rapid Support",
+        "value": "24/7"
+      }
+    ],
     "steps": [
-      { "step": "1. Analysis", "desc": "Farm visit and sample collection." },
-      { "step": "2. Evaluation", "desc": "Genetic index calculation and reporting." },
-      { "step": "3. Implementation", "desc": "Artificial insemination with selected genetics." },
-      { "step": "4. Monitoring", "desc": "Regular check-ups and performance tracking." }
+      {
+        "step": "Farm Analysis",
+        "desc": "We evaluate herd data, feed, and your goals on-site."
+      },
+      {
+        "step": "Program Design",
+        "desc": "Actionable genetics, nutrition, and staffing roadmap."
+      },
+      {
+        "step": "Performance Tracking",
+        "desc": "Monthly reviews keep progress visible to your team."
+      }
     ]
   },
   "contact": {
