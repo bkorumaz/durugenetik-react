@@ -10,12 +10,33 @@
     "contact": "İletişim"
   },
   "hero": {
-    "title": "Verimli Bir Gelecek İnşa Ediyoruz",
-    "subtitle": "Sürünüzü güçlendirmek için premium sığır genetiği, seksli sperma ve embriyo hizmetleri.",
+    "title": "Veteriner Medikal Ürünleri San.Tic.Ltd.Şti",
+    "subtitle": "Sahadaki ihtiyaçlara uygun premium sığır genetiği ve yenilikçi üreme çözümleri sunuyoruz.",
     "cta": "Genetikleri İncele"
   },
   "products": {
     "title": "Genetik Portföyümüz",
+    "tagline": "Saha Onaylı Genetikler",
+    "intro": "Anadolu koşullarında doğrulanmış yüksek etkili genetikleri seçerek her uygulamada daha sağlıklı ve verimli sürüler elde etmenizi sağlıyoruz.",
+    "highlights": [
+      {
+        "title": "Seçilmiş Boğa Kadroları",
+        "description": "Holstein, Montofon ve Simmental soyları bölgesel performans verilerine göre eşleştirilir."
+      },
+      {
+        "title": "Yaşam Döngüsü Takibi",
+        "description": "Tohumlamadan buzağılamaya kadar her yavruyu sürü hedeflerinizle kıyaslıyoruz."
+      },
+      {
+        "title": "Hızlı Tedarik",
+        "description": "Soğuk zincir lojistiği sayesinde ihtiyaç anında premium genetik erişimi sağlıyoruz."
+      }
+    ],
+    "metrics": [
+      { "label": "Sürü Programı", "value": "120+" },
+      { "label": "Donör Ailesi", "value": "48" },
+      { "label": "Gebelik Oranı", "value": "%92" }
+    ],
     "list": [
       {
         "name": "Holstein Düve",
@@ -64,27 +85,126 @@
     "readMore": "Devamını oku"
   },
   "partners": {
+    "badge": "Güvenilir İş Birlikleri",
     "title": "Ortaklarımız",
-    "partner": "Ortak {{number}}"
+    "subtitle": "Küresel üreticilerle kurduğumuz güçlü iş birlikleri sayesinde çiftliklerin ihtiyaçlarına hızlı ve güvenilir çözümler ulaştırıyoruz.",
+    "partner": "Ortak {{number}}",
+    "items": {
+      "bayer": {
+        "name": "Bayer",
+        "description": "Hayvan sağlığı için entegre ilaç ve koruyucu çözümler.",
+        "focus": "Veteriner Sağlık"
+      },
+      "zoetis": {
+        "name": "Zoetis",
+        "description": "Saha operasyonlarına uygun gelişmiş teşhis ve destek platformları.",
+        "focus": "Teşhis Teknolojileri"
+      },
+      "semex": {
+        "name": "Semex",
+        "description": "Sürü verimini yükselten genomik odaklı damızlık programları.",
+        "focus": "Genetik Programlar"
+      },
+      "syngenta": {
+        "name": "Syngenta",
+        "description": "Yem kalitesini destekleyen tohum ve besleme stratejileri.",
+        "focus": "Besleme Destekleri"
+      },
+      "cargill": {
+        "name": "Cargill",
+        "description": "Büyüme performansını optimize eden beslenme çözümleri.",
+        "focus": "Sürü Besleme"
+      },
+      "dupont": {
+        "name": "DuPont",
+        "description": "Üretim süreçlerinde sürdürülebilirliği güçlendiren teknolojiler.",
+        "focus": "Sürdürülebilir Teknoloji"
+      },
+      "basf": {
+        "name": "BASF",
+        "description": "Ürün kalitesini artıran yenilikçi kimyasal bileşenler.",
+        "focus": "Kimyasal Çözümler"
+      },
+      "elanco": {
+        "name": "Elanco",
+        "description": "Enfeksiyon risklerini azaltan veteriner ilaç portföyü.",
+        "focus": "İleri İlaçlar"
+      },
+      "pfizer": {
+        "name": "Pfizer",
+        "description": "Hayvancılık için kanıtlanmış aşı ve biyoteknoloji çözümleri.",
+        "focus": "Biyoteknoloji"
+      },
+      "boehringer": {
+        "name": "Boehringer Ingelheim",
+        "description": "Sürü sağlığını sürekli takip eden koruyucu programlar.",
+        "focus": "Koruyucu Sağlık"
+      },
+      "merck": {
+        "name": "Merck",
+        "description": "İleri teşhis sistemleriyle risk yönetimini kolaylaştırır.",
+        "focus": "Tanı Sistemleri"
+      },
+      "novartis": {
+        "name": "Novartis",
+        "description": "Veteriner tedavilerde yenilikçi araştırma ve geliştirme gücü.",
+        "focus": "Ar-Ge Ortaklığı"
+      }
+    }
   },
   "about": {
     "title": "Hakkımızda",
     "description": "2010 yılında Burdur’da kurulan DuruGenetik, Türkiye genelindeki çiftliklere dünya standartlarında hayvan genetiği ve saha desteği sağlar."
   },
   "services": {
+    "badge": "Uzman Ekip",
     "title": "Hizmetlerimiz",
+    "intro": "Sürü stratejisinden sahadaki uygulamaya kadar uzmanlarımız laboratuvar bilgisini saha disipliniyle birleştirerek yatırımınızı korur.",
+    "highlights": [
+      { "label": "Yönettiğimiz Çiftlik", "value": "1.200+" },
+      { "label": "Yıllık Ziyaret", "value": "350" },
+      { "label": "Saha Uzmanı", "value": "18" }
+    ],
     "list": [
       {
-        "title": "Genetik Planlama",
-        "description": "Genomik analizlerle desteklenen özel damızlık programları."
+        "title": "Genetik Planlama ve Denetim",
+        "pillar": "PLAN",
+        "description": "Genomik değerlendirmeler ve çiftlik ekonomisiyle şekillenen kişiye özel damızlık yol haritaları.",
+        "points": [
+          "Sürü skorlaması ve KPI tanımları",
+          "Genomik ve lineer özellik haritalaması",
+          "Çeyreklik ilerleme raporlaması"
+        ]
       },
       {
-        "title": "Seksli Sperma Tedariki",
-        "description": "Sürü büyümesini hızlandıran dişi ağırlıklı sperma."
+        "title": "Dişi Odaklı Genetik Tedariki",
+        "pillar": "TEDARİK",
+        "description": "Sürü büyümesini hızlandıran sertifikalı sexlenmiş genetik ve elit embriyolar.",
+        "points": [
+          "Yüksek fertiliteli sexlenmiş sperma portföyü",
+          "Embriyo rezervasyonu ve depolama yönetimi",
+          "İzlenebilirlik ve mevzuat dokümantasyonu"
+        ]
       },
       {
-        "title": "Embriyo Transferi",
-        "description": "Donör ve taşıyıcı yönetimiyle yüksek başarı oranlı embriyo transferi."
+        "title": "İleri Transfer Programları",
+        "pillar": "TRANSFER",
+        "description": "Donör senkronizasyonu ve taşıyıcı takibiyle desteklenen yüksek başarı oranlı transfer süreçleri.",
+        "points": [
+          "Donör uyarımı ve yıkama takvimleri",
+          "Taşıyıcı senkronizasyonu ve puanlaması",
+          "Sahada transfer ekibi ve sonrası takip"
+        ]
+      },
+      {
+        "title": "Yaşam Döngüsü Saha Desteği",
+        "pillar": "DESTEK",
+        "description": "Sürü sağlığı, besleme ve veri bütünlüğünü yıl boyu sürdüren veterinerlik uzmanlığı.",
+        "points": [
+          "Rutin fertilite kontrolleri ve ultrason",
+          "Besleme ve barınak optimizasyonu",
+          "Acil müdahale ve uzaktan yönlendirme"
+        ]
       }
     ]
   },

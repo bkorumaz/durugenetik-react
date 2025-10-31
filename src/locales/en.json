@@ -10,12 +10,33 @@
     "contact": "Contact"
   },
   "hero": {
-    "title": "Building a Productive Future",
-    "subtitle": "Premium cattle genetics, sexed semen and embryo services to strengthen your herd.",
+    "title": "Veteriner Medikal Ürünleri San.Tic.Ltd.Şti",
+    "subtitle": "Delivering premium cattle genetics with innovative reproductive solutions tailored to field conditions.",
     "cta": "Browse Genetics"
   },
   "products": {
     "title": "Genetic Portfolio",
+    "tagline": "Field-Proven Genetics",
+    "intro": "We curate high-impact genetics that are validated in Anatolian field conditions so every straw contributes to healthier, more productive herds.",
+    "highlights": [
+      {
+        "title": "Curated Sire Lineups",
+        "description": "Holstein, Brown Swiss, and Simmental pedigrees matched to regional performance data."
+      },
+      {
+        "title": "Lifecycle Monitoring",
+        "description": "From conception to calving, we benchmark every calf crop against your herd goals."
+      },
+      {
+        "title": "Rapid Supply",
+        "description": "Cold-chain logistics keep premium genetics accessible exactly when farms need them."
+      }
+    ],
+    "metrics": [
+      { "label": "Herd Programs", "value": "120+" },
+      { "label": "Donor Families", "value": "48" },
+      { "label": "Avg. Conception", "value": "92%" }
+    ],
     "list": [
       {
         "name": "Holstein Heifer",
@@ -64,27 +85,126 @@
     "readMore": "Read more"
   },
   "partners": {
+    "badge": "Trusted Alliances",
     "title": "Our Partners",
-    "partner": "Partner {{number}}"
+    "subtitle": "We collaborate with global producers to deliver reliable, fast solutions for every farm we support.",
+    "partner": "Partner {{number}}",
+    "items": {
+      "bayer": {
+        "name": "Bayer",
+        "description": "Integrated pharmaceuticals and preventive care for animal health.",
+        "focus": "Animal Health"
+      },
+      "zoetis": {
+        "name": "Zoetis",
+        "description": "Advanced diagnostics and service platforms built for field operations.",
+        "focus": "Diagnostics"
+      },
+      "semex": {
+        "name": "Semex",
+        "description": "Genomics-driven breeding programs that lift herd performance.",
+        "focus": "Genetic Programs"
+      },
+      "syngenta": {
+        "name": "Syngenta",
+        "description": "Feed strategies and seed technologies supporting forage quality.",
+        "focus": "Forage Support"
+      },
+      "cargill": {
+        "name": "Cargill",
+        "description": "Nutrition expertise that optimizes daily production results.",
+        "focus": "Nutrition"
+      },
+      "dupont": {
+        "name": "DuPont",
+        "description": "Technologies that strengthen sustainability across operations.",
+        "focus": "Sustainable Tech"
+      },
+      "basf": {
+        "name": "BASF",
+        "description": "Innovative chemistry improving the quality of final products.",
+        "focus": "Chemistry"
+      },
+      "elanco": {
+        "name": "Elanco",
+        "description": "Veterinary pharmaceuticals that help reduce infection risks.",
+        "focus": "Advanced Pharma"
+      },
+      "pfizer": {
+        "name": "Pfizer",
+        "description": "Proven vaccines and biotech solutions for livestock systems.",
+        "focus": "Biotechnology"
+      },
+      "boehringer": {
+        "name": "Boehringer Ingelheim",
+        "description": "Preventive programs built to keep herds healthy year-round.",
+        "focus": "Preventive Care"
+      },
+      "merck": {
+        "name": "Merck",
+        "description": "Diagnostic systems that simplify risk management decisions.",
+        "focus": "Diagnostics"
+      },
+      "novartis": {
+        "name": "Novartis",
+        "description": "Research strength that advances veterinary treatment options.",
+        "focus": "R&D Alliance"
+      }
+    }
   },
   "about": {
     "title": "About Us",
     "description": "Founded in 2010 in Burdur, DuruGenetik brings world-class livestock genetics and hands-on support to farms across the region."
   },
   "services": {
+    "badge": "Expert Team",
     "title": "Our Services",
+    "intro": "From herd strategy to on-site implementation, our specialists bring together laboratory insight and field discipline to protect your investment.",
+    "highlights": [
+      { "label": "Farms Guided", "value": "1.200+" },
+      { "label": "Annual Visits", "value": "350" },
+      { "label": "Field Specialists", "value": "18" }
+    ],
     "list": [
       {
-        "title": "Genetic Planning",
-        "description": "Customized breeding programs backed by genomic analysis."
+        "title": "Genetic Planning & Audit",
+        "pillar": "PLAN",
+        "description": "Customized breeding roadmaps informed by genomic evaluations and farm economics.",
+        "points": [
+          "Baseline herd scoring and KPI definition",
+          "Genomic and linear trait mapping",
+          "Quarterly progress reports for stakeholders"
+        ]
       },
       {
-        "title": "Sexed Semen Supply",
-        "description": "Certified female-biased semen for rapid herd growth."
+        "title": "Female-Centric Genetic Supply",
+        "pillar": "SUPPLY",
+        "description": "Certified sexed genetics and elite embryos positioned to accelerate herd growth.",
+        "points": [
+          "High-fertility sexed semen portfolio",
+          "Embryo reservation and storage management",
+          "Traceability and compliance documentation"
+        ]
       },
       {
-        "title": "Embryo Transfer",
-        "description": "High-success embryo transfer with donor and recipient management."
+        "title": "Advanced Transfer Programs",
+        "pillar": "TRANSFER",
+        "description": "High-success transfer workflows supported by donor synchrony and recipient monitoring.",
+        "points": [
+          "Donor stimulation and flush schedules",
+          "Recipient synchronization and scoring",
+          "On-site transfer team and aftercare"
+        ]
+      },
+      {
+        "title": "Lifecycle Field Support",
+        "pillar": "SUPPORT",
+        "description": "Hands-on veterinary expertise to maintain herd health, nutrition, and data integrity year-round.",
+        "points": [
+          "Routine fertility checks and ultrasound",
+          "Feeding and housing optimization",
+          "Emergency call-out and remote guidance"
+        ]
       }
     ]
   },
