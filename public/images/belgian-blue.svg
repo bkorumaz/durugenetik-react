@@ -1,0 +1,28 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Stylized Belgian Blue illustration</title>
+  <desc id="desc">Minimal illustration of a Belgian Blue cow on a cool gradient background.</desc>
+  <defs>
+    <linearGradient id="bb-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0f6ff" />
+      <stop offset="100%" stop-color="#c4d9ff" />
+    </linearGradient>
+    <linearGradient id="bb-body" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b8c7dd" />
+      <stop offset="100%" stop-color="#7086ad" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" fill="url(#bb-bg)" rx="48" />
+  <g transform="translate(52 176)">
+    <ellipse cx="160" cy="186" rx="42" ry="56" fill="#2c3a52" opacity="0.18" />
+    <ellipse cx="312" cy="186" rx="46" ry="58" fill="#2c3a52" opacity="0.24" />
+    <path d="M56 172c0-30 22-56 64-70l66-22c18-6 36-18 48-34l14-18c12-16 30-24 50-24h24c24 0 46 12 60 32l28 40c10 14 16 32 16 50v32c0 38-32 70-74 70H140c-62 0-84-24-84-56z" fill="url(#bb-body)" />
+    <path d="M290 26l28 18c14 10 22 26 22 42v18c0 14-12 26-26 26h-48c-16 0-28-12-28-26v-26c0-22 20-52 52-52z" fill="#dde6f5" />
+    <ellipse cx="310" cy="84" rx="7" ry="9" fill="#1f2a3f" />
+    <ellipse cx="332" cy="84" rx="7" ry="9" fill="#1f2a3f" />
+    <path d="M312 112c6 10 18 10 24 0" fill="none" stroke="#1f2a3f" stroke-width="3" stroke-linecap="round" />
+    <path d="M132 120l-20 60c-8 24-24 42-44 54" fill="none" stroke="#5f759d" stroke-width="12" stroke-linecap="round" opacity="0.55" />
+    <path d="M380 160l24 28c8 10 12 22 12 36v16c0 8-6 14-14 14h-16c-6 0-12-6-12-12v-52z" fill="#8ea3c7" />
+    <path d="M80 142l-42-30c-12-10-18-24-18-40 0-12 6-22 16-28l42-26" fill="none" stroke="#5f759d" stroke-width="12" stroke-linecap="round" opacity="0.5" />
+  </g>
+  <text x="50%" y="468" text-anchor="middle" font-family="'Poppins', 'Helvetica', sans-serif" font-size="44" font-weight="600" fill="#2c3a52" opacity="0.8">Belgian Blue</text>
+</svg>

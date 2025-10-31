@@ -39,12 +39,12 @@
       },
       {
         "name": "Jersey",
-        "image": "https://images.unsplash.com/photo-1589883661920-92328ea4fd47?auto=compress&cs=tinysrgb&w=800",
+        "image": "/images/jersey.svg",
         "desc": "Jersey lines prized for naturally high butterfat milk."
       },
       {
         "name": "Belgian Blue",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/3/30/Belgian_Blue_cow.jpg",
+        "image": "/images/belgian-blue.svg",
         "desc": "Muscle-dense Belgian Blue genetics to elevate carcass yield."
       }
     ]
@@ -158,6 +158,10 @@
       {
         "title": "Advanced Transfer Programs",
         "description": "High-success transfer workflows supported by donor and recipient management."
+      },
+      {
+        "title": "Embryo Freezing & Storage",
+        "description": "Cryopreservation and storage safeguards high-value embryos year-round."
       }
     ]
   },

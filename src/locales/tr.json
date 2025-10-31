@@ -39,12 +39,12 @@
       },
       {
         "name": "Jersey",
-        "image": "https://images.unsplash.com/photo-1589883661920-92328ea4fd47?auto=compress&cs=tinysrgb&w=800",
+        "image": "/images/jersey.svg",
         "desc": "Süt yağı oranı yüksek Jersey genetiği."
       },
       {
         "name": "Belçika Mavisi",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/3/30/Belgian_Blue_cow.jpg",
+        "image": "/images/belgian-blue.svg",
         "desc": "Kas gelişimini öne çıkaran Belçika Mavisi hatları."
       }
     ]
@@ -158,6 +158,10 @@
       {
         "title": "İleri Transfer Programları",
         "description": "Donör ve taşıyıcı yönetimiyle yüksek başarı oranlı gelişmiş transfer süreçleri."
+      },
+      {
+        "title": "Embriyo Dondurma ve Saklama",
+        "description": "Değerli embriyoları yıl boyu koruyan kriyoprezervasyon ve depolama çözümleri."
       }
     ]
   },
