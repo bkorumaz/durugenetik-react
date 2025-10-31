@@ -15,21 +15,21 @@
     "cta": "Browse Genetics"
   },
   "products": {
-    "title": "Genetic Portfolio",
+    "title": "Our Genetic Products",
     "tagline": "Field-Proven Genetics",
-    "intro": "We select proven genetics with field data so milk and beef performance stay on track.",
+    "intro": "We strengthen herd health and output with curated lines that deliver practical results.",
     "highlights": [
       {
-        "title": "Curated Bull Teams",
-        "description": "Holstein, Brown Swiss, and Simmental sires are matched to herd priorities."
+        "title": "Expert Sire Teams",
+        "description": "Holstein, Brown Swiss, and Simmental pedigrees aligned with your herd goals."
       },
       {
-        "title": "Lifecycle Tracking",
-        "description": "Each calf is benchmarked from birth to production."
+        "title": "Transparent Tracking",
+        "description": "Every calf remains on record throughout its productive lifetime."
       },
       {
-        "title": "Rapid Fulfilment",
-        "description": "Cold-chain logistics deliver premium genetics right when you need them."
+        "title": "Seamless Logistics",
+        "description": "Cold-chain deliveries keep premium genetics ready right when needed."
       }
     ],
     "metrics": [
@@ -48,34 +48,29 @@
     ],
     "list": [
       {
-        "name": "Holstein Bulls",
-        "image": "https://images.unsplash.com/photo-1527153857715-3908f2bae5e8?auto=compress&cs=tinysrgb&w=800",
-        "desc": "High PTA sires focused on milk output and longevity."
+        "name": "Holstein Performance Series",
+        "image": "https://images.unsplash.com/photo-1522844990619-4951c40f7eda?auto=compress&cs=tinysrgb&w=900",
+        "desc": "Selected sires with strong udders and dependable milk flow."
       },
       {
-        "name": "Holstein Heifers",
+        "name": "Holstein Heifer Program",
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Holstein_Friesian_UK_Yorkshire_July_2011.jpg/960px-Holstein_Friesian_UK_Yorkshire_July_2011.jpg",
-        "desc": "Balanced female lines that settle fast and milk early."
+        "desc": "Balanced female pedigrees for confident first lactations."
       },
       {
-        "name": "Brown Swiss Lines",
+        "name": "Brown Swiss Resilience Pack",
         "image": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Brown_swiss.jpg",
-        "desc": "Durable frames with elevated butterfat production."
+        "desc": "Hard-wearing lines with naturally higher butterfat."
       },
       {
-        "name": "Simmental Program",
+        "name": "Simmental Dual-Purpose Series",
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Simmentaler_Fleckvieh.jpg/960px-Simmentaler_Fleckvieh.jpg",
-        "desc": "Dual-purpose power with reliable growth."
+        "desc": "Genetics that balance carcass development and milk output."
       },
       {
-        "name": "Jersey Selection",
+        "name": "Jersey Premium",
         "image": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Jersey_cow.jpg",
-        "desc": "Compact cows driving rich milk solids."
-      },
-      {
-        "name": "Angus Beef Line",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Black_Angus_cattle.jpg",
-        "desc": "Muscle-forward genetics for beef-focused herds."
+        "desc": "Compact herds delivering rich butterfat and protein."
       }
     ]
   },
@@ -178,11 +173,11 @@
   "services": {
     "badge": "Expert Team",
     "title": "Our Services",
-    "intro": "Our veterinary team manages planning, sourcing, and on-site support under one roof to keep every herd on target.",
+    "intro": "We unite planning, sourcing, and on-site support under one expert team so every herd goal is clear.",
     "highlights": [
       {
         "label": "Farms Guided",
-        "value": "1.200+"
+        "value": "1,200+"
       },
       {
         "label": "Annual Visits",
@@ -197,28 +192,25 @@
       {
         "title": "Genetic Planning",
         "pillar": "PLAN",
-        "description": "We translate herd data into tailored mating maps that protect your goals.",
+        "description": "We translate herd data into mating plans shaped around your goals.",
         "points": [
-          "Herd scoring & goal timeline",
-          "Genomic pairing charts"
+          "Herd scoring review"
         ]
       },
       {
         "title": "Female Line Management",
         "pillar": "RENEW",
-        "description": "High-performing female lines accelerate replacements without disruption.",
+        "description": "Proven female lines accelerate replacements without disruption.",
         "points": [
-          "Approved female rosters",
-          "Logistics & compliance oversight"
+          "Approved female rosters"
         ]
       },
       {
         "title": "Advanced Transfer Programs",
         "pillar": "TRANSFER",
-        "description": "Coordinated donor and recipient schedules push pregnancy rates higher.",
+        "description": "Coordinated donor and recipient care keeps pregnancy rates higher.",
         "points": [
-          "Donor calendar",
-          "Post-transfer field follow-up"
+          "Donor calendar"
         ]
       },
       {
@@ -226,8 +218,7 @@
         "pillar": "SUPPORT",
         "description": "Routine visits align nutrition, health, and records all season long.",
         "points": [
-          "Monthly farm visits",
-          "Remote monitoring reports"
+          "Monthly farm visits"
         ]
       }
     ]
