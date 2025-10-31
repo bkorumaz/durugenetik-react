@@ -28,6 +28,8 @@ export default function Navbar({
     const menuContainerRef = useRef();
     const [underline, setUnderline] = useState({ left: 0, width: 0 });
 
+    const logoSrc = "/images/logo4.png";
+
     useEffect(() => {
         const idx = menuItems.findIndex((item) => item.id === activeSection);
         const ref = menuRefs.current[idx];
@@ -136,10 +138,17 @@ export default function Navbar({
         <nav key={darkMode ? 'dark' : 'light'} className={bgClasses}>
             <div className="max-w-6xl w-full mx-auto px-6 flex justify-between items-center h-16">
                 {/* Logo */}
-                <span className="font-extrabold text-2xl flex">
-                    <span className="text-green-800 dark:text-green-300">Duru</span>
-                    <span className="text-teal-500 dark:text-teal-200 ml-1">genetik</span>
-                </span>
+                <a
+                    href="#home"
+                    className="flex items-center h-full"
+                    aria-label={t("nav.home")}
+                >
+                    <img
+                        src={logoSrc}
+                        alt="Duru Genetik logo"
+                        className="h-10 w-auto object-contain"
+                    />
+                </a>
                 {/* Menu + underline */}
                 <div className="hidden md:flex items-center space-x-4">
                     <div className="relative flex items-center" ref={menuContainerRef}>

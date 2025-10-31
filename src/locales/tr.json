@@ -36,6 +36,16 @@
         "name": "Simmental",
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Simmentaler_Fleckvieh.jpg/960px-Simmentaler_Fleckvieh.jpg",
         "desc": "Et ve süt dengesini sağlayan Simmental hatları."
+      },
+      {
+        "name": "Jersey",
+        "image": "/images/jersey.svg",
+        "desc": "Süt yağı oranı yüksek Jersey genetiği."
+      },
+      {
+        "name": "Belçika Mavisi",
+        "image": "/images/belgian-blue.svg",
+        "desc": "Kas gelişimini öne çıkaran Belçika Mavisi hatları."
       }
     ]
   },
@@ -148,6 +158,10 @@
       {
         "title": "İleri Transfer Programları",
         "description": "Donör ve taşıyıcı yönetimiyle yüksek başarı oranlı gelişmiş transfer süreçleri."
+      },
+      {
+        "title": "Embriyo Dondurma ve Saklama",
+        "description": "Değerli embriyoları yıl boyu koruyan kriyoprezervasyon ve depolama çözümleri."
       }
     ]
   },

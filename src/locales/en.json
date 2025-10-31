@@ -36,6 +36,16 @@
         "name": "Simmental",
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Simmentaler_Fleckvieh.jpg/960px-Simmentaler_Fleckvieh.jpg",
         "desc": "Dual-purpose Simmental lines for meat and milk balance."
+      },
+      {
+        "name": "Jersey",
+        "image": "/images/jersey.svg",
+        "desc": "Jersey lines prized for naturally high butterfat milk."
+      },
+      {
+        "name": "Belgian Blue",
+        "image": "/images/belgian-blue.svg",
+        "desc": "Muscle-dense Belgian Blue genetics to elevate carcass yield."
       }
     ]
   },
@@ -148,6 +158,10 @@
       {
         "title": "Advanced Transfer Programs",
         "description": "High-success transfer workflows supported by donor and recipient management."
+      },
+      {
+        "title": "Embryo Freezing & Storage",
+        "description": "Cryopreservation and storage safeguards high-value embryos year-round."
       }
     ]
   },
