@@ -36,6 +36,16 @@
         "name": "Simmental",
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Simmentaler_Fleckvieh.jpg/960px-Simmentaler_Fleckvieh.jpg",
         "desc": "Dual-purpose Simmental lines for meat and milk balance."
+      },
+      {
+        "name": "Jersey",
+        "image": "https://images.unsplash.com/photo-1589883661920-92328ea4fd47?auto=compress&cs=tinysrgb&w=800",
+        "desc": "Jersey lines prized for naturally high butterfat milk."
+      },
+      {
+        "name": "Belgian Blue",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/3/30/Belgian_Blue_cow.jpg",
+        "desc": "Muscle-dense Belgian Blue genetics to elevate carcass yield."
       }
     ]
   },

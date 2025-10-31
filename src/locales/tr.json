@@ -36,6 +36,16 @@
         "name": "Simmental",
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Simmentaler_Fleckvieh.jpg/960px-Simmentaler_Fleckvieh.jpg",
         "desc": "Et ve süt dengesini sağlayan Simmental hatları."
+      },
+      {
+        "name": "Jersey",
+        "image": "https://images.unsplash.com/photo-1589883661920-92328ea4fd47?auto=compress&cs=tinysrgb&w=800",
+        "desc": "Süt yağı oranı yüksek Jersey genetiği."
+      },
+      {
+        "name": "Belçika Mavisi",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/3/30/Belgian_Blue_cow.jpg",
+        "desc": "Kas gelişimini öne çıkaran Belçika Mavisi hatları."
       }
     ]
   },

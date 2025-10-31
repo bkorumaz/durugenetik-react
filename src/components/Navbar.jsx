@@ -150,15 +150,19 @@ export default function Navbar({
                 <button
                     type="button"
                     onClick={() => setLogoIndex((prev) => (prev + 1) % logos.length)}
-                    className="flex items-center focus:outline-none"
+                    className="flex items-center focus:outline-none group"
                     title={t("nav.home")}
                     aria-label="Change logo"
                 >
-                    <img
-                        src={currentLogo}
-                        alt="Duru Genetik logo"
-                        className="h-10 w-auto"
-                    />
+                    <span
+                        className="relative flex h-12 w-12 items-center justify-center rounded-2xl bg-white shadow-md ring-1 ring-black/5 transition-transform group-active:scale-95 dark:ring-white/20 dark:shadow-[0_0_0_1px_rgba(255,255,255,0.18)]"
+                    >
+                        <img
+                            src={currentLogo}
+                            alt="Duru Genetik logo"
+                            className="h-8 w-auto"
+                        />
+                    </span>
                 </button>
                 {/* Menu + underline */}
                 <div className="hidden md:flex items-center space-x-4">
